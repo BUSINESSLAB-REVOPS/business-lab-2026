@@ -1,0 +1,113 @@
+---
+import pages from '../data/secondary-pages.json';
+import homePage from '../data/home-page.json';
+interface Props { page: keyof typeof pages | "home"; }
+const { page } = Astro.props;
+const content = page === "home" ? homePage : pages[page];
+---
+<link rel="stylesheet" href={`/assets/page-${page}.css`} />
+<div class="secondary-content">
+  <div class="et-db et_pb_gutters3 et_pb_pagebuilder_layout et_divi_theme et_no_sidebar et_pb_button_helper_class"><div id="et-boc"><Fragment set:html={content.html} /></div></div>
+</div>
+<style is:global>
+/* Preserve the original Divi grid. In particular, flex rows must not wrap on desktop. */
+.secondary-content{font-family:Inter,Arial,sans-serif;font-size:18px;line-height:1.4;color:#666;padding:0!important;--et_global_heading_font:Poppins,Arial,sans-serif;--et_global_body_font:Inter,Arial,sans-serif}
+@font-face{font-family:ETmodules;src:url('/assets/ETmodules.woff') format('woff');font-display:block}
+.secondary-content .et_animated,.secondary-content .et-waypoint{opacity:1!important;animation:none!important}
+.secondary-content .et_pb_slide{display:none}
+.secondary-content .et_pb_slide:first-child{display:block}
+.secondary-content .et_pb_toggle_close .et_pb_toggle_content{display:none}
+.secondary-content .et_pb_toggle_title{cursor:pointer}
+.secondary-content .et_pb_newsletter{display:none}
+</style>
+<script>
+for (const toggle of document.querySelectorAll<HTMLElement>('.secondary-content .et_pb_toggle')) {
+ const title = toggle.querySelector<HTMLElement>('.et_pb_toggle_title');
+ if (!title) continue;
+ title.tabIndex = 0;
+ title.setAttribute('role', 'button');
+ const update = () => title.setAttribute('aria-expanded', String(!toggle.classList.contains('et_pb_toggle_close')));
+ const activate = () => { toggle.classList.toggle('et_pb_toggle_close'); toggle.classList.toggle('et_pb_toggle_open'); update(); };
+ title.addEventListener('click', activate);
+ title.addEventListener('keydown', event => { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); activate(); } });
+ update();
+}
+</script>
+
+<style is:global>
+.secondary-content .et-pb-parallax-wrapper,.secondary-content .et_parallax_bg_wrap{position:absolute;inset:0;display:block;overflow:hidden;pointer-events:none}
+.secondary-content .et-pb-parallax-background,.secondary-content .et_parallax_bg{position:absolute;inset:0;display:block;background-size:cover;background-position:center;background-repeat:no-repeat}
+.secondary-content .et_pb_slide{position:relative;background-size:cover;background-position:center}
+.secondary-content .et_pb_slider_container_inner,.secondary-content .et_pb_slide_description,.secondary-content .et_pb_fullwidth_header_container{position:relative;z-index:1}
+.secondary-content .et_pb_fullwidth_header_overlay,.secondary-content .et_pb_slide_overlay_container{position:absolute;inset:0;pointer-events:none}
+.secondary-content .et_pb_fullwidth_header{position:relative;padding:50px 0;background-size:cover;background-position:center}
+.secondary-content .et_pb_fullwidth_header_container{width:80%;max-width:1080px;margin:auto}
+.secondary-content .et_pb_fullwidth_header_container.center{text-align:center}
+.secondary-content .et_pb_bg_layout_dark .et_pb_slide_title,.secondary-content .et_pb_bg_layout_dark .et_pb_slide_content,.secondary-content .et_pb_bg_layout_dark .et_pb_module_header,.secondary-content .et_pb_bg_layout_dark .et_pb_header_content_wrapper{color:#fff}
+</style>
+
+<style is:global>
+/* WordPress normally sizes these carousels at runtime. CSS keeps every slide in
+   the same grid cell so the tallest title determines a stable shared height. */
+.secondary-content .et_pb_slider .et_pb_slides{display:grid}
+.secondary-content .et_pb_slider .et_pb_slide{display:block!important;grid-area:1/1;visibility:hidden;pointer-events:none}
+.secondary-content .et_pb_slider .et_pb_slide.replica-active{visibility:visible;pointer-events:auto;z-index:1}
+.secondary-content .et_pb_slider .et_pb_slide>.et_pb_container{height:100%}
+.secondary-content .et_pb_post_slider .et_pb_slide_description,.secondary-content .et_pb_post_slider .et_pb_slider_container_inner{position:static}
+.secondary-content .replica-slider-controls{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:space-between;padding:8px;z-index:3}
+.secondary-content .replica-slider-controls button{pointer-events:auto;background:#0007;border:0;border-radius:4px;color:#fff;font:32px Arial;width:36px;height:44px}
+.secondary-content .swiper-wrapper{display:grid!important;grid-auto-flow:column;grid-auto-columns:calc((100% - 30px)/3);gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;transform:none!important;height:auto!important;align-items:stretch}
+.secondary-content .swiper-wrapper::-webkit-scrollbar{display:none}
+.secondary-content .swiper-wrapper>.swiper-slide{width:auto!important;height:auto;min-width:0;scroll-snap-align:start;margin:0!important}
+.secondary-content .dipl_blog_slider_post{height:100%;min-height:500px}
+.secondary-content .dipl_blog_slider_image_wrapper{height:200px;flex-shrink:0}
+.secondary-content .dipl_blog_slider_image_wrapper img{width:100%;height:200px;object-fit:cover}
+.secondary-content .replica-article-controls{display:flex;justify-content:center;gap:16px;margin-top:16px}
+.secondary-content .replica-article-controls button{background:transparent;border:1px solid #aaa;color:#333;font:24px Arial;width:36px;height:32px;border-radius:3px}
+@media(max-width:980px){.secondary-content .swiper-wrapper{grid-auto-columns:calc((100% - 15px)/2)}}
+@media(max-width:767px){.secondary-content .swiper-wrapper{grid-auto-columns:100%}.secondary-content .dipl_blog_slider_post{min-height:0}}
+</style>
+<script>
+for(const slider of document.querySelectorAll<HTMLElement>('.secondary-content .et_pb_slider')){
+ const slides=Array.from(slider.querySelectorAll<HTMLElement>('.et_pb_slide'));
+ if(!slides.length)continue;
+ let active=0;
+ const show=(index:number)=>{active=(index+slides.length)%slides.length;slides.forEach((slide,i)=>{slide.classList.toggle('replica-active',i===active);slide.setAttribute('aria-hidden',String(i!==active));slide.inert=i!==active})};
+ show(0);
+ if(slides.length<2)continue;
+ const controls=document.createElement('div');controls.className='replica-slider-controls';
+ slider.setAttribute('aria-roledescription','carrusel');
+ for(const [label,glyph,direction] of [['Artículo anterior','‹',-1],['Artículo siguiente','›',1]] as const){const button=document.createElement('button');button.type='button';button.textContent=glyph;button.setAttribute('aria-label',slider.classList.contains('et_pb_post_slider')?label:(direction===-1?'Diapositiva anterior':'Diapositiva siguiente'));button.addEventListener('click',()=>show(active+direction));controls.append(button)}
+ slider.append(controls);
+ if(slider.classList.contains('et_slider_auto')){
+  let paused=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let timer:ReturnType<typeof setInterval>|undefined;
+  const stop=()=>clearInterval(timer);
+  const start=()=>{stop();if(!paused&&!document.hidden)timer=setInterval(()=>show(active+1),6000)};
+  const pause=document.createElement('button');pause.type='button';pause.className='replica-slider-pause';
+  const update=()=>{pause.textContent=paused?'▷':'Ⅱ';pause.setAttribute('aria-label',paused?'Reanudar carrusel':'Pausar carrusel')};
+  pause.addEventListener('click',()=>{paused=!paused;update();start()});slider.append(pause);
+  slider.addEventListener('mouseenter',stop);slider.addEventListener('mouseleave',start);
+  slider.addEventListener('focusin',stop);slider.addEventListener('focusout',event=>{if(!slider.contains(event.relatedTarget as Node))start()});
+  document.addEventListener('visibilitychange',start);update();start();
+ }
+
+}
+for(const track of document.querySelectorAll<HTMLElement>('.secondary-content .swiper-wrapper')){
+ const controls=document.createElement('div');controls.className='replica-article-controls';
+ for(const [label,glyph,direction] of [['Artículos anteriores','‹',-1],['Artículos siguientes','›',1]] as const){const button=document.createElement('button');button.type='button';button.textContent=glyph;button.setAttribute('aria-label',label);button.addEventListener('click',()=>track.scrollBy({left:direction*(track.clientWidth+15),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));controls.append(button)}
+ track.parentElement?.append(controls);
+}
+</script>
+
+
+<style is:global>
+.secondary-content .replica-slider-pause{position:absolute;bottom:18px;right:20px;z-index:4;border:1px solid #ffffff80;color:white;background:#0006;border-radius:3px;width:34px;height:30px}
+@media(max-width:767px){.secondary-content .et_pb_slide .et_pb_slide_title{font-size:32px;overflow-wrap:normal;word-break:normal}}
+</style>
+<style is:global>
+@media(min-width:981px){.secondary-content .et_pb_slider .et-pb-parallax-background{height:calc(100% + 30vh);top:-18px;bottom:auto;background-position:top center}}
+</style>
+<style is:global>
+@media(max-width:767px){.secondary-content .et_pb_slide .et_pb_slide_title{font-size:32px!important;line-height:1.2!important}}
+</style>
