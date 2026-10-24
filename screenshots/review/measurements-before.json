@@ -1,0 +1,556 @@
+{
+  "metodologia": {
+    "original": {
+      "height": 7760,
+      "rows": [
+        {
+          "cls": "et_pb_row_10 et_pb_row et_flex_row",
+          "columns": [
+            478,
+            478
+          ],
+          "h": 686,
+          "w": 1012,
+          "y": 751
+        },
+        {
+          "cls": "et_pb_row_11 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 48,
+          "w": 1012,
+          "y": 1539
+        },
+        {
+          "cls": "et_pb_row_12 et_pb_row et_flex_row",
+          "columns": [
+            158,
+            158,
+            158,
+            158,
+            158
+          ],
+          "h": 160,
+          "w": 1012,
+          "y": 1647
+        },
+        {
+          "cls": "et_pb_row_13 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 282,
+          "w": 1012,
+          "y": 1957
+        },
+        {
+          "cls": "et_pb_row_14 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 520,
+          "w": 1012,
+          "y": 2340
+        },
+        {
+          "cls": "et_pb_row_15 et_pb_row et_pb_row_nested et_flex_row",
+          "columns": [
+            300,
+            300,
+            300
+          ],
+          "h": 200,
+          "w": 1012,
+          "y": 2419
+        },
+        {
+          "cls": "et_pb_row_16 et_pb_row et_pb_row_nested et_flex_row",
+          "columns": [
+            300,
+            300,
+            300
+          ],
+          "h": 211,
+          "w": 1012,
+          "y": 2649
+        },
+        {
+          "cls": "et_pb_row_17 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 48,
+          "w": 1012,
+          "y": 2961
+        },
+        {
+          "cls": "et_pb_row_18 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 3921,
+          "w": 1012,
+          "y": 3070
+        },
+        {
+          "cls": "et_pb_row_19 et_pb_row et_flex_row",
+          "columns": [
+            300,
+            300,
+            300
+          ],
+          "h": 244,
+          "w": 1012,
+          "y": 7465
+        }
+      ],
+      "sections": [
+        {
+          "cls": "et_pb_section_8 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 621
+        },
+        {
+          "cls": "et_pb_section_9 et_pb_section et_section_regular et_flex_section",
+          "h": 787
+        },
+        {
+          "cls": "et_pb_section_10 et_pb_section et_section_regular et_flex_section",
+          "h": 419
+        },
+        {
+          "cls": "et_pb_section_11 et_pb_section et_section_regular et_flex_section",
+          "h": 383
+        },
+        {
+          "cls": "et_pb_section_12 et_pb_section et_section_regular et_flex_section",
+          "h": 621
+        },
+        {
+          "cls": "et_pb_section_13 et_pb_section et_section_regular et_flex_section",
+          "h": 4131
+        },
+        {
+          "cls": "et_pb_section_14 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 373
+        },
+        {
+          "cls": "et_pb_section_15 et_pb_section et_section_regular et_flex_section",
+          "h": 346
+        }
+      ]
+    },
+    "before": {
+      "height": 10269,
+      "rows": [
+        {
+          "cls": "et_pb_row_10 et_pb_row et_flex_row",
+          "columns": [
+            1012,
+            1012
+          ],
+          "h": 1071,
+          "w": 1012,
+          "y": 751
+        },
+        {
+          "cls": "et_pb_row_11 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 108,
+          "w": 1012,
+          "y": 1924
+        },
+        {
+          "cls": "et_pb_row_12 et_pb_row et_flex_row",
+          "columns": [
+            1012,
+            1012,
+            1012,
+            1012,
+            1012
+          ],
+          "h": 826,
+          "w": 1012,
+          "y": 2092
+        },
+        {
+          "cls": "et_pb_row_13 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 357,
+          "w": 1012,
+          "y": 3069
+        },
+        {
+          "cls": "et_pb_row_14 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 1528,
+          "w": 1012,
+          "y": 3527
+        },
+        {
+          "cls": "et_pb_row_15 et_pb_row et_pb_row_nested et_flex_row",
+          "columns": [
+            1012,
+            1012,
+            1012
+          ],
+          "h": 680,
+          "w": 1012,
+          "y": 3635
+        },
+        {
+          "cls": "et_pb_row_16 et_pb_row et_pb_row_nested et_flex_row",
+          "columns": [
+            1012,
+            1012,
+            1012
+          ],
+          "h": 680,
+          "w": 1012,
+          "y": 4345
+        },
+        {
+          "cls": "et_pb_row_17 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 108,
+          "w": 1012,
+          "y": 5157
+        },
+        {
+          "cls": "et_pb_row_18 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 4123,
+          "w": 1012,
+          "y": 5325
+        }
+      ],
+      "sections": [
+        {
+          "cls": "et_pb_section_8 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 621
+        },
+        {
+          "cls": "et_pb_section_9 et_pb_section et_section_regular et_flex_section",
+          "h": 1172
+        },
+        {
+          "cls": "et_pb_section_10 et_pb_section et_section_regular et_flex_section",
+          "h": 1145
+        },
+        {
+          "cls": "et_pb_section_11 et_pb_section et_section_regular et_flex_section",
+          "h": 458
+        },
+        {
+          "cls": "et_pb_section_12 et_pb_section et_section_regular et_flex_section",
+          "h": 1630
+        },
+        {
+          "cls": "et_pb_section_13 et_pb_section et_section_regular et_flex_section",
+          "h": 4393
+        },
+        {
+          "cls": "et_pb_section_14 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 373
+        }
+      ]
+    }
+  },
+  "casos": {
+    "original": {
+      "height": 2400,
+      "rows": [
+        {
+          "cls": "et_pb_row_3 et_pb_row et_block_row",
+          "columns": [
+            1012
+          ],
+          "h": 1249,
+          "w": 1012,
+          "y": 131
+        },
+        {
+          "cls": "et_pb_row_4 et_pb_row et_block_row",
+          "columns": [
+            1012
+          ],
+          "h": 149,
+          "w": 1012,
+          "y": 1481
+        },
+        {
+          "cls": "et_pb_row_5 et_pb_row et_flex_row",
+          "columns": [
+            300,
+            300,
+            300
+          ],
+          "h": 244,
+          "w": 1012,
+          "y": 2105
+        }
+      ],
+      "sections": [
+        {
+          "cls": "et_pb_section_4 et_pb_section et_section_regular et_block_section",
+          "h": 1351
+        },
+        {
+          "cls": "et_pb_section_5 et_pb_section et_section_regular et_block_section",
+          "h": 251
+        },
+        {
+          "cls": "et_pb_section_6 et_pb_section et_pb_fullwidth_section et_section_regular et_block_section",
+          "h": 373
+        },
+        {
+          "cls": "et_pb_section_7 et_pb_section et_section_regular et_flex_section",
+          "h": 346
+        }
+      ]
+    },
+    "before": {
+      "height": 2205,
+      "rows": [
+        {
+          "cls": "et_pb_row_3 et_pb_row et_block_row",
+          "columns": [
+            1012
+          ],
+          "h": 1003,
+          "w": 1012,
+          "y": 131
+        },
+        {
+          "cls": "et_pb_row_4 et_pb_row et_block_row",
+          "columns": [
+            1012
+          ],
+          "h": 149,
+          "w": 1012,
+          "y": 1234
+        }
+      ],
+      "sections": [
+        {
+          "cls": "et_pb_section_4 et_pb_section et_section_regular et_block_section",
+          "h": 1104
+        },
+        {
+          "cls": "et_pb_section_5 et_pb_section et_section_regular et_block_section",
+          "h": 251
+        },
+        {
+          "cls": "et_pb_section_6 et_pb_section et_pb_fullwidth_section et_section_regular et_block_section",
+          "h": 373
+        }
+      ]
+    }
+  },
+  "blog": {
+    "original": {
+      "height": 2216,
+      "rows": [
+        {
+          "cls": "et_pb_row et_pb_row-3-4_1-4 et_flex_row",
+          "columns": [
+            478,
+            478
+          ],
+          "h": 674,
+          "w": 1012,
+          "y": 131
+        },
+        {
+          "cls": "et_pb_row_2 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 540,
+          "w": 1012,
+          "y": 906
+        },
+        {
+          "cls": "et_pb_row_3 et_pb_row et_flex_row",
+          "columns": [
+            300,
+            300,
+            300
+          ],
+          "h": 244,
+          "w": 1012,
+          "y": 1921
+        }
+      ],
+      "sections": [
+        {
+          "cls": "et_pb_section_4 et_pb_section et_section_specialty et_flex_section",
+          "h": 776
+        },
+        {
+          "cls": "et_pb_section_5 et_pb_section et_section_regular et_flex_section",
+          "h": 642
+        },
+        {
+          "cls": "et_pb_section_6 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 373
+        },
+        {
+          "cls": "et_pb_section_7 et_pb_section et_section_regular et_flex_section",
+          "h": 346
+        }
+      ]
+    },
+    "before": {
+      "height": 2090,
+      "rows": [
+        {
+          "cls": "et_pb_row et_pb_row-3-4_1-4 et_flex_row",
+          "columns": [
+            1012,
+            1012
+          ],
+          "h": 584,
+          "w": 1012,
+          "y": 131
+        },
+        {
+          "cls": "et_pb_row_2 et_pb_row et_flex_row",
+          "columns": [
+            1012
+          ],
+          "h": 453,
+          "w": 1012,
+          "y": 816
+        }
+      ],
+      "sections": [
+        {
+          "cls": "et_pb_section_4 et_pb_section et_section_specialty et_flex_section",
+          "h": 685
+        },
+        {
+          "cls": "et_pb_section_5 et_pb_section et_section_regular et_flex_section",
+          "h": 554
+        },
+        {
+          "cls": "et_pb_section_6 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 373
+        }
+      ]
+    }
+  },
+  "representantes": {
+    "original": {
+      "height": 1627,
+      "rows": [
+        {
+          "cls": "et_pb_row_3 et_pb_row et-vb-row--no-module et_flex_row",
+          "columns": [
+            478,
+            478
+          ],
+          "h": 1,
+          "w": 1012,
+          "y": 751
+        },
+        {
+          "cls": "et_pb_row_4 et_pb_row et-vb-row--no-module et_flex_row",
+          "columns": [
+            478,
+            478
+          ],
+          "h": 1,
+          "w": 1012,
+          "y": 854
+        },
+        {
+          "cls": "et_pb_row_5 et_pb_row et_flex_row",
+          "columns": [
+            300,
+            300,
+            300
+          ],
+          "h": 245,
+          "w": 1012,
+          "y": 1331
+        }
+      ],
+      "sections": [
+        {
+          "cls": "et_pb_section_5 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 621
+        },
+        {
+          "cls": "et_pb_section_6 et_pb_section et_section_regular et_flex_section",
+          "h": 102
+        },
+        {
+          "cls": "et_pb_section_7 et_pb_section et_section_regular et_flex_section",
+          "h": 102
+        },
+        {
+          "cls": "et_pb_section_8 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 375
+        },
+        {
+          "cls": "et_pb_section_9 et_pb_section et_section_regular et_flex_section",
+          "h": 346
+        }
+      ]
+    },
+    "before": {
+      "height": 1878,
+      "rows": [
+        {
+          "cls": "et_pb_row_3 et_pb_row et-vb-row--no-module et_flex_row",
+          "columns": [
+            1012,
+            1012
+          ],
+          "h": 102,
+          "w": 1012,
+          "y": 751
+        },
+        {
+          "cls": "et_pb_row_4 et_pb_row et-vb-row--no-module et_flex_row",
+          "columns": [
+            1012,
+            1012
+          ],
+          "h": 102,
+          "w": 1012,
+          "y": 955
+        }
+      ],
+      "sections": [
+        {
+          "cls": "et_pb_section_5 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 621
+        },
+        {
+          "cls": "et_pb_section_6 et_pb_section et_section_regular et_flex_section",
+          "h": 203
+        },
+        {
+          "cls": "et_pb_section_7 et_pb_section et_section_regular et_flex_section",
+          "h": 203
+        },
+        {
+          "cls": "et_pb_section_8 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section",
+          "h": 373
+        }
+      ]
+    }
+  }
+}
