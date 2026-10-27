@@ -22,9 +22,3 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-
-# reference working snapshots
-.reference/
-reference.html
-reference.css
-fonts.css
