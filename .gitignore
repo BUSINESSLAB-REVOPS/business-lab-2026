@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Local migration references and browser test output
+.artifacts/
+test-results/
+playwright-report/
+.venv-fonts/
