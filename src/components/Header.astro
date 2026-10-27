@@ -1,0 +1,78 @@
+---
+const navigation = [
+  ["Nosotros", "/"],
+  ["Metodologia", "/metodologia/"],
+  ["FAQs", "/nosotros/faqs/"],
+  ["Consultoria Agil", "/consultoriaagil/"],
+  ["Entrenamiento", "/servicios/entrenamiento/"],
+  ["Casos", "/casos/"],
+  ["Blog", "/blog/"],
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Business Lab, inicio"
+      ><img
+        src="/assets/BL-LOGO-White.jpg"
+        alt="Business Lab"
+        width="1140"
+        height="256"
+      /></a
+    >
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+      aria-label="Abrir menú"><span></span><span></span><span></span></button
+    >
+    <nav
+      id="main-navigation"
+      class="main-navigation"
+      aria-label="Navegación principal"
+    >
+      <ul>
+        {
+          navigation.map(([label, href]) => (
+            <li>
+              <a
+                href={href}
+                aria-current={Astro.url.pathname === href ? "page" : undefined}
+              >
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
+  const navigation = document.querySelector<HTMLElement>(".main-navigation");
+  const closeMenu = () => {
+    toggle?.setAttribute("aria-expanded", "false");
+    navigation?.classList.remove("is-open");
+    toggle?.setAttribute("aria-label", "Abrir menú");
+  };
+  toggle?.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    navigation?.classList.toggle("is-open", open);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      toggle?.getAttribute("aria-expanded") === "true"
+    ) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+  navigation
+    ?.querySelectorAll("a")
+    .forEach((link) => link.addEventListener("click", closeMenu));
+</script>
