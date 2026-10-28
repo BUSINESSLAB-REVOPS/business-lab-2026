@@ -22,6 +22,18 @@ npm run preview
 
 La salida estática se genera en `dist`.
 
+## Cloudflare Workers
+
+`wrangler.jsonc` configura el Worker `business-lab-2026` para servir el sitio estático desde `dist` y habilita las previews de las ramas.
+
+En la integración de Git de Cloudflare, usa estos comandos:
+
+- Compilación: `npm run build`.
+- Despliegue de producción: `npx wrangler deploy`.
+- Despliegue de preview: `npx wrangler preview`.
+
+La compilación debe ejecutarse antes del despliegue para generar `dist`. `npm run preview` sirve la compilación localmente; las previews publicadas en Cloudflare usan Wrangler.
+
 ## Componentes
 
 - `src/layouts/Layout.astro`: documento, favicons, canonical y metadatos sociales; recibe una clave `page` del registro tipado.
