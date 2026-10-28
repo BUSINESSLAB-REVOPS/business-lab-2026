@@ -1,46 +1,88 @@
 ---
+import Background from './Background.astro';
 interface Props {
   title?: string;
   description?: string;
   label?: string;
   href?: string;
   id?: string;
-  index?: number;
   backgroundImage?: string;
 }
-
 const {
-  title = "¿Listo para escalar tus ventas con un sistema real y accesible?",
-  description = "En Business Lab combinamos lo mejor de la estrategia, la ejecución y la tecnología para construir tu propio motor comercial.",
-  label = "Consultoria Gratuita",
-  href = "/#contacto",
+  title = '¿Listo para escalar tus ventas con un sistema real y accesible?',
+  description = 'En Business Lab combinamos lo mejor de la estrategia, la ejecución y la tecnología para construir tu propio motor comercial.',
+  label = 'Consultoria Gratuita',
+  href = '/#contacto',
   id,
-  index = 1,
-  backgroundImage = "/assets/CONSULTORIA-GRATUITA.jpg",
+  backgroundImage = '/assets/CONSULTORIA-GRATUITA.jpg',
 } = Astro.props;
 ---
 
-<section
-  class={`et_pb_fullwidth_header_${index} et_pb_fullwidth_header et_pb_bg_layout_dark et_pb_text_align_center et_pb_section_parallax et_pb_module et_flex_module`}
->
-  <span class="et-pb-parallax-wrapper"
-    ><span
-      class={`et-pb-parallax-background et-pb-parallax-background-module--divi-fullwidth-header-${index}`}
-      style={`background-image:url(${backgroundImage})`}></span></span
-  >
-  <div class="et_pb_fullwidth_header_container center">
-    <div class="header-content-container center">
-      <div class="header-content et_flex_module">
-        <h1 class="et_pb_module_header" id={id}>{title}</h1>
-        <div class="et_pb_header_content_wrapper"><p>{description}</p></div>
-        <div class="et_pb_header_button_wrapper">
-          <a class="et_pb_button et_pb_more_button et_pb_button_one" href={href}
-            >{label}</a
-          >
-        </div>
-      </div>
+<section class="cta">
+  <Background src={backgroundImage} />
+  <div class="cta-container">
+    <div class="cta-content">
+      <h2 id={id}>{title}</h2>
+      <p>{description}</p>
+      <a class="cta-button" href={href}>
+        {label}
+      </a>
     </div>
   </div>
-  <div class="et_pb_fullwidth_header_overlay"></div>
-  <div class="et_pb_fullwidth_header_scroll"></div>
 </section>
+<style>
+  @layer overrides {
+    .cta {
+      position: relative;
+      padding: 50px 0;
+      background: var(--color-orange);
+      color: #fff;
+      font: 18px/1.4em var(--font-body);
+    }
+    .cta-container {
+      position: relative;
+      z-index: 1;
+      width: 80%;
+      max-width: 1080px;
+      margin-inline: auto;
+    }
+    .cta-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 10px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 100%;
+      text-align: center;
+    }
+    h2 {
+      font: 600 32px/1.2 var(--font-heading);
+      color: inherit;
+    }
+    p {
+      padding: 0;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 0.3em 1em;
+      background: var(--color-orange);
+      color: #fff;
+      border-radius: 12px;
+      font: 500 20px/1.7 var(--font-body);
+    }
+    @media (max-width: 767px) {
+      h2 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .cta-button {
+        font-size: 16px;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,98 @@
+---
+interface Props {
+  class?: string;
+  layout?: string;
+}
+const { class: className, layout = 'layout3' } = Astro.props;
+---
+
+<bl-articles
+  class:list={['article-module', className]}
+  role="region"
+  aria-label="Artículos"
+>
+  <div class={layout}>
+    <div class="article-track">
+      <slot />
+    </div>
+  </div>
+  <div class="article-controls" hidden>
+    <button type="button" data-back aria-label="Artículos anteriores">
+      ‹
+    </button>
+    <button type="button" data-forward aria-label="Artículos siguientes">
+      ›
+    </button>
+  </div>
+</bl-articles>
+<script>
+  class ArticleScroller extends HTMLElement {
+    connectedCallback() {
+      if (this.dataset.ready !== undefined) return;
+      this.dataset.ready = '';
+      const track = this.querySelector<HTMLElement>('.article-track')!;
+      this.querySelector<HTMLElement>('.article-controls')!.hidden = false;
+      for (const [selector, direction] of [
+        ['[data-back]', -1],
+        ['[data-forward]', 1],
+      ] as const)
+        this.querySelector(selector)?.addEventListener('click', () =>
+          track.scrollBy({
+            left: direction * (track.clientWidth + 15),
+            behavior: matchMedia('(prefers-reduced-motion: reduce)').matches
+              ? 'instant'
+              : 'smooth',
+          }),
+        );
+    }
+  }
+  if (!customElements.get('bl-articles'))
+    customElements.define('bl-articles', ArticleScroller);
+</script>
+<style>
+  @layer components {
+    bl-articles {
+      display: block;
+      min-width: 0;
+    }
+    .article-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% - 30px) / 3);
+      gap: 15px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      align-items: stretch;
+    }
+    .article-track > :global(*) {
+      min-width: 0;
+      scroll-snap-align: start;
+    }
+    .article-controls {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .article-controls button {
+      background: transparent;
+      border: 1px solid #aaa;
+      color: #333;
+      font: 24px Arial;
+      width: 36px;
+      height: 32px;
+      border-radius: 3px;
+    }
+    @media (max-width: 980px) {
+      .article-track {
+        grid-auto-columns: calc((100% - 15px) / 2);
+      }
+    }
+    @media (max-width: 767px) {
+      .article-track {
+        grid-auto-columns: 100%;
+      }
+    }
+  }
+</style>

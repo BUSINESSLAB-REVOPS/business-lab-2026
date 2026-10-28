@@ -1,0 +1,38 @@
+---
+interface Props {
+  class?: string;
+  name?: 'check' | 'training' | 'dot';
+}
+const { class: className, name = 'check' } = Astro.props;
+---
+
+<span class:list={['symbol', className]} aria-hidden="true">
+  <svg
+    viewBox="0 0 32 32"
+    width="1em"
+    height="1em"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    {name === 'training' ? (
+      <>
+        <path d="m5 27 2-8L22 4l6 6-15 15-8 2Zm14-20 6 6M7 19l6 6" />
+      </>
+    ) : name === 'dot' ? (
+      <circle cx="16" cy="16" r="4" fill="currentColor" stroke="none" />
+    ) : (
+      <>
+        <circle cx="16" cy="16" r="12" />
+        <path d="m10 16 4 4 8-9" />
+      </>
+    )}
+  </svg>
+</span>
+<style>
+  @layer components {
+    .symbol {
+      vertical-align: top;
+    }
+  }
+</style>

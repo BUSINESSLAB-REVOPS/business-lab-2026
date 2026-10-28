@@ -1,0 +1,202 @@
+---
+interface Props {
+  class?: string;
+  autoplay?: boolean;
+  interval?: number;
+  label?: string;
+}
+const {
+  class: className,
+  autoplay = false,
+  interval = 6000,
+  label = 'Presentación',
+} = Astro.props;
+---
+
+<bl-carousel
+  class:list={['carousel', className]}
+  data-autoplay={String(autoplay)}
+  data-interval={interval}
+  role="region"
+  aria-roledescription="carrusel"
+  aria-label={label}
+>
+  <div class="carousel-track">
+    <slot />
+  </div>
+  <div class="carousel-controls" hidden>
+    <button type="button" data-previous aria-label="Diapositiva anterior">
+      ‹
+    </button>
+    <button type="button" data-next aria-label="Diapositiva siguiente">
+      ›
+    </button>
+  </div>
+  <button
+    class="carousel-pause"
+    type="button"
+    data-pause
+    hidden
+    aria-label="Pausar carrusel"
+  >
+    Ⅱ
+  </button>
+</bl-carousel>
+<script>
+  class CarouselElement extends HTMLElement {
+    private cleanup?: () => void;
+    connectedCallback() {
+      if (this.cleanup) return;
+      const slides = Array.from(
+        this.querySelectorAll<HTMLElement>('[data-carousel-slide]'),
+      );
+      if (!slides.length) return;
+      const controller = new AbortController();
+      const options = { signal: controller.signal };
+      const motion = matchMedia('(prefers-reduced-motion: reduce)');
+      const pause = this.querySelector<HTMLButtonElement>('[data-pause]')!;
+      let active = 0;
+      let paused = false;
+      let timer: ReturnType<typeof setInterval> | undefined;
+      const stop = () => {
+        clearInterval(timer);
+        timer = undefined;
+      };
+      const show = (index: number) => {
+        active = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('is-active', i === active);
+          slide.inert = i !== active;
+          slide.setAttribute('aria-hidden', String(i !== active));
+        });
+      };
+      const sync = () => {
+        stop();
+        const blocked =
+          paused ||
+          motion.matches ||
+          document.hidden ||
+          this.matches(':hover') ||
+          this.contains(document.activeElement);
+        pause.textContent = paused || motion.matches ? '▷' : 'Ⅱ';
+        pause.disabled = motion.matches;
+        pause.setAttribute(
+          'aria-label',
+          motion.matches
+            ? 'Movimiento reducido: reproducción automática desactivada'
+            : paused
+              ? 'Reanudar carrusel'
+              : 'Pausar carrusel',
+        );
+        if (this.dataset.autoplay === 'true' && slides.length > 1 && !blocked)
+          timer = setInterval(
+            () => show(active + 1),
+            Number(this.dataset.interval) || 6000,
+          );
+      };
+      show(0);
+      this.dataset.ready = '';
+      if (slides.length > 1) {
+        this.querySelector<HTMLElement>('.carousel-controls')!.hidden = false;
+        pause.hidden = this.dataset.autoplay !== 'true';
+      }
+      this.querySelector('[data-previous]')?.addEventListener(
+        'click',
+        () => show(active - 1),
+        options,
+      );
+      this.querySelector('[data-next]')?.addEventListener(
+        'click',
+        () => show(active + 1),
+        options,
+      );
+      pause.addEventListener(
+        'click',
+        () => {
+          paused = !paused;
+          sync();
+        },
+        options,
+      );
+      this.addEventListener(
+        'keydown',
+        (event) => {
+          if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault();
+            show(active + (event.key === 'ArrowLeft' ? -1 : 1));
+          }
+        },
+        options,
+      );
+      for (const event of ['mouseenter', 'mouseleave', 'focusin'])
+        this.addEventListener(event, sync, options);
+      this.addEventListener('focusout', () => queueMicrotask(sync), options);
+      document.addEventListener('visibilitychange', sync, options);
+      motion.addEventListener('change', sync, options);
+      sync();
+      this.cleanup = () => {
+        stop();
+        controller.abort();
+        this.cleanup = undefined;
+      };
+    }
+    disconnectedCallback() {
+      this.cleanup?.();
+    }
+  }
+  if (!customElements.get('bl-carousel'))
+    customElements.define('bl-carousel', CarouselElement);
+</script>
+<style>
+  @layer components {
+    bl-carousel {
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+    bl-carousel[data-ready] > .carousel-track {
+      display: grid;
+    }
+    bl-carousel[data-ready] > .carousel-track > :global([data-carousel-slide]) {
+      grid-area: 1 / 1;
+    }
+    bl-carousel[data-ready]
+      > .carousel-track
+      > :global([data-carousel-slide]:not(.is-active)) {
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .carousel-controls {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .carousel-controls button {
+      pointer-events: auto;
+      border: 0;
+      border-radius: 4px;
+      background: #0007;
+      color: white;
+      font: 32px Arial;
+      width: 36px;
+      height: 44px;
+    }
+    .carousel-pause {
+      position: absolute;
+      right: 20px;
+      bottom: 18px;
+      z-index: 4;
+      border: 1px solid #ffffff80;
+      color: white;
+      background: #0006;
+      border-radius: 3px;
+      width: 34px;
+      height: 30px;
+    }
+  }
+</style>

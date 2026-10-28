@@ -1,0 +1,137 @@
+---
+import AssetImage from './AssetImage.astro';
+import Button from './Button.astro';
+import type { Article } from '../data/articles';
+interface Props {
+  post: Article;
+  class?: string;
+  id?: string;
+  variant?: 'featured' | 'slider';
+  showMeta?: boolean;
+  showAuthor?: boolean;
+  label?: string;
+}
+const {
+  post,
+  class: className,
+  id,
+  variant = 'slider',
+  showMeta = false,
+  showAuthor = false,
+  label = 'Leer más',
+} = Astro.props;
+---
+
+<div class={variant === 'slider' ? 'article-slide' : 'featured-post'}>
+  <article
+    class:list={[
+      variant === 'featured' ? 'post-card' : 'article-card',
+      className,
+    ]}
+  >
+    {post.image && (
+      <div
+        class={variant === 'featured' ? 'post-image' : 'article-image-wrapper'}
+      >
+        <a href={post.href} class="article-image-link" aria-label={post.title}>
+          <AssetImage
+            src={post.image}
+            alt=""
+            class="article-image"
+            sizes="(max-width: 767px) 86vw, (max-width: 980px) 40vw, 360px"
+          />
+        </a>
+      </div>
+    )}
+    <div class={variant === 'featured' ? 'post-content' : 'article-body'}>
+      {showMeta && variant === 'slider' && (
+        <p class="article-meta">
+          {post.category && (
+            <a href={post.categoryHref} class="article-categories">
+              {post.category}
+            </a>
+          )}{' '}
+          <span class="published">{post.date}</span>
+        </p>
+      )}
+      <h3
+        id={id}
+        class:list={[
+          variant === 'featured' ? 'post-title' : 'article-title',
+          'heading-size-2',
+        ]}
+      >
+        <a href={post.href}>{post.title}</a>
+      </h3>
+      {showMeta && variant === 'featured' && (
+        <p class="post-meta">
+          <span class="published">{post.date}</span> |{' '}
+          <a href={post.categoryHref} class="post-categories">
+            {post.category}
+          </a>
+        </p>
+      )}
+      <div
+        class={
+          variant === 'featured' ? 'post-content-inner' : 'article-excerpt'
+        }
+      >
+        <p>{post.excerpt}</p>
+      </div>
+      {variant === 'slider' && (
+        <div class="action-wrapper article-read-more">
+          <Button href={post.href}>{label}</Button>
+        </div>
+      )}
+      {showAuthor && (
+        <p class="article-meta article-meta-bottom">
+          <span class="author">
+            <a href={post.authorHref} rel="author">
+              {post.author}
+            </a>
+          </span>{' '}
+          <span class="comments">0</span>
+        </p>
+      )}
+    </div>
+  </article>
+</div>
+<style>
+  @layer components {
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 500px;
+    }
+    .article-image-wrapper {
+      height: 200px;
+      flex-shrink: 0;
+    }
+    .article-image-wrapper :global(img) {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .article-body {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 20px;
+    }
+    .article-title {
+      font-size: 20px;
+    }
+    .article-meta {
+      font-size: 14px;
+    }
+    .post-image :global(img) {
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      .article-card {
+        min-height: 0;
+      }
+    }
+  }
+</style>

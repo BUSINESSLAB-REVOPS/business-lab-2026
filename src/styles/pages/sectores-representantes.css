@@ -1,0 +1,421 @@
+/* Layout and typography for sectores-representantes. Component behavior lives in its component. */
+@layer pages {
+  @media (width <= 980px) {
+    .page-sectores-representantes .flex-row {
+      flex-wrap: wrap;
+    }
+  }
+  @media (width <= 980px) {
+    .page-sectores-representantes .flex-row > .content-column {
+      flex: 0 0 100%;
+      min-width: 0px;
+    }
+  }
+  .page-sectores-representantes .carousel-slide {
+    display: none;
+  }
+  .page-sectores-representantes .carousel-slide {
+    background-position: 50% center;
+    background-size: cover;
+    position: relative;
+  }
+  .page-sectores-representantes .slide-inner,
+  .page-sectores-representantes .slide-description {
+    z-index: 1;
+    position: relative;
+  }
+  .page-sectores-representantes .tone-dark .slide-title,
+  .page-sectores-representantes .tone-dark .slide-content,
+  .page-sectores-representantes .tone-dark .heading-title,
+  .page-sectores-representantes .tone-dark .header-content-wrapper {
+    color: rgb(255, 255, 255);
+  }
+  .page-sectores-representantes .carousel .carousel-slide > .slide-container {
+    height: 100%;
+  }
+  @media (width <= 767px) {
+    .page-sectores-representantes .carousel-slide .slide-title {
+      overflow-wrap: normal;
+      word-break: normal;
+      font-size: 32px;
+    }
+  }
+  @media (width >= 981px) {
+    .page-sectores-representantes .carousel .scene-image {
+      background-position: center top;
+      height: calc(100% + 30vh);
+      top: -18px;
+      bottom: auto;
+    }
+  }
+  .page-sectores-representantes .heading-size-1,
+  .page-sectores-representantes .heading-size-2 {
+    color: rgb(51, 51, 51);
+    padding-bottom: 10px;
+    line-height: 1em;
+    font-weight: 500;
+  }
+  .page-sectores-representantes .heading-size-1 {
+    font-size: 30px;
+  }
+  .page-sectores-representantes .heading-size-2 {
+    font-size: 26px;
+  }
+  .page-sectores-representantes .flex-column,
+  .page-sectores-representantes .stack,
+  .page-sectores-representantes .flex-row,
+  .page-sectores-representantes .flex-section {
+    display: flex;
+    column-gap: var(--horizontal-gap);
+    row-gap: var(--vertical-gap);
+    flex-direction: var(--flex-direction);
+  }
+  .page-sectores-representantes .flex-row {
+    --horizontal-gap: var(--row-gutter-horizontal);
+    --vertical-gap: var(--row-gutter-vertical);
+    --flex-direction: row;
+  }
+  .page-sectores-representantes .flex-section {
+    --horizontal-gap: var(--section-gutter);
+    --vertical-gap: var(--section-gutter);
+    --flex-direction: column;
+    align-items: center;
+  }
+  .page-sectores-representantes .flex-column,
+  .page-sectores-representantes .stack {
+    --flex-direction: column;
+    --horizontal-gap: var(--module-gutter);
+    --vertical-gap: var(--module-gutter);
+  }
+  .page-sectores-representantes .column-24-24 {
+    width: calc(100% - var(--horizontal-gap-parent, 5.5%) * 0 / 1);
+  }
+  .page-sectores-representantes .flex-section > .content-row {
+    margin: initial;
+  }
+  .page-sectores-representantes .column-empty {
+    min-height: 1px;
+  }
+  .page-sectores-representantes .content-column,
+  .page-sectores-representantes .content-row {
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: 980px) {
+    .page-sectores-representantes .content-column.column-empty {
+      display: none;
+    }
+  }
+  .page-sectores-representantes .carousel {
+    --vertical-gap: 0px;
+    --horizontal-gap: 0px;
+  }
+  .page-sectores-representantes .carousel .slide-container {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    z-index: 2;
+  }
+  .page-sectores-representantes .carousel-track .slide-container {
+    display: table;
+    table-layout: fixed;
+  }
+  .page-sectores-representantes .carousel-track .slide-inner {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+  .page-sectores-representantes .slide-content {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+  }
+  .page-sectores-representantes .slide-content p:last-of-type {
+    padding-bottom: 0px;
+  }
+  .page-sectores-representantes .tone-dark .slide-content {
+    color: rgb(255, 255, 255);
+  }
+  .page-sectores-representantes .slide-description {
+    overflow-wrap: break-word;
+    --vertical-gap: 20px;
+  }
+  .page-sectores-representantes .tone-dark .slide-description {
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+  }
+  .page-sectores-representantes .slide-description {
+    padding: 16% 8%;
+    width: auto;
+    margin: auto;
+  }
+  .page-sectores-representantes .slide-description .slide-title {
+    font-weight: 300;
+    margin-top: 0px;
+  }
+  .page-sectores-representantes .slide-description .heading-size-2.slide-title {
+    font-size: 46px;
+  }
+  .page-sectores-representantes .carousel .action-link {
+    margin-top: 0px;
+  }
+  .page-sectores-representantes .carousel .slide-title {
+    padding-bottom: 0px;
+  }
+  @media (max-width: 980px) {
+    .page-sectores-representantes
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 26px;
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-sectores-representantes .slide-description .slide-title {
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-sectores-representantes .slide-content {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-sectores-representantes .slide-description {
+      text-align: center;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-sectores-representantes .slide-content {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-sectores-representantes
+      .carousel.content-block
+      .carousel-track
+      .slide-content {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-sectores-representantes
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 24px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-sectores-representantes
+      .carousel.content-block
+      .carousel-track
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-sectores-representantes .slide-description {
+      text-align: center;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-sectores-representantes
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-sectores-representantes .slide-content {
+      font-weight: 400;
+      font-size: 10px;
+      display: block;
+    }
+  }
+  .page-sectores-representantes .carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  .page-sectores-representantes .carousel-slide {
+    padding: 0px 6%;
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+  .page-sectores-representantes .carousel .carousel-slide {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-position: 50% center;
+    background-size: cover;
+  }
+  .page-sectores-representantes {
+    font-size: 18px;
+  }
+  .page-sectores-representantes .slide-content {
+    font-size: 20px;
+  }
+  .page-sectores-representantes {
+    font-weight: 400;
+  }
+  .page-sectores-representantes .slide-content {
+    font-weight: 400;
+  }
+  .page-sectores-representantes .heading-size-1,
+  .page-sectores-representantes .heading-size-2,
+  .page-sectores-representantes .slide-description .slide-title {
+    line-height: 1.2em;
+  }
+  .page-sectores-representantes .heading-size-1 {
+    font-size: 32px;
+  }
+  .page-sectores-representantes .heading-size-2 {
+    font-size: 27px;
+  }
+  .page-sectores-representantes .slide-description .slide-title {
+    font-size: 48px;
+  }
+  .page-sectores-representantes .heading-size-1 {
+    font-weight: 600;
+  }
+  .page-sectores-representantes .heading-size-2 {
+    font-weight: 600;
+  }
+  .page-sectores-representantes .slide-description .slide-title {
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-sectores-representantes .heading-size-1 {
+      font-size: 28px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-sectores-representantes .heading-size-2 {
+      font-size: 24px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-sectores-representantes
+      .carousel.content-block
+      .carousel-track
+      .slide-description
+      .slide-title {
+      font-size: 42px;
+    }
+  }
+  .page-sectores-representantes .heading-size-1,
+  .page-sectores-representantes .heading-size-2 {
+    font-family: var(--font-heading);
+  }
+  .page-sectores-representantes
+    .fullwidth-slider-1
+    .carousel-slide
+    .slide-description {
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-sectores-representantes .fullwidth-slider-1.carousel .slide-content {
+    font-size: 18px;
+  }
+  .page-sectores-representantes .fullwidth-slider-1 .slide-link.action-link {
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: solid;
+  }
+  .page-sectores-representantes .carousel .slide-1 {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  .page-sectores-representantes .slide-1 .slide-description .slide-title,
+  .page-sectores-representantes .slide-1 .slide-description .slide-content,
+  .page-sectores-representantes
+    .carousel-track
+    .slide-1.carousel-slide
+    .slide-description {
+    text-align: start;
+  }
+  .page-sectores-representantes
+    .carousel
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-title {
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-sectores-representantes
+    .carousel.content-block
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-content {
+    font-size: 28px;
+    line-height: 1.9em;
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-sectores-representantes
+    .slide-1.carousel-slide
+    .slide-link.action-link {
+    background-color: rgb(131, 0, 233);
+    letter-spacing: 2px;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-sectores-representantes .fullwidth-slider-1 .slide-link.action-link {
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-sectores-representantes
+      .carousel.content-block
+      .slide-1.carousel-slide
+      .slide-description
+      .slide-content {
+      font-size: 24px;
+    }
+  }
+}
+@layer overrides {
+  @media (width <= 980px) {
+    .page-sectores-representantes .flex-row > .content-column {
+      width: 100%;
+    }
+  }
+  @media (width <= 767px) {
+    .page-sectores-representantes .carousel-slide .slide-title {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+  }
+  .page-sectores-representantes .tone-dark,
+  .page-sectores-representantes .tone-dark .heading-size-1,
+  .page-sectores-representantes .tone-dark .heading-size-2 {
+    color: rgb(255, 255, 255);
+  }
+  .page-sectores-representantes .carousel .carousel-slide {
+    list-style: none;
+  }
+  .page-sectores-representantes
+    .fullwidth-slider-1.carousel
+    .slide-description
+    .slide-title {
+    font-size: 52px;
+  }
+  .page-sectores-representantes
+    .carousel
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-title {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.3em;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-sectores-representantes
+      .carousel
+      .slide-1.carousel-slide
+      .slide-description
+      .slide-title {
+      font-size: 38px;
+    }
+  }
+}
