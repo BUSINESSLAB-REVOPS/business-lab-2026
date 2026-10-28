@@ -1,0 +1,385 @@
+/* Layout and typography for nosotros-faqs. Component behavior lives in its component. */
+@layer overrides {
+  @media (min-width: 981px) {
+    .page-nosotros-faqs .faq-list > .faq-item:not(:last-child) {
+      margin-bottom: 2.75%;
+    }
+  }
+}
+@layer pages {
+  .page-nosotros-faqs .faq-question {
+    cursor: pointer;
+  }
+  .page-nosotros-faqs .tone-dark .heading-title,
+  .page-nosotros-faqs .tone-dark .header-content-wrapper {
+    color: rgb(255, 255, 255);
+  }
+  .page-nosotros-faqs .heading-size-1,
+  .page-nosotros-faqs .heading-size-5 {
+    color: rgb(51, 51, 51);
+    padding-bottom: 10px;
+    line-height: 1em;
+    font-weight: 500;
+  }
+  .page-nosotros-faqs .heading-size-1 {
+    font-size: 30px;
+  }
+  .page-nosotros-faqs .heading-size-5 {
+    font-size: 16px;
+  }
+  .page-nosotros-faqs img {
+    max-width: 100%;
+    height: auto;
+  }
+  .page-nosotros-faqs .tone-light.action-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  @media (max-width: 980px) {
+    .page-nosotros-faqs .content-column .content-block {
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-nosotros-faqs .content-row .content-column .content-block:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  @media (min-width: 981px) {
+    .page-nosotros-faqs .block-row .content-column {
+      margin-right: 5.5%;
+    }
+  }
+  @media (min-width: 981px) {
+    .page-nosotros-faqs .block-row .span-4-4 {
+      width: 100%;
+    }
+  }
+  @media (min-width: 981px) {
+    .page-nosotros-faqs .block-row .span-1-2 {
+      width: 47.25%;
+    }
+  }
+  @media (min-width: 981px) {
+    .page-nosotros-faqs .span-4-4.block-column .content-block {
+      margin-bottom: 2.75%;
+    }
+  }
+  @media (min-width: 981px) {
+    .page-nosotros-faqs .span-1-2.block-column .content-block {
+      margin-bottom: 5.82%;
+    }
+  }
+  .page-nosotros-faqs .stack {
+    display: flex;
+    column-gap: var(--horizontal-gap);
+    row-gap: var(--vertical-gap);
+    flex-direction: var(--flex-direction);
+  }
+  .page-nosotros-faqs .stack {
+    --flex-direction: column;
+    --horizontal-gap: var(--module-gutter);
+    --vertical-gap: var(--module-gutter);
+  }
+  .page-nosotros-faqs .content-column,
+  .page-nosotros-faqs .content-row {
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: 981px) {
+    .page-nosotros-faqs .block-row {
+      padding: 2% 0px;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-nosotros-faqs .block-row {
+      padding: 30px 0px;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-nosotros-faqs .block-row .content-column {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  .page-nosotros-faqs .copy {
+    overflow-wrap: break-word;
+    line-height: var(--body-line-height, 1.7em);
+  }
+  .page-nosotros-faqs .copy > :last-child {
+    padding-bottom: 0px;
+  }
+  .page-nosotros-faqs .copy-inner {
+    position: relative;
+  }
+  .page-nosotros-faqs .heading-container {
+    position: relative;
+    width: 100%;
+  }
+  .page-nosotros-faqs .testimonial-description-inner {
+    overflow-wrap: break-word;
+  }
+  .page-nosotros-faqs .testimonial {
+    position: relative;
+    padding: 30px;
+    line-height: 1.5;
+  }
+  .page-nosotros-faqs .testimonial .testimonial-content {
+    line-height: 1.5em;
+  }
+  .page-nosotros-faqs .testimonial .testimonial-meta {
+    padding-bottom: 0px;
+  }
+  .page-nosotros-faqs .testimonial-portrait {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    margin-right: 30px;
+    box-sizing: content-box;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px inset;
+    border-radius: 90px;
+  }
+  .page-nosotros-faqs .testimonial-portrait img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+  .page-nosotros-faqs .testimonial.block-module .testimonial-author {
+    margin-top: 32px;
+    display: block;
+  }
+  .page-nosotros-faqs .testimonial-author {
+    font-weight: 700;
+    width: 100%;
+  }
+  .page-nosotros-faqs .testimonial-company,
+  .page-nosotros-faqs .testimonial-meta,
+  .page-nosotros-faqs .testimonial-position {
+    display: inline-block;
+  }
+  @media (min-width: 768px) and (max-width: 980px) {
+    .page-nosotros-faqs .content-column .testimonial-portrait {
+      display: block;
+      margin-right: 30px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 980px) {
+    .page-nosotros-faqs .content-column .testimonial-description {
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-nosotros-faqs .content-column .testimonial-description {
+      width: 100%;
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-nosotros-faqs .content-column .testimonial-portrait {
+      display: block;
+      margin: 0px auto 20px;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-nosotros-faqs .testimonial {
+      padding-top: 10%;
+    }
+  }
+  .page-nosotros-faqs .tone-light.content-block.action-link {
+    color: rgb(46, 163, 242);
+  }
+  .page-nosotros-faqs .action-link {
+    display: inline-block;
+  }
+  .page-nosotros-faqs {
+    font-size: 18px;
+  }
+  .page-nosotros-faqs {
+    font-weight: 400;
+  }
+  .page-nosotros-faqs .heading-size-1,
+  .page-nosotros-faqs .heading-size-5 {
+    line-height: 1.2em;
+  }
+  @media only screen and (min-width: 1350px) {
+    .page-nosotros-faqs .block-row {
+      padding: 27px 0px;
+    }
+  }
+  .page-nosotros-faqs .heading-size-1 {
+    font-size: 32px;
+  }
+  .page-nosotros-faqs .heading-size-1 {
+    font-weight: 600;
+  }
+  .page-nosotros-faqs .heading-size-5 {
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-nosotros-faqs .heading-size-1 {
+      font-size: 28px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-nosotros-faqs .heading-size-5 {
+      font-size: 14px;
+    }
+  }
+  .page-nosotros-faqs .heading-size-1,
+  .page-nosotros-faqs .heading-size-5 {
+    font-family: var(--font-heading);
+  }
+  .page-nosotros-faqs .testimonial-1 {
+    background-color: rgb(245, 245, 245);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 18px -6px;
+    text-align: start;
+  }
+  .page-nosotros-faqs .testimonial-1 .testimonial-inner {
+    overflow: hidden;
+  }
+  .page-nosotros-faqs .testimonial-1::before {
+    font-size: 22px;
+    line-height: 22px;
+    border-radius: 22px;
+    top: -11px;
+    margin-left: -11px;
+  }
+  .page-nosotros-faqs .testimonial-1.testimonial .testimonial-author,
+  .page-nosotros-faqs .testimonial-1.testimonial .testimonial-position,
+  .page-nosotros-faqs .testimonial-1.testimonial .testimonial-separator,
+  .page-nosotros-faqs .testimonial-1.testimonial .testimonial-content {
+    font-size: 13px;
+  }
+  .page-nosotros-faqs .testimonial-1.testimonial .testimonial-company {
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .page-nosotros-faqs .button-1-wrapper,
+  .page-nosotros-faqs .text-8 {
+    text-align: center;
+  }
+  .page-nosotros-faqs .button-1-wrapper .button-1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page-nosotros-faqs .page-section .button-1 {
+    border-radius: 0px;
+    border-width: 0px;
+    border-color: rgb(51, 51, 51);
+    border-style: solid;
+  }
+  .page-nosotros-faqs .heading-2 .heading-container .heading-size-1 {
+    text-align: center;
+  }
+  .page-nosotros-faqs .text-8 .copy-inner {
+    font-weight: 600;
+  }
+  .page-nosotros-faqs .text-9,
+  .page-nosotros-faqs .text-10 {
+    text-align: start;
+  }
+  .page-nosotros-faqs .faq-list {
+    --vertical-gap: 10px;
+  }
+  .page-nosotros-faqs .faq-list .faq-question::before {
+    right: 0px;
+    left: auto;
+  }
+  .page-nosotros-faqs .faq-list.block-module .faq-item {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .page-nosotros-faqs .faq-list .faq-item:last-child {
+    margin-bottom: 0px;
+  }
+  .page-nosotros-faqs .faq-answer,
+  .page-nosotros-faqs .faq-question {
+    overflow-wrap: break-word;
+  }
+  .page-nosotros-faqs .faq-item {
+    border: 1px solid rgb(217, 217, 217);
+    --vertical-gap: 0;
+  }
+  .page-nosotros-faqs .faq-item .faq-question,
+  .page-nosotros-faqs .faq-item .heading-size-5.faq-question {
+    cursor: pointer;
+    position: relative;
+    padding: 0px 50px 0px 0px;
+  }
+  .page-nosotros-faqs .faq-item .faq-question::before {
+    right: 0px;
+    left: auto;
+  }
+  .page-nosotros-faqs .faq-answer {
+    position: relative;
+    padding-top: 20px;
+  }
+  .page-nosotros-faqs .faq-answer:not(:has(.content-block)) {
+    --vertical-gap: 0;
+  }
+  .page-nosotros-faqs .faq-answer p:last-of-type {
+    padding-bottom: 0px;
+  }
+  .page-nosotros-faqs .accordion-1.faq-list .faq-item {
+    border-radius: 16px;
+    border-width: 0px;
+    border-color: rgb(51, 51, 51);
+    border-style: solid;
+    overflow: hidden;
+  }
+  .page-nosotros-faqs .accordion-1 .faq-item {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 18px -6px;
+  }
+  .page-nosotros-faqs .accordion-item-12.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-13.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-14.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-15.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-16.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-17.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-18.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-19.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-20.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-21.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-22.faq-item .faq-answer,
+  .page-nosotros-faqs .accordion-item-23.faq-item .faq-answer {
+    font-size: 14px;
+  }
+  .page-nosotros-faqs .heading-3 .heading-container .heading-size-1 {
+    text-align: center;
+  }
+  .page-nosotros-faqs .section-5 {
+    border-radius: 0px;
+  }
+}
+@layer overrides {
+  .page-nosotros-faqs .tone-dark,
+  .page-nosotros-faqs .tone-dark .heading-size-1 {
+    color: rgb(255, 255, 255);
+  }
+  @media (max-width: 479px) {
+    .page-nosotros-faqs .block-row .content-column {
+      width: 100%;
+    }
+  }
+  .page-nosotros-faqs .page-section .button-1 {
+    color: #2a2a2a;
+    padding-right: 2em;
+    padding-left: 0.7em;
+  }
+  .page-nosotros-faqs .heading-2 .heading-container .heading-size-1 {
+    color: #072130;
+  }
+  .page-nosotros-faqs .heading-3 .heading-container .heading-size-1 {
+    color: var(--color-soft);
+  }
+  .page-nosotros-faqs .section-5 {
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/Slide43-1-background.webp');
+  }
+}

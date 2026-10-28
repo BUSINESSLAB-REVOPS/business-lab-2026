@@ -1,0 +1,62 @@
+---
+interface Props {
+  question: string;
+  open?: boolean;
+  class?: string;
+}
+const { question, open = false, class: className } = Astro.props;
+---
+
+<details class:list={['faq-item', className]} open={open}>
+  <summary class="faq-question heading-size-5">{question}</summary>
+  <div class="faq-answer">
+    <slot />
+  </div>
+</details>
+<style>
+  @layer components {
+    .faq-item {
+      border: 1px solid #d9d9d9;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    .faq-question {
+      position: relative;
+      padding-right: 26px;
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--font-heading);
+      font-weight: 500;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 0;
+      font: 22px Arial;
+      color: #777;
+    }
+    .faq-item[open] .faq-question::after {
+      content: '−';
+    }
+    .faq-answer {
+      padding-top: 20px;
+    }
+  }
+</style>
+<style>
+  @layer overrides {
+    .faq-item[open] {
+      background: #fff;
+    }
+    .faq-question {
+      color: #666;
+    }
+    .faq-item[open] .faq-question {
+      color: #333;
+    }
+  }
+</style>

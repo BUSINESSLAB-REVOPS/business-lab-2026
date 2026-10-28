@@ -1,57 +1,491 @@
 ---
+import Section from '../Section.astro';
+import Carousel from '../Carousel.astro';
+import Slide from '../Slide.astro';
+import Button from '../Button.astro';
+import ArticleScroller from '../ArticleScroller.astro';
+import ArticleCard from '../ArticleCard.astro';
 import CTA from '../CTA.astro';
+import { articles } from '../../data/articles';
+import '../../styles/pages/blog.css';
 ---
-<div id="main-content">
 
-
-
-				<article id="post-584" class="post-584 page type-page status-publish hentry">
-
-
-					<div class="entry-content">
-					<div class="et-l et-l--post">
-			<div class="et_builder_inner_content">
-		<div class="et_pb_section_4 et_pb_section et_section_specialty et_flex_section"><div class="et_pb_row et_pb_row-3-4_1-4 et_flex_row"><div class="et_pb_column_6 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_24_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone et_pb_column_single"><div class="et_pb_row_inner_1 et_pb_row_inner et_flex_row"><div class="et_pb_column_inner_1 et_pb_column_inner et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough"><div class="et_pb_post_slider_1 et_pb_post_slider et_pb_bg_layout_dark et_pb_slider et_pb_slider_fullwidth_off et_pb_slider_no_pagination et_pb_post_slider_image_background et_pb_slider_with_overlay et_pb_module et_flex_module"><div class="et_pb_slides"><div class="et_pb_slide et_pb_post_slide-25980791 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/uniflex-blog-growth-machine-5.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="institucion-educativa"><a href="https://business-lab.net/casos-uso/institucion-educativa/">Institucion Educativa</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>Revertir su caída de matrículas y modernizar su gestión integral en solo 10 meses</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/casos-uso/institucion-educativa/">Read More</a></div></div></div></div></div><div class="et_pb_slide et_pb_post_slide-25980784 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/pexels-olly-3789100-scaled.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="5-senales-de-que-necesitas-una-maquina-comercial"><a href="https://business-lab.net/articulos/5-senales-de-que-necesitas-una-maquina-comercial/">5 señales de que necesitas una maquina comercial</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>Muchos fundadores y gerentes de SaaS llegan a un punto en que el marketing y el boca a boca ya no da más</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/articulos/5-senales-de-que-necesitas-una-maquina-comercial/">Read More</a></div></div></div></div></div><div class="et_pb_slide et_pb_post_slide-25980755 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/Slide29.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025"><a href="https://business-lab.net/articulos/como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025/">Cómo la Inteligencia Artificial está Redefiniendo el Marketing Digital en 2025</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>La IA ya es una realidad, en 2025, es el motor de las estrategias de marketing más eficaces y escalables del mundo</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/articulos/como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025/">Read More</a></div></div></div></div></div><div class="et_pb_slide et_pb_post_slide-25980729 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/GUIA-DIAGNOSTICO-REVENUE-FACTORY-1.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="guia-de-diagnostico-de-madurez-comercial"><a href="https://business-lab.net/articulos/guia-de-diagnostico-de-madurez-comercial/">Guía de Diagnóstico de Madurez Comercial</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>La herramienta que usamos para evaluar los factores que componen nuestra metodología REVENUE FACTORY</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/articulos/guia-de-diagnostico-de-madurez-comercial/">Read More</a></div></div></div></div></div><div class="et_pb_slide et_pb_post_slide-25980708 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/Slide1-1.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="como-aplicamos-la-metodologia-revenue-factory"><a href="https://business-lab.net/articulos/como-aplicamos-la-metodologia-revenue-factory/">Cómo Aplicamos la metodología REVENUE FACTORY</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>En este artículo te explicamos cómo crear un un plan de acción concreto para mejorar tus ventas.</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/articulos/como-aplicamos-la-metodologia-revenue-factory/">Read More</a></div></div></div></div></div><div class="et_pb_slide et_pb_post_slide-25980691 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/Slide24.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="como-escalar-tus-ventas-b2b-con-una-ecuacion"><a href="https://business-lab.net/articulos/como-escalar-tus-ventas-b2b-con-una-ecuacion/">Cómo Escalar tus Ventas B2B con una Ecuación</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>Una fórmula que nos permite analizar, optimizar y escalar cada parte del proceso comercial con claridad y método</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/articulos/como-escalar-tus-ventas-b2b-con-una-ecuacion/">Read More</a></div></div></div></div></div><div class="et_pb_slide et_pb_post_slide-25980683 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/Slide3-1.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="como-convertimos-la-venta-b2b-en-un-sistema-que-escala"><a href="https://business-lab.net/articulos/como-convertimos-la-venta-b2b-en-un-sistema-que-escala/">Cómo Convertimos la Venta B2B en un Sistema que Escala</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>La metodología REVENUE FACTORY se basa en 6 etapas que atacan las causas por las que una empresa no vende más</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/articulos/como-convertimos-la-venta-b2b-en-un-sistema-que-escala/">Read More</a></div></div></div></div></div><div class="et_pb_slide et_pb_post_slide-25980672 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/Slide90.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="te-quieren-volver-influencerguia-para-detectarlo-parte-2"><a href="https://business-lab.net/articulos/te-quieren-volver-influencer-guia-para-detectarlo/">Te quieren volver influencer&#8230;Guia para detectarlo Parte 2</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>Saber detectar si te están vendiendo marketing de influencer cuando tú vendes a empresas</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/articulos/te-quieren-volver-influencer-guia-para-detectarlo/">Read More</a></div></div></div></div></div><div class="et_pb_slide et_pb_post_slide-25980662 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/influencer-dark.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="te-quieren-volver-influencer-pero-tu-vendes-a-empresas-parte-1"><a href="https://business-lab.net/articulos/te-quieren-volver-influencer-pero-tu-vendes-a-empresas/">Te quieren volver influencer… pero tú vendes a empresas Parte 1</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>Si tú diriges una empresa B2B esa receta no solo es ineficaz, puede ser peligrosa para tu marca</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/articulos/te-quieren-volver-influencer-pero-tu-vendes-a-empresas/">Read More</a></div></div></div></div></div><div class="et_pb_slide et_pb_post_slide-25980653 et_pb_bg_layout_dark" style="background-repeat:no-repeat;background-image:url('/assets/Slide38.jpg');background-color:var(--gcid-primary-color)"><div class="et_pb_slide_overlay_container"></div><div class="et_pb_container clearfix"><div class="et_pb_slider_container_inner"><div class="et_pb_slide_description"><h2 class="et_pb_slide_title" id="consultoria-real-vs-express"><a href="https://business-lab.net/articulos/distinguir-entre-una-consultoria-real-y-un-analisis-express/">Consultoría real vs Express</a></h2><div class="et_pb_slide_content"><div class="et_pb_slide_content_body"><p>Aprende a distinguir entre una consultoría real y un «análisis express» que te vende un enlatado</p>
-</div></div><div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_more_button" href="https://business-lab.net/articulos/distinguir-entre-una-consultoria-real-y-un-analisis-express/">Read More</a></div></div></div></div></div></div></div></div></div></div><div class="et_pb_column_7 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_24_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone et_pb_column_single"><div class="et_pb_heading_1 et_pb_heading et_pb_module et_flex_module"><div class="et_pb_heading_container"><h1 class="et_pb_module_header">Lee nuestros ultimos articulos</h1></div></div><div class="et_pb_text_6 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p>Descubre las ultimas tendencias, tecnicas y tecnologias para llevar a tu empresa de tecnologia al siguiente nivel</p>
-</div></div></div></div></div><div class="et_pb_section_5 et_pb_section et_section_regular et_flex_section"><div class="et_pb_row_2 et_pb_row et_flex_row"><div class="et_pb_column_8 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_24_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone">
-<div class="et_pb_module et_d4_element dipl_blog_slider dipl_blog_slider_0 et_animated">
-
-
-
-
-
-
-				<div class="et_pb_module_inner">
-					<div class="dipl_swiper_wrapper" data-slide_effect="slide" data-show_arrow="on" data-show_control_dot="on" data-slider_loop="off" data-autoplay="on" data-autoplay_speed="3000" data-transition_duration="1000" data-pause_on_hover="on" data-auto_height_slider="off" data-enable_coverflow_shadow="off" data-coverflow_rotate="40" data-coverflow_depth="100" data-enable_dynamic_dots="off" data-per_view="3" data-per_view_tablet="3" data-per_view_phone="3" data-space_between_slides="15px" data-space_between_slides_tablet="15px" data-space_between_slides_phone="15px" data-per_group="1" data-per_group_tablet="1" data-per_group_phone="1"><div class="dipl_blog_slider_container dipl_swiper_inner_wrap layout3"><div class="swiper-container"><div class="swiper-wrapper"><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980784" class=" dipl_blog_slider_post post-25980784 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/5-senales-de-que-necesitas-una-maquina-comercial/" class="dipl_blog_slider_image_link"><img fetchpriority="high" decoding="async" width="300" height="200" src="/assets/pexels-olly-3789100-300x200.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="5-senales-de-que-necesitas-una-maquina-comercial"><a href="https://business-lab.net/articulos/5-senales-de-que-necesitas-una-maquina-comercial/">5 señales de que necesitas una maquina comercial</a></h2><div class="dipl_blog_slider_content"><p>Muchos fundadores y gerentes de SaaS llegan a un punto en que el marketing y el boca a boca ya no da más</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/5-senales-de-que-necesitas-una-maquina-comercial/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980755" class=" dipl_blog_slider_post post-25980755 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025/" class="dipl_blog_slider_image_link"><img loading="lazy" decoding="async" width="300" height="169" src="/assets/Slide29-300x169.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025"><a href="https://business-lab.net/articulos/como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025/">Cómo la Inteligencia Artificial está Redefiniendo el Marketing Digital en 2025</a></h2><div class="dipl_blog_slider_content"><p>La IA ya es una realidad, en 2025, es el motor de las estrategias de marketing más eficaces y escalables del mundo</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980729" class=" dipl_blog_slider_post post-25980729 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/guia-de-diagnostico-de-madurez-comercial/" class="dipl_blog_slider_image_link"><img loading="lazy" decoding="async" width="300" height="169" src="/assets/GUIA-DIAGNOSTICO-REVENUE-FACTORY-1-300x169.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="guia-de-diagnostico-de-madurez-comercial"><a href="https://business-lab.net/articulos/guia-de-diagnostico-de-madurez-comercial/">Guía de Diagnóstico de Madurez Comercial</a></h2><div class="dipl_blog_slider_content"><p>La herramienta que usamos para evaluar los factores que componen nuestra metodología REVENUE FACTORY</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/guia-de-diagnostico-de-madurez-comercial/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980708" class=" dipl_blog_slider_post post-25980708 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/como-aplicamos-la-metodologia-revenue-factory/" class="dipl_blog_slider_image_link"><img loading="lazy" decoding="async" width="300" height="169" src="/assets/Slide1-1-300x169.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="como-aplicamos-la-metodologia-revenue-factory"><a href="https://business-lab.net/articulos/como-aplicamos-la-metodologia-revenue-factory/">Cómo Aplicamos la metodología REVENUE FACTORY</a></h2><div class="dipl_blog_slider_content"><p>En este artículo te explicamos cómo crear un un plan de acción concreto para mejorar tus ventas.</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/como-aplicamos-la-metodologia-revenue-factory/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980691" class=" dipl_blog_slider_post post-25980691 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/como-escalar-tus-ventas-b2b-con-una-ecuacion/" class="dipl_blog_slider_image_link"><img loading="lazy" decoding="async" width="300" height="169" src="/assets/Slide24-300x169.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="como-escalar-tus-ventas-b2b-con-una-ecuacion"><a href="https://business-lab.net/articulos/como-escalar-tus-ventas-b2b-con-una-ecuacion/">Cómo Escalar tus Ventas B2B con una Ecuación</a></h2><div class="dipl_blog_slider_content"><p>Una fórmula que nos permite analizar, optimizar y escalar cada parte del proceso comercial con claridad y método</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/como-escalar-tus-ventas-b2b-con-una-ecuacion/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980683" class=" dipl_blog_slider_post post-25980683 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/como-convertimos-la-venta-b2b-en-un-sistema-que-escala/" class="dipl_blog_slider_image_link"><img loading="lazy" decoding="async" width="300" height="169" src="/assets/Slide3-1-300x169.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="como-convertimos-la-venta-b2b-en-un-sistema-que-escala"><a href="https://business-lab.net/articulos/como-convertimos-la-venta-b2b-en-un-sistema-que-escala/">Cómo Convertimos la Venta B2B en un Sistema que Escala</a></h2><div class="dipl_blog_slider_content"><p>La metodología REVENUE FACTORY se basa en 6 etapas que atacan las causas por las que una empresa no vende más</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/como-convertimos-la-venta-b2b-en-un-sistema-que-escala/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980672" class=" dipl_blog_slider_post post-25980672 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/te-quieren-volver-influencer-guia-para-detectarlo/" class="dipl_blog_slider_image_link"><img loading="lazy" decoding="async" width="300" height="169" src="/assets/Slide90-300x169.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="te-quieren-volver-influencerguia-para-detectarlo-parte-2"><a href="https://business-lab.net/articulos/te-quieren-volver-influencer-guia-para-detectarlo/">Te quieren volver influencer&#8230;Guia para detectarlo Parte 2</a></h2><div class="dipl_blog_slider_content"><p>Saber detectar si te están vendiendo marketing de influencer cuando tú vendes a empresas</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/te-quieren-volver-influencer-guia-para-detectarlo/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980662" class=" dipl_blog_slider_post post-25980662 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/te-quieren-volver-influencer-pero-tu-vendes-a-empresas/" class="dipl_blog_slider_image_link"><img loading="lazy" decoding="async" width="300" height="169" src="/assets/influencer-dark-300x169.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="te-quieren-volver-influencer-pero-tu-vendes-a-empresas-parte-1"><a href="https://business-lab.net/articulos/te-quieren-volver-influencer-pero-tu-vendes-a-empresas/">Te quieren volver influencer… pero tú vendes a empresas Parte 1</a></h2><div class="dipl_blog_slider_content"><p>Si tú diriges una empresa B2B esa receta no solo es ineficaz, puede ser peligrosa para tu marca</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/te-quieren-volver-influencer-pero-tu-vendes-a-empresas/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980653" class=" dipl_blog_slider_post post-25980653 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/distinguir-entre-una-consultoria-real-y-un-analisis-express/" class="dipl_blog_slider_image_link"><img loading="lazy" decoding="async" width="300" height="169" src="/assets/Slide38-300x169.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="consultoria-real-vs-express"><a href="https://business-lab.net/articulos/distinguir-entre-una-consultoria-real-y-un-analisis-express/">Consultoría real vs Express</a></h2><div class="dipl_blog_slider_content"><p>Aprende a distinguir entre una consultoría real y un «análisis express» que te vende un enlatado</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/distinguir-entre-una-consultoria-real-y-un-analisis-express/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div><div class="dipl_blog_post_slide swiper-slide"><article id="post-25980625" class=" dipl_blog_slider_post post-25980625 post type-post status-publish format-standard has-post-thumbnail hentry category-articulos" ><div class="dipl_blog_slider_image_wrapper"><a href="https://business-lab.net/articulos/porque-tu-empresa-b2b-no-esta-creciendo/" class="dipl_blog_slider_image_link"><img loading="lazy" decoding="async" width="300" height="169" src="/assets/Slide9-300x169.jpg" class="dipl_blog_slider_post_image wp-post-image" alt="" /></a></div> <!-- dipl_blog_slider_image_wrapper --><div class="dipl_blog_slider_content_wrapper"><h2 class="dipl_blog_slider_post_title" id="porque-tu-empresa-b2b-no-esta-creciendo"><a href="https://business-lab.net/articulos/porque-tu-empresa-b2b-no-esta-creciendo/">Porque tu empresa B2B no esta creciendo</a></h2><div class="dipl_blog_slider_content"><p>6 errores comunes que frenan la escalabilidad de empresas tecnologicas que buscan crecer</p>
-</div><div class="et_pb_button_wrapper dipl_blog_slider_read_more_link"><a class="et_pb_button" href="https://business-lab.net/articulos/porque-tu-empresa-b2b-no-esta-creciendo/">Leer más</a></div></div> <!-- dipl_blog_slider_content_wrapper --></article></div></div> <!-- swiper-wrapper --></div> <!-- swiper-container --><div class="dipl_swiper_navigation" data-arrows_desktop="outside"><div class="swiper-button-next" data-next_slide_arrow="&#x35;"></div> <div class="swiper-button-prev" data-previous_slide_arrow="&#x34;"></div></div></div> <!-- dipl_blog_slider_container --><div class="dipl_swiper_pagination"><div class="swiper-pagination solid_dot"></div></div></div> <!-- dipl_swiper_wrapper -->
-				</div>
-			</div>
-</div></div></div><div class="et_pb_section_6 et_pb_section et_pb_fullwidth_section et_section_regular et_flex_section"><CTA /></div>
-		</div>
-	</div>
-						</div>
-
-
-				</article>
-
-
-
+<div class="page-content page-blog">
+  <Section class="section-4 page-section section-specialty flex-section">
+    <div class="content-row row-3-4-1-4 flex-row" style=";--columns:2">
+      <div class="column-6 content-column flex-column column-24-24 column-24-24-tablet column-24-24-phone column-single">
+        <div class="row-inner-1 row-inner flex-row">
+          <div class="column-inner-1 column-inner last-column flex-column">
+            <Carousel
+              class="post-slider-1 article-hero tone-dark carousel slider-fullwidth-off post-slider-image-background slider-with-overlay content-block stack"
+              autoplay={false}
+              label="Artículos destacados"
+            >
+              <Slide class="carousel-slide post-slide-25980791 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="institucion-educativa"
+                      >
+                        <a href="https://business-lab.net/casos-uso/institucion-educativa/">
+                          Institucion Educativa
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            Revertir su caída de matrículas y modernizar su
+                            gestión integral en solo 10 meses
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/casos-uso/institucion-educativa/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+              <Slide class="carousel-slide post-slide-25980784 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="5-senales-de-que-necesitas-una-maquina-comercial"
+                      >
+                        <a href="https://business-lab.net/articulos/5-senales-de-que-necesitas-una-maquina-comercial/">
+                          5 señales de que necesitas una maquina comercial
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            Muchos fundadores y gerentes de SaaS llegan a un
+                            punto en que el marketing y el boca a boca ya no da
+                            más
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/articulos/5-senales-de-que-necesitas-una-maquina-comercial/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+              <Slide class="carousel-slide post-slide-25980755 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025"
+                      >
+                        <a href="https://business-lab.net/articulos/como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025/">
+                          Cómo la Inteligencia Artificial está Redefiniendo el
+                          Marketing Digital en 2025
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            La IA ya es una realidad, en 2025, es el motor de
+                            las estrategias de marketing más eficaces y
+                            escalables del mundo
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/articulos/como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+              <Slide class="carousel-slide post-slide-25980729 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="guia-de-diagnostico-de-madurez-comercial"
+                      >
+                        <a href="https://business-lab.net/articulos/guia-de-diagnostico-de-madurez-comercial/">
+                          Guía de Diagnóstico de Madurez Comercial
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            La herramienta que usamos para evaluar los factores
+                            que componen nuestra metodología REVENUE FACTORY
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/articulos/guia-de-diagnostico-de-madurez-comercial/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+              <Slide class="carousel-slide post-slide-25980708 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="como-aplicamos-la-metodologia-revenue-factory"
+                      >
+                        <a href="https://business-lab.net/articulos/como-aplicamos-la-metodologia-revenue-factory/">
+                          Cómo Aplicamos la metodología REVENUE FACTORY
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            En este artículo te explicamos cómo crear un un plan
+                            de acción concreto para mejorar tus ventas.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/articulos/como-aplicamos-la-metodologia-revenue-factory/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+              <Slide class="carousel-slide post-slide-25980691 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="como-escalar-tus-ventas-b2b-con-una-ecuacion"
+                      >
+                        <a href="https://business-lab.net/articulos/como-escalar-tus-ventas-b2b-con-una-ecuacion/">
+                          Cómo Escalar tus Ventas B2B con una Ecuación
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            Una fórmula que nos permite analizar, optimizar y
+                            escalar cada parte del proceso comercial con
+                            claridad y método
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/articulos/como-escalar-tus-ventas-b2b-con-una-ecuacion/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+              <Slide class="carousel-slide post-slide-25980683 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="como-convertimos-la-venta-b2b-en-un-sistema-que-escala"
+                      >
+                        <a href="https://business-lab.net/articulos/como-convertimos-la-venta-b2b-en-un-sistema-que-escala/">
+                          Cómo Convertimos la Venta B2B en un Sistema que Escala
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            La metodología REVENUE FACTORY se basa en 6 etapas
+                            que atacan las causas por las que una empresa no
+                            vende más
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/articulos/como-convertimos-la-venta-b2b-en-un-sistema-que-escala/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+              <Slide class="carousel-slide post-slide-25980672 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="te-quieren-volver-influencerguia-para-detectarlo-parte-2"
+                      >
+                        <a href="https://business-lab.net/articulos/te-quieren-volver-influencer-guia-para-detectarlo/">
+                          Te quieren volver influencer…Guia para detectarlo
+                          Parte 2
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            Saber detectar si te están vendiendo marketing de
+                            influencer cuando tú vendes a empresas
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/articulos/te-quieren-volver-influencer-guia-para-detectarlo/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+              <Slide class="carousel-slide post-slide-25980662 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="te-quieren-volver-influencer-pero-tu-vendes-a-empresas-parte-1"
+                      >
+                        <a href="https://business-lab.net/articulos/te-quieren-volver-influencer-pero-tu-vendes-a-empresas/">
+                          Te quieren volver influencer… pero tú vendes a
+                          empresas Parte 1
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            Si tú diriges una empresa B2B esa receta no solo es
+                            ineficaz, puede ser peligrosa para tu marca
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/articulos/te-quieren-volver-influencer-pero-tu-vendes-a-empresas/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+              <Slide class="carousel-slide post-slide-25980653 tone-dark">
+                <div class="slide-overlay-container"></div>
+                <div class="slide-container clearfix">
+                  <div class="slide-inner">
+                    <div class="slide-description">
+                      <h2
+                        class="slide-title heading-size-2"
+                        id="consultoria-real-vs-express"
+                      >
+                        <a href="https://business-lab.net/articulos/distinguir-entre-una-consultoria-real-y-un-analisis-express/">
+                          Consultoría real vs Express
+                        </a>
+                      </h2>
+                      <div class="slide-content">
+                        <div class="slide-content-body">
+                          <p>
+                            Aprende a distinguir entre una consultoría real y un
+                            «análisis express» que te vende un enlatado
+                          </p>
+                        </div>
+                      </div>
+                      <div class="action-wrapper">
+                        <Button
+                          href="https://business-lab.net/articulos/distinguir-entre-una-consultoria-real-y-un-analisis-express/"
+                          class="action-link slide-link"
+                        >
+                          Read More
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Slide>
+            </Carousel>
+          </div>
+        </div>
+      </div>
+      <div class="column-7 content-column last-column flex-column column-24-24 column-24-24-tablet column-24-24-phone column-single">
+        <div class="heading-1 heading content-block stack">
+          <div class="heading-container">
+            <h1 class="heading-title heading-size-1">
+              Lee nuestros ultimos articulos
+            </h1>
+          </div>
+        </div>
+        <div class="text-6 copy tone-light content-block stack">
+          <div class="copy-inner">
+            <p>
+              Descubre las ultimas tendencias, tecnicas y tecnologias para
+              llevar a tu empresa de tecnologia al siguiente nivel
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+  <Section class="section-5 page-section regular-section flex-section">
+    <div class="row-2 content-row flex-row" style=";--columns:1">
+      <div class="column-8 content-column last-column flex-column column-24-24 column-24-24-tablet column-24-24-phone">
+        <ArticleScroller
+          class="content-block article-module blog-slider-0"
+          layout="layout3"
+        >
+          <ArticleCard
+            post={articles['5-senales-de-que-necesitas-una-maquina-comercial']}
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+          <ArticleCard
+            post={
+              articles[
+                'como-la-inteligencia-artificial-esta-redefiniendo-el-marketing-digital-en-2025'
+              ]
+            }
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+          <ArticleCard
+            post={articles['guia-de-diagnostico-de-madurez-comercial']}
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+          <ArticleCard
+            post={articles['como-aplicamos-la-metodologia-revenue-factory']}
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+          <ArticleCard
+            post={articles['como-escalar-tus-ventas-b2b-con-una-ecuacion']}
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+          <ArticleCard
+            post={
+              articles['como-convertimos-la-venta-b2b-en-un-sistema-que-escala']
+            }
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+          <ArticleCard
+            post={articles['te-quieren-volver-influencer-guia-para-detectarlo']}
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+          <ArticleCard
+            post={
+              articles['te-quieren-volver-influencer-pero-tu-vendes-a-empresas']
+            }
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+          <ArticleCard
+            post={
+              articles[
+                'distinguir-entre-una-consultoria-real-y-un-analisis-express'
+              ]
+            }
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+          <ArticleCard
+            id="porque-tu-empresa-b2b-no-esta-creciendo"
+            post={articles['porque-tu-empresa-b2b-no-esta-creciendo']}
+            class="article-card"
+            variant="slider"
+            showMeta={false}
+            showAuthor={false}
+            label="Leer más"
+          />
+        </ArticleScroller>
+      </div>
+    </div>
+  </Section>
+  <Section class="section-6 page-section fullwidth-section regular-section flex-section">
+    <CTA />
+  </Section>
 </div>

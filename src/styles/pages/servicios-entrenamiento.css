@@ -1,0 +1,516 @@
+/* Layout and typography for servicios-entrenamiento. Component behavior lives in its component. */
+@layer pages {
+  @media (width <= 980px) {
+    .page-servicios-entrenamiento .flex-row {
+      flex-wrap: wrap;
+    }
+  }
+  @media (width <= 980px) {
+    .page-servicios-entrenamiento .flex-row > .content-column {
+      flex: 0 0 100%;
+      min-width: 0px;
+    }
+  }
+  .page-servicios-entrenamiento .carousel-slide {
+    display: none;
+  }
+  .page-servicios-entrenamiento .carousel-slide {
+    background-position: 50% center;
+    background-size: cover;
+    position: relative;
+  }
+  .page-servicios-entrenamiento .slide-inner,
+  .page-servicios-entrenamiento .slide-description {
+    z-index: 1;
+    position: relative;
+  }
+  .page-servicios-entrenamiento .tone-dark .slide-title,
+  .page-servicios-entrenamiento .tone-dark .slide-content,
+  .page-servicios-entrenamiento .tone-dark .heading-title,
+  .page-servicios-entrenamiento .tone-dark .header-content-wrapper {
+    color: rgb(255, 255, 255);
+  }
+  .page-servicios-entrenamiento .carousel .carousel-slide > .slide-container {
+    height: 100%;
+  }
+  @media (width <= 767px) {
+    .page-servicios-entrenamiento .carousel-slide .slide-title {
+      overflow-wrap: normal;
+      word-break: normal;
+      font-size: 32px;
+    }
+  }
+  @media (width >= 981px) {
+    .page-servicios-entrenamiento .carousel .scene-image {
+      background-position: center top;
+      height: calc(100% + 30vh);
+      top: -18px;
+      bottom: auto;
+    }
+  }
+  .page-servicios-entrenamiento .heading-size-1,
+  .page-servicios-entrenamiento .heading-size-2 {
+    color: rgb(51, 51, 51);
+    padding-bottom: 10px;
+    line-height: 1em;
+    font-weight: 500;
+  }
+  .page-servicios-entrenamiento .heading-size-1 {
+    font-size: 30px;
+  }
+  .page-servicios-entrenamiento .heading-size-2 {
+    font-size: 26px;
+  }
+  .page-servicios-entrenamiento img {
+    max-width: 100%;
+    height: auto;
+  }
+  @media (max-width: 980px) {
+    .page-servicios-entrenamiento .content-column .content-block {
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-servicios-entrenamiento .flex-column > .content-block {
+      margin-bottom: unset;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-servicios-entrenamiento
+      .content-row
+      .content-column
+      .content-block:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .page-servicios-entrenamiento .flex-column,
+  .page-servicios-entrenamiento .stack,
+  .page-servicios-entrenamiento .flex-row,
+  .page-servicios-entrenamiento .flex-section {
+    display: flex;
+    column-gap: var(--horizontal-gap);
+    row-gap: var(--vertical-gap);
+    flex-direction: var(--flex-direction);
+  }
+  .page-servicios-entrenamiento .flex-row {
+    --horizontal-gap: var(--row-gutter-horizontal);
+    --vertical-gap: var(--row-gutter-vertical);
+    --flex-direction: row;
+  }
+  .page-servicios-entrenamiento .flex-section {
+    --horizontal-gap: var(--section-gutter);
+    --vertical-gap: var(--section-gutter);
+    --flex-direction: column;
+    align-items: center;
+  }
+  .page-servicios-entrenamiento .flex-column,
+  .page-servicios-entrenamiento .stack {
+    --flex-direction: column;
+    --horizontal-gap: var(--module-gutter);
+    --vertical-gap: var(--module-gutter);
+  }
+  .page-servicios-entrenamiento .flex-column > .content-block,
+  .page-servicios-entrenamiento
+    .page-section
+    .content-row
+    .flex-column
+    > .content-block {
+    margin-bottom: 0px;
+  }
+  .page-servicios-entrenamiento .column-24-24 {
+    width: calc(100% - var(--horizontal-gap-parent, 5.5%) * 0 / 1);
+  }
+  .page-servicios-entrenamiento .flex-section > .content-row {
+    margin: initial;
+  }
+  .page-servicios-entrenamiento .column-empty {
+    min-height: 1px;
+  }
+  .page-servicios-entrenamiento .content-column,
+  .page-servicios-entrenamiento .content-row {
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: 980px) {
+    .page-servicios-entrenamiento .content-column.column-empty {
+      display: none;
+    }
+  }
+  .page-servicios-entrenamiento .image-block {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0;
+  }
+  .page-servicios-entrenamiento .flex-column > .image-block {
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .page-servicios-entrenamiento .image-block .image-frame {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+  }
+  .page-servicios-entrenamiento .image-block:where(.stack) > .image-frame {
+    width: fit-content;
+    display: flex;
+  }
+  .page-servicios-entrenamiento .image-block img {
+    position: relative;
+  }
+  .page-servicios-entrenamiento .copy {
+    overflow-wrap: break-word;
+    line-height: var(--body-line-height, 1.7em);
+  }
+  .page-servicios-entrenamiento .copy > :last-child {
+    padding-bottom: 0px;
+  }
+  .page-servicios-entrenamiento .copy-inner {
+    position: relative;
+  }
+  .page-servicios-entrenamiento .carousel {
+    --vertical-gap: 0px;
+    --horizontal-gap: 0px;
+  }
+  .page-servicios-entrenamiento .carousel .slide-container {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    z-index: 2;
+  }
+  .page-servicios-entrenamiento .carousel-track .slide-container {
+    display: table;
+    table-layout: fixed;
+  }
+  .page-servicios-entrenamiento .carousel-track .slide-inner {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+  .page-servicios-entrenamiento .slide-content {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+  }
+  .page-servicios-entrenamiento .slide-content p:last-of-type {
+    padding-bottom: 0px;
+  }
+  .page-servicios-entrenamiento .tone-dark .slide-content {
+    color: rgb(255, 255, 255);
+  }
+  .page-servicios-entrenamiento .slide-description {
+    overflow-wrap: break-word;
+    --vertical-gap: 20px;
+  }
+  .page-servicios-entrenamiento .tone-dark .slide-description {
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+  }
+  .page-servicios-entrenamiento .slide-description {
+    padding: 16% 8%;
+    width: auto;
+    margin: auto;
+  }
+  .page-servicios-entrenamiento .slide-description .slide-title {
+    font-weight: 300;
+    margin-top: 0px;
+  }
+  .page-servicios-entrenamiento .slide-description .heading-size-2.slide-title {
+    font-size: 46px;
+  }
+  .page-servicios-entrenamiento .carousel .action-link {
+    margin-top: 0px;
+  }
+  .page-servicios-entrenamiento .carousel .slide-title {
+    padding-bottom: 0px;
+  }
+  @media (max-width: 980px) {
+    .page-servicios-entrenamiento
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 26px;
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-servicios-entrenamiento .slide-description .slide-title {
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-servicios-entrenamiento .slide-content {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-servicios-entrenamiento .slide-description {
+      text-align: center;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-servicios-entrenamiento .slide-content {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-servicios-entrenamiento
+      .carousel.content-block
+      .carousel-track
+      .slide-content {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-servicios-entrenamiento
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 24px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-servicios-entrenamiento
+      .carousel.content-block
+      .carousel-track
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-servicios-entrenamiento .slide-description {
+      text-align: center;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-servicios-entrenamiento
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-servicios-entrenamiento .slide-content {
+      font-weight: 400;
+      font-size: 10px;
+      display: block;
+    }
+  }
+  .page-servicios-entrenamiento .carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  .page-servicios-entrenamiento .carousel-slide {
+    padding: 0px 6%;
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+  .page-servicios-entrenamiento .carousel .carousel-slide {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-position: 50% center;
+    background-size: cover;
+  }
+  .page-servicios-entrenamiento {
+    font-size: 18px;
+  }
+  .page-servicios-entrenamiento .slide-content {
+    font-size: 20px;
+  }
+  .page-servicios-entrenamiento {
+    font-weight: 400;
+  }
+  .page-servicios-entrenamiento .slide-content {
+    font-weight: 400;
+  }
+  .page-servicios-entrenamiento .heading-size-1,
+  .page-servicios-entrenamiento .heading-size-2,
+  .page-servicios-entrenamiento .slide-description .slide-title {
+    line-height: 1.2em;
+  }
+  .page-servicios-entrenamiento .heading-size-1 {
+    font-size: 32px;
+  }
+  .page-servicios-entrenamiento .heading-size-2 {
+    font-size: 27px;
+  }
+  .page-servicios-entrenamiento .slide-description .slide-title {
+    font-size: 48px;
+  }
+  .page-servicios-entrenamiento .heading-size-1 {
+    font-weight: 600;
+  }
+  .page-servicios-entrenamiento .heading-size-2 {
+    font-weight: 600;
+  }
+  .page-servicios-entrenamiento .slide-description .slide-title {
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-servicios-entrenamiento .heading-size-1 {
+      font-size: 28px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-servicios-entrenamiento .heading-size-2 {
+      font-size: 24px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-servicios-entrenamiento
+      .carousel.content-block
+      .carousel-track
+      .slide-description
+      .slide-title {
+      font-size: 42px;
+    }
+  }
+  .page-servicios-entrenamiento .heading-size-1,
+  .page-servicios-entrenamiento .heading-size-2 {
+    font-family: var(--font-heading);
+  }
+  .page-servicios-entrenamiento
+    .fullwidth-slider-1
+    .carousel-slide
+    .slide-description {
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-servicios-entrenamiento .fullwidth-slider-1.carousel .slide-content {
+    font-size: 18px;
+  }
+  .page-servicios-entrenamiento .fullwidth-slider-1 .slide-link.action-link {
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: solid;
+  }
+  .page-servicios-entrenamiento .carousel .slide-1 {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  .page-servicios-entrenamiento .slide-1 .slide-description .slide-title,
+  .page-servicios-entrenamiento .slide-1 .slide-description .slide-content,
+  .page-servicios-entrenamiento
+    .carousel-track
+    .slide-1.carousel-slide
+    .slide-description {
+    text-align: start;
+  }
+  .page-servicios-entrenamiento
+    .carousel
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-title {
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-servicios-entrenamiento
+    .carousel.content-block
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-content {
+    font-size: 28px;
+    line-height: 1.9em;
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-servicios-entrenamiento
+    .slide-1.carousel-slide
+    .slide-link.action-link {
+    background-color: rgb(131, 0, 233);
+    letter-spacing: 2px;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-servicios-entrenamiento .fullwidth-slider-1 .slide-link.action-link {
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-servicios-entrenamiento
+      .carousel.content-block
+      .slide-1.carousel-slide
+      .slide-description
+      .slide-content {
+      font-size: 24px;
+    }
+  }
+  .page-servicios-entrenamiento .action-link {
+    display: inline-block;
+  }
+  .page-servicios-entrenamiento .content-block.action-link:not(.block-module) {
+    max-width: max-content;
+  }
+  .page-servicios-entrenamiento .heading-container {
+    position: relative;
+    width: 100%;
+  }
+  .page-servicios-entrenamiento .heading-1 .heading-container .heading-size-1,
+  .page-servicios-entrenamiento .button-1-wrapper {
+    text-align: center;
+  }
+  .page-servicios-entrenamiento .button-1-wrapper .button-1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page-servicios-entrenamiento .page-section .button-1 {
+    background-color: rgb(87, 0, 255);
+    border-radius: 16px;
+  }
+  .page-servicios-entrenamiento .text-8,
+  .page-servicios-entrenamiento .text-9,
+  .page-servicios-entrenamiento .text-10 {
+    text-align: start;
+  }
+  .page-servicios-entrenamiento .image-2 .image-frame {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .page-servicios-entrenamiento .image-2 .image-frame img {
+    border-radius: inherit;
+  }
+}
+@layer overrides {
+  @media (width <= 980px) {
+    .page-servicios-entrenamiento .flex-row > .content-column {
+      width: 100%;
+    }
+  }
+  @media (width <= 767px) {
+    .page-servicios-entrenamiento .carousel-slide .slide-title {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+  }
+  .page-servicios-entrenamiento .tone-dark,
+  .page-servicios-entrenamiento .tone-dark .heading-size-1,
+  .page-servicios-entrenamiento .tone-dark .heading-size-2 {
+    color: rgb(255, 255, 255);
+  }
+  .page-servicios-entrenamiento .carousel .carousel-slide {
+    list-style: none;
+  }
+  .page-servicios-entrenamiento
+    .fullwidth-slider-1.carousel
+    .slide-description
+    .slide-title {
+    font-size: 52px;
+  }
+  .page-servicios-entrenamiento
+    .carousel
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-title {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.3em;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-servicios-entrenamiento
+      .carousel
+      .slide-1.carousel-slide
+      .slide-description
+      .slide-title {
+      font-size: 38px;
+    }
+  }
+}

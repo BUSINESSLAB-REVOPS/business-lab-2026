@@ -1,0 +1,1159 @@
+/* Layout and typography for metodologia. Component behavior lives in its component. */
+@layer pages {
+  @media (width <= 980px) {
+    .page-metodologia .flex-row {
+      flex-wrap: wrap;
+    }
+  }
+  @media (width <= 980px) {
+    .page-metodologia .flex-row > .content-column {
+      flex: 0 0 100%;
+      min-width: 0px;
+    }
+  }
+  .page-metodologia .carousel-slide {
+    display: none;
+  }
+  .page-metodologia .carousel-slide {
+    background-position: 50% center;
+    background-size: cover;
+    position: relative;
+  }
+  .page-metodologia .slide-inner,
+  .page-metodologia .slide-description {
+    z-index: 1;
+    position: relative;
+  }
+  .page-metodologia .tone-dark .slide-title,
+  .page-metodologia .tone-dark .slide-content,
+  .page-metodologia .tone-dark .heading-title,
+  .page-metodologia .tone-dark .header-content-wrapper {
+    color: rgb(255, 255, 255);
+  }
+  .page-metodologia .carousel .carousel-slide > .slide-container {
+    height: 100%;
+  }
+  @media (width <= 767px) {
+    .page-metodologia .carousel-slide .slide-title {
+      overflow-wrap: normal;
+      word-break: normal;
+      font-size: 32px;
+    }
+  }
+  @media (width >= 981px) {
+    .page-metodologia .carousel .scene-image {
+      background-position: center top;
+      height: calc(100% + 30vh);
+      top: -18px;
+      bottom: auto;
+    }
+  }
+  .page-metodologia strong {
+    font-weight: 700;
+  }
+  .page-metodologia .heading-size-1,
+  .page-metodologia .heading-size-2,
+  .page-metodologia .heading-size-3,
+  .page-metodologia .heading-size-4,
+  .page-metodologia .heading-size-5 {
+    color: rgb(51, 51, 51);
+    padding-bottom: 10px;
+    line-height: 1em;
+    font-weight: 500;
+  }
+  .page-metodologia .heading-size-1 {
+    font-size: 30px;
+  }
+  .page-metodologia .heading-size-2 {
+    font-size: 26px;
+  }
+  .page-metodologia .heading-size-3 {
+    font-size: 22px;
+  }
+  .page-metodologia .heading-size-4 {
+    font-size: 18px;
+  }
+  .page-metodologia .heading-size-5 {
+    font-size: 16px;
+  }
+  .page-metodologia img {
+    max-width: 100%;
+    height: auto;
+  }
+  .page-metodologia .symbol {
+    speak: none;
+    font-weight: 400;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 96px;
+    font-style: normal;
+    display: inline-block;
+    box-sizing: border-box;
+    direction: ltr;
+  }
+  .page-metodologia .module-inner {
+    position: relative;
+  }
+  .page-metodologia .with-border {
+    position: relative;
+    border: 0px solid rgb(51, 51, 51);
+  }
+  @media (max-width: 980px) {
+    .page-metodologia .content-column .content-block {
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-metodologia .flex-column > .content-block {
+      margin-bottom: unset;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-metodologia .content-row .content-column .content-block:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .page-metodologia .flex-column,
+  .page-metodologia .stack,
+  .page-metodologia .flex-row,
+  .page-metodologia .flex-section {
+    display: flex;
+    column-gap: var(--horizontal-gap);
+    row-gap: var(--vertical-gap);
+    flex-direction: var(--flex-direction);
+  }
+  .page-metodologia .flex-row {
+    --horizontal-gap: var(--row-gutter-horizontal);
+    --vertical-gap: var(--row-gutter-vertical);
+    --flex-direction: row;
+  }
+  .page-metodologia .flex-row .nested-row.flex-row {
+    width: 100%;
+    max-width: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  .page-metodologia .flex-section {
+    --horizontal-gap: var(--section-gutter);
+    --vertical-gap: var(--section-gutter);
+    --flex-direction: column;
+    align-items: center;
+  }
+  .page-metodologia .flex-column,
+  .page-metodologia .stack {
+    --flex-direction: column;
+    --horizontal-gap: var(--module-gutter);
+    --vertical-gap: var(--module-gutter);
+  }
+  .page-metodologia .flex-column > .content-block,
+  .page-metodologia .page-section .content-row .flex-column > .content-block {
+    margin-bottom: 0px;
+  }
+  .page-metodologia .column-24-24 {
+    width: calc(100% - var(--horizontal-gap-parent, 5.5%) * 0 / 1);
+  }
+  .page-metodologia .flex-column > .content-row,
+  .page-metodologia .flex-section > .content-row {
+    margin: initial;
+  }
+  .page-metodologia .content-column,
+  .page-metodologia .content-row {
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+  .page-metodologia .image-block {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0;
+  }
+  .page-metodologia .flex-column > .image-block {
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .page-metodologia .image-block .image-frame {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+  }
+  .page-metodologia .image-block:where(.stack) > .image-frame {
+    width: fit-content;
+    display: flex;
+  }
+  .page-metodologia .image-block img {
+    position: relative;
+  }
+  .page-metodologia .copy {
+    overflow-wrap: break-word;
+    line-height: var(--body-line-height, 1.7em);
+  }
+  .page-metodologia .copy > :last-child {
+    padding-bottom: 0px;
+  }
+  .page-metodologia .copy-inner {
+    position: relative;
+  }
+  .page-metodologia .heading-container {
+    position: relative;
+    width: 100%;
+  }
+  .page-metodologia .metric {
+    overflow-wrap: break-word;
+    margin: 0px auto 30px;
+    position: relative;
+    text-align: center;
+    --vertical-gap: 20px;
+  }
+  .page-metodologia .flex-column > .metric {
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .page-metodologia .metric .metric-value {
+    z-index: 2;
+  }
+  .page-metodologia .metric {
+    opacity: 0;
+  }
+  .page-metodologia .metric {
+    width: auto;
+  }
+  .page-metodologia .metric .metric-value {
+    height: 72px;
+    position: relative;
+  }
+  .page-metodologia .metric .metric-value p {
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 500;
+  }
+  .page-metodologia {
+    font-size: 18px;
+  }
+  .page-metodologia .slide-content {
+    font-size: 20px;
+  }
+  .page-metodologia {
+    font-weight: 400;
+  }
+  .page-metodologia .slide-content {
+    font-weight: 400;
+  }
+  .page-metodologia .heading-size-1,
+  .page-metodologia .heading-size-2,
+  .page-metodologia .heading-size-3,
+  .page-metodologia .heading-size-4,
+  .page-metodologia .heading-size-5,
+  .page-metodologia .slide-description .slide-title {
+    line-height: 1.2em;
+  }
+  .page-metodologia .heading-size-1 {
+    font-size: 32px;
+  }
+  .page-metodologia .heading-size-2 {
+    font-size: 27px;
+  }
+  .page-metodologia .heading-size-3 {
+    font-size: 23px;
+  }
+  .page-metodologia .heading-size-4 {
+    font-size: 19px;
+  }
+  .page-metodologia .slide-description .slide-title {
+    font-size: 48px;
+  }
+  .page-metodologia .heading-size-1 {
+    font-weight: 600;
+  }
+  .page-metodologia .heading-size-2 {
+    font-weight: 600;
+  }
+  .page-metodologia .heading-size-3 {
+    font-weight: 600;
+  }
+  .page-metodologia .heading-size-4 {
+    font-weight: 600;
+  }
+  .page-metodologia .heading-size-5 {
+    font-weight: 600;
+  }
+  .page-metodologia .slide-description .slide-title {
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .heading-size-1 {
+      font-size: 28px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .heading-size-2 {
+      font-size: 24px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .heading-size-3 {
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .heading-size-4 {
+      font-size: 16px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia
+      .carousel.content-block
+      .carousel-track
+      .slide-description
+      .slide-title {
+      font-size: 42px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .heading-size-5 {
+      font-size: 14px;
+    }
+  }
+  .page-metodologia .heading-size-1,
+  .page-metodologia .heading-size-2,
+  .page-metodologia .heading-size-3,
+  .page-metodologia .heading-size-4,
+  .page-metodologia .heading-size-5 {
+    font-family: var(--font-heading);
+  }
+  .page-metodologia .fullwidth-slider-1 .carousel-slide .slide-description {
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-metodologia .fullwidth-slider-1.carousel .slide-content {
+    font-size: 18px;
+  }
+  .page-metodologia .fullwidth-slider-1 .slide-link.action-link {
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: solid;
+  }
+  .page-metodologia .carousel .slide-1 {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  .page-metodologia .slide-1 .slide-description .slide-title,
+  .page-metodologia .slide-1 .slide-description .slide-content,
+  .page-metodologia .carousel-track .slide-1.carousel-slide .slide-description {
+    text-align: start;
+  }
+  .page-metodologia
+    .carousel
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-title {
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-metodologia
+    .carousel.content-block
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-content {
+    font-size: 28px;
+    line-height: 1.9em;
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-metodologia .slide-1.carousel-slide .slide-link.action-link {
+    background-color: rgb(131, 0, 233);
+    letter-spacing: 2px;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .fullwidth-slider-1 .slide-link.action-link {
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia
+      .carousel.content-block
+      .slide-1.carousel-slide
+      .slide-description
+      .slide-content {
+      font-size: 24px;
+    }
+  }
+  .page-metodologia .carousel {
+    --vertical-gap: 0px;
+    --horizontal-gap: 0px;
+  }
+  .page-metodologia .carousel .slide-container {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    z-index: 2;
+  }
+  .page-metodologia .carousel-track .slide-container {
+    display: table;
+    table-layout: fixed;
+  }
+  .page-metodologia .carousel-track .slide-inner {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+  .page-metodologia .slide-content {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+  }
+  .page-metodologia .slide-content p:last-of-type {
+    padding-bottom: 0px;
+  }
+  .page-metodologia .tone-dark .slide-content {
+    color: rgb(255, 255, 255);
+  }
+  .page-metodologia .slide-description {
+    overflow-wrap: break-word;
+    --vertical-gap: 20px;
+  }
+  .page-metodologia .tone-dark .slide-description {
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+  }
+  .page-metodologia .slide-description {
+    padding: 16% 8%;
+    width: auto;
+    margin: auto;
+  }
+  .page-metodologia .slide-description .slide-title {
+    font-weight: 300;
+    margin-top: 0px;
+  }
+  .page-metodologia .slide-description .heading-size-2.slide-title {
+    font-size: 46px;
+  }
+  .page-metodologia .carousel .action-link {
+    margin-top: 0px;
+  }
+  .page-metodologia .carousel .slide-title {
+    padding-bottom: 0px;
+  }
+  @media (max-width: 980px) {
+    .page-metodologia .slide-description .heading-size-2.slide-title {
+      font-size: 26px;
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-metodologia .slide-description .slide-title {
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-metodologia .slide-content {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-metodologia .slide-description {
+      text-align: center;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-metodologia .slide-content {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-metodologia .carousel.content-block .carousel-track .slide-content {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-metodologia .slide-description .heading-size-2.slide-title {
+      font-size: 24px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-metodologia
+      .carousel.content-block
+      .carousel-track
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-metodologia .slide-description {
+      text-align: center;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-metodologia .slide-description .heading-size-2.slide-title {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-metodologia .slide-content {
+      font-weight: 400;
+      font-size: 10px;
+      display: block;
+    }
+  }
+  .page-metodologia .carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  .page-metodologia .carousel-slide {
+    padding: 0px 6%;
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+  .page-metodologia .carousel .carousel-slide {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-position: 50% center;
+    background-size: cover;
+  }
+  .page-metodologia .testimonial-description-inner {
+    overflow-wrap: break-word;
+  }
+  .page-metodologia .testimonial {
+    position: relative;
+    padding: 30px;
+    line-height: 1.5;
+  }
+  .page-metodologia .testimonial .testimonial-content {
+    line-height: 1.5em;
+  }
+  .page-metodologia .testimonial .testimonial-meta {
+    padding-bottom: 0px;
+  }
+  .page-metodologia .testimonial-portrait {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    margin-right: 30px;
+    box-sizing: content-box;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px inset;
+    border-radius: 90px;
+  }
+  .page-metodologia .testimonial-portrait img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+  .page-metodologia .testimonial-author {
+    font-weight: 700;
+    width: 100%;
+  }
+  .page-metodologia .testimonial-company,
+  .page-metodologia .testimonial-meta,
+  .page-metodologia .testimonial-position {
+    display: inline-block;
+  }
+  @media (min-width: 768px) and (max-width: 980px) {
+    .page-metodologia .content-column .testimonial-portrait {
+      display: block;
+      margin-right: 30px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 980px) {
+    .page-metodologia .content-column .testimonial-description {
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-metodologia .content-column .testimonial-description {
+      width: 100%;
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-metodologia .content-column .testimonial-portrait {
+      display: block;
+      margin: 0px auto 20px;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-metodologia .testimonial {
+      padding-top: 10%;
+    }
+  }
+  .page-metodologia .testimonial-1 {
+    background-color: rgb(245, 245, 245);
+    border-radius: 16px;
+    text-align: start;
+  }
+  .page-metodologia .testimonial-1 .testimonial-inner {
+    overflow: hidden;
+  }
+  .page-metodologia .text-10,
+  .page-metodologia .text-11,
+  .page-metodologia .text-12,
+  .page-metodologia .text-13,
+  .page-metodologia .text-14 {
+    text-align: start;
+  }
+  .page-metodologia .heading-5 .heading-container .heading-size-1,
+  .page-metodologia .heading-7 .heading-container .heading-size-1,
+  .page-metodologia .heading-8 .heading-container .heading-size-1 {
+    text-align: center;
+  }
+  .page-metodologia .number-counter-5 .metric-label,
+  .page-metodologia .number-counter-5 .metric-value,
+  .page-metodologia .number-counter-6 .metric-label,
+  .page-metodologia .number-counter-6 .metric-value,
+  .page-metodologia .number-counter-7 .metric-label,
+  .page-metodologia .number-counter-7 .metric-value,
+  .page-metodologia .number-counter-8 .metric-label,
+  .page-metodologia .number-counter-8 .metric-value,
+  .page-metodologia .number-counter-9 .metric-label,
+  .page-metodologia .number-counter-9 .metric-value {
+    text-align: center;
+  }
+  .page-metodologia .number-counter-5.metric .heading-size-5.metric-label,
+  .page-metodologia .number-counter-6.metric .heading-size-5.metric-label,
+  .page-metodologia .number-counter-7.metric .heading-size-5.metric-label,
+  .page-metodologia .number-counter-8.metric .heading-size-5.metric-label,
+  .page-metodologia .number-counter-9.metric .heading-size-5.metric-label {
+    font-family: var(--font-body);
+    font-weight: var(--heading-weight);
+  }
+  .page-metodologia .number-counter-5.metric .metric-value p,
+  .page-metodologia .number-counter-6.metric .metric-value p,
+  .page-metodologia .number-counter-7.metric .metric-value p,
+  .page-metodologia .number-counter-8.metric .metric-value p,
+  .page-metodologia .number-counter-9.metric .metric-value p {
+    font-family: Poppins, Helvetica, Arial, Lucida, sans-serif;
+    font-weight: var(--heading-weight);
+    color: rgb(87, 0, 255);
+    font-size: 52px;
+  }
+  .page-metodologia .heading-6 .heading-container .heading-size-5 {
+    text-align: left;
+  }
+  .page-metodologia .heading-9 .heading-container .heading-size-1 {
+    text-align: center;
+  }
+  .page-metodologia .section-10.page-section {
+    padding-bottom: 100px;
+  }
+  .page-metodologia .flipbox-0 .benefit-front,
+  .page-metodologia .flipbox-0 .benefit-back,
+  .page-metodologia .flipbox-1 .benefit-front,
+  .page-metodologia .flipbox-1 .benefit-back,
+  .page-metodologia .flipbox-2 .benefit-front,
+  .page-metodologia .flipbox-2 .benefit-back,
+  .page-metodologia .flipbox-3 .benefit-front,
+  .page-metodologia .flipbox-3 .benefit-back,
+  .page-metodologia .flipbox-4 .benefit-front,
+  .page-metodologia .flipbox-4 .benefit-back,
+  .page-metodologia .flipbox-5 .benefit-front,
+  .page-metodologia .flipbox-5 .benefit-back,
+  .page-metodologia .timeline-0 {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .page-metodologia .flipbox-0 .benefit-wrapper .benefit-inner,
+  .page-metodologia .flipbox-1 .benefit-wrapper .benefit-inner,
+  .page-metodologia .flipbox-2 .benefit-wrapper .benefit-inner,
+  .page-metodologia .flipbox-3 .benefit-wrapper .benefit-inner,
+  .page-metodologia .flipbox-4 .benefit-wrapper .benefit-inner,
+  .page-metodologia .flipbox-5 .benefit-wrapper .benefit-inner {
+    transform: translateZ(50px) scale(0.95);
+  }
+  .page-metodologia .timeline-item-0.timeline-item .item-content,
+  .page-metodologia .timeline-item-1.timeline-item .item-content,
+  .page-metodologia .timeline-item-2.timeline-item .item-content,
+  .page-metodologia .timeline-item-3.timeline-item .item-content,
+  .page-metodologia .timeline-item-4.timeline-item .item-content,
+  .page-metodologia .timeline-item-5.timeline-item .item-content {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 6px -6px;
+  }
+  .page-metodologia .timeline .timeline-item-0 .item-icon,
+  .page-metodologia .timeline .timeline-item-1 .item-icon,
+  .page-metodologia .timeline .timeline-item-2 .item-icon,
+  .page-metodologia .timeline .timeline-item-3 .item-icon,
+  .page-metodologia .timeline .timeline-item-4 .item-icon,
+  .page-metodologia .timeline .timeline-item-5 .item-icon {
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .page-metodologia .timeline-0 .item-icon {
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .page-metodologia .timeline-item-0.timeline-item .item-content-inner,
+  .page-metodologia .timeline-item-1.timeline-item .item-content-inner,
+  .page-metodologia .timeline-item-2.timeline-item .item-content-inner,
+  .page-metodologia .timeline-item-3.timeline-item .item-content-inner,
+  .page-metodologia .timeline-item-4.timeline-item .item-content-inner,
+  .page-metodologia .timeline-item-5.timeline-item .item-content-inner {
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    overflow: hidden;
+    border-width: 1px;
+  }
+  .page-metodologia .benefit-card {
+    width: auto;
+  }
+  .page-metodologia .benefit-card .module-inner {
+    position: relative;
+    transform: translateZ(0px);
+    perspective: 1000px;
+  }
+  .page-metodologia .benefit-card .benefit-wrapper {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transform-style: preserve-3d;
+  }
+  .page-metodologia .benefit-card .benefit-side {
+    min-height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .page-metodologia .benefit-back,
+  .page-metodologia .benefit-front {
+    background: center center / cover no-repeat rgb(255, 255, 255);
+    padding: 30px;
+  }
+  .page-metodologia .benefit-card .module-inner .benefit-back,
+  .page-metodologia .benefit-card .module-inner .benefit-front {
+    overflow: visible;
+  }
+  .page-metodologia .benefit-card .benefit-inner {
+    width: 100%;
+  }
+  .page-metodologia .benefit-card .flipbox_position_top .benefit-inner {
+    display: flex;
+  }
+  .page-metodologia .benefit-card .flipbox_position_top .benefit-inner {
+    flex-direction: column;
+  }
+  .page-metodologia .benefit-card .benefit-back.flipbox_content_center,
+  .page-metodologia .benefit-card .benefit-front.flipbox_content_center {
+    align-items: center;
+  }
+  .page-metodologia .benefit-front .heading-size-4.heading-title {
+    font-size: 18px;
+  }
+  .page-metodologia .benefit-card .layout1 {
+    perspective: 1000px;
+    backface-visibility: hidden;
+  }
+  .page-metodologia .benefit-card .layout1 .benefit-back,
+  .page-metodologia .benefit-card .layout1 .benefit-front {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  .page-metodologia .benefit-card .layout1 .benefit-back {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .page-metodologia .benefit-card .layout1 .benefit-inner {
+    backface-visibility: hidden;
+  }
+  .page-metodologia .benefit-card .layout1 .benefit-front,
+  .page-metodologia .benefit-card .layout1:hover .benefit-back {
+    transform: rotateX(0deg);
+  }
+  .page-metodologia .benefit-card .layout1 .benefit-back {
+    transform: rotateX(-180deg);
+  }
+  .page-metodologia .benefit-card .layout1:hover .benefit-front {
+    transform: rotateX(180deg);
+  }
+  .page-metodologia .timeline .timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-metodologia .timeline .icon-wrapper {
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .page-metodologia .timeline .item-icon.symbol {
+    font-size: 32px;
+  }
+  .page-metodologia .timeline .icon-tree .symbol {
+    background: rgb(255, 255, 255);
+  }
+  .page-metodologia .timeline .item-content-inner {
+    background-color: rgb(238, 238, 238);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .page-metodologia .timeline .item-time {
+    margin-bottom: 8px;
+  }
+  .page-metodologia .timeline .item-content {
+    position: relative;
+    z-index: 1;
+  }
+  .page-metodologia .timeline .stem-center {
+    z-index: 1;
+  }
+  .page-metodologia .timeline .stem-wrapper {
+    width: 2px;
+    background: rgb(238, 238, 238);
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+  }
+  .page-metodologia .timeline-alternate-stem .stem-wrapper {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  .page-metodologia
+    .timeline
+    .timeline-alternate
+    .timeline-item:nth-child(2n + 1)
+    .timeline-item-wrapper {
+    flex-direction: row-reverse;
+  }
+  .page-metodologia
+    .timeline
+    .timeline-alternate
+    .timeline-item
+    .item-content-inner {
+    padding: 20px;
+  }
+  .page-metodologia
+    .timeline
+    .timeline-alternate
+    .timeline-item:nth-child(2n)
+    .item-content-inner {
+    text-align: right;
+  }
+  .page-metodologia
+    .timeline
+    .timeline-alternate
+    .timeline-item
+    .item-content
+    .triangle {
+    display: block;
+    height: 20px;
+    width: 20px;
+    background: inherit;
+    border: inherit;
+    position: absolute;
+    clip-path: polygon(0px 0px, 20px 20px, 0px 20px);
+    top: calc(50% - 15px);
+  }
+  .page-metodologia
+    .timeline
+    .timeline-alternate
+    .timeline-item:nth-child(2n + 1)
+    .item-content
+    .triangle {
+    left: -9px;
+    transform: rotate(45deg);
+  }
+  .page-metodologia
+    .timeline
+    .timeline-alternate
+    .timeline-item:nth-child(2n)
+    .item-content
+    .triangle {
+    right: -9px;
+    transform: rotate(225deg);
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .timeline .timeline-item .icon-tree .stem-center {
+      margin-left: 0px;
+      margin-right: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia
+      .timeline
+      .timeline-alternate
+      .timeline-item:nth-child(2n)
+      .item-content-inner {
+      text-align: left;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia
+      .timeline
+      .timeline-alternate
+      .timeline-item:nth-child(2n)
+      .icon-tree {
+      flex-direction: row-reverse;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia
+      .timeline
+      .timeline-alternate
+      .timeline-item:nth-child(2n)
+      .icon-tree
+      .item-content
+      .triangle {
+      display: block;
+      height: 20px;
+      width: 20px;
+      background: inherit;
+      border: inherit;
+      position: absolute;
+      left: -9px;
+      clip-path: polygon(0px 0px, 20px 20px, 0px 20px);
+      transform: rotate(45deg);
+      top: calc(50% - 15px);
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .timeline .timeline-alternate .date-container {
+      display: none;
+    }
+  }
+  .page-metodologia .timeline-item .timeline-item-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .page-metodologia .timeline-item .stem-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 300px;
+    width: auto;
+  }
+  .page-metodologia .timeline-alternate .timeline-item .stem-center {
+    order: 1;
+    margin: 0px 20px;
+  }
+  .page-metodologia .timeline-alternate .date-container,
+  .page-metodologia .timeline-alternate .item-content {
+    flex-basis: 50%;
+    max-width: 100%;
+    position: relative;
+    flex-grow: 1;
+  }
+  .page-metodologia .timeline-alternate .date-container {
+    order: 2;
+  }
+  .page-metodologia .timeline-item .item-content .triangle,
+  .page-metodologia .timeline-item .item-content-inner {
+    border-style: solid;
+  }
+  .page-metodologia .timeline-item .item-time {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+  .page-metodologia .timeline-item .item-title {
+    overflow-wrap: anywhere;
+  }
+}
+@layer overrides {
+  @media (width <= 980px) {
+    .page-metodologia .flex-row > .content-column {
+      width: 100%;
+    }
+  }
+  @media (width <= 767px) {
+    .page-metodologia .carousel-slide .slide-title {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+  }
+  .page-metodologia .tone-dark,
+  .page-metodologia .tone-dark .heading-size-1,
+  .page-metodologia .tone-dark .heading-size-2 {
+    color: rgb(255, 255, 255);
+  }
+  .page-metodologia
+    .fullwidth-slider-1.carousel
+    .slide-description
+    .slide-title {
+    font-size: 52px;
+  }
+  .page-metodologia
+    .carousel
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-title {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.3em;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia
+      .carousel
+      .slide-1.carousel-slide
+      .slide-description
+      .slide-title {
+      font-size: 38px;
+    }
+  }
+  .page-metodologia .carousel .carousel-slide {
+    list-style: none;
+  }
+  .page-metodologia .heading-5 .heading-container .heading-size-1,
+  .page-metodologia .heading-7 .heading-container .heading-size-1,
+  .page-metodologia .heading-8 .heading-container .heading-size-1 {
+    color: #072130;
+  }
+  .page-metodologia .number-counter-5.metric .heading-size-5.metric-label,
+  .page-metodologia .number-counter-6.metric .heading-size-5.metric-label,
+  .page-metodologia .number-counter-7.metric .heading-size-5.metric-label,
+  .page-metodologia .number-counter-8.metric .heading-size-5.metric-label,
+  .page-metodologia .number-counter-9.metric .heading-size-5.metric-label {
+    color: rgb(255, 0, 117);
+  }
+  .page-metodologia .heading-9 .heading-container .heading-size-1 {
+    color: rgb(87, 0, 255);
+  }
+  .page-metodologia .flipbox-0 .benefit-wrapper,
+  .page-metodologia .flipbox-1 .benefit-wrapper,
+  .page-metodologia .flipbox-2 .benefit-wrapper,
+  .page-metodologia .flipbox-3 .benefit-wrapper,
+  .page-metodologia .flipbox-4 .benefit-wrapper,
+  .page-metodologia .flipbox-5 .benefit-wrapper {
+    max-width: 550px;
+  }
+  .page-metodologia .flipbox-0 .benefit-side,
+  .page-metodologia .flipbox-1 .benefit-side,
+  .page-metodologia .flipbox-2 .benefit-side,
+  .page-metodologia .flipbox-3 .benefit-side,
+  .page-metodologia .flipbox-4 .benefit-side,
+  .page-metodologia .flipbox-5 .benefit-side {
+    min-height: 200px;
+  }
+  .page-metodologia .flipbox-0.benefit-card .benefit-front,
+  .page-metodologia .flipbox-1.benefit-card .benefit-front,
+  .page-metodologia .flipbox-2.benefit-card .benefit-front,
+  .page-metodologia .flipbox-3.benefit-card .benefit-front,
+  .page-metodologia .flipbox-4.benefit-card .benefit-front,
+  .page-metodologia .flipbox-5.benefit-card .benefit-front {
+    background-color: rgb(242, 175, 3);
+  }
+  .page-metodologia .timeline-item-0 .item-icon,
+  .page-metodologia .timeline-item-1 .item-icon,
+  .page-metodologia .timeline-item-2 .item-icon,
+  .page-metodologia .timeline-item-3 .item-icon,
+  .page-metodologia .timeline-item-4 .item-icon,
+  .page-metodologia .timeline-item-5 .item-icon {
+    font-weight: 400;
+  }
+  .page-metodologia .timeline .timeline-item-0 .item-icon,
+  .page-metodologia .timeline .timeline-item-1 .item-icon,
+  .page-metodologia .timeline .timeline-item-2 .item-icon,
+  .page-metodologia .timeline .timeline-item-3 .item-icon,
+  .page-metodologia .timeline .timeline-item-4 .item-icon,
+  .page-metodologia .timeline .timeline-item-5 .item-icon {
+    color: rgb(255, 100, 111);
+  }
+  .page-metodologia .timeline-0 .item-icon.symbol {
+    font-size: 6px;
+  }
+  .page-metodologia .timeline-0 .item-icon {
+    color: rgb(141, 0, 255);
+    background-color: rgb(104, 0, 255);
+  }
+  .page-metodologia .timeline-0 .stem-wrapper {
+    width: 2px;
+    background: rgb(0, 1, 255);
+  }
+  .page-metodologia .timeline-0 .stem {
+    background: rgb(255, 0, 34);
+  }
+  .page-metodologia
+    .timeline-item-0.timeline-item
+    .item-content
+    .heading-size-2,
+  .page-metodologia
+    .timeline-item-1.timeline-item
+    .item-content
+    .heading-size-2,
+  .page-metodologia
+    .timeline-item-1.timeline-item
+    .item-content
+    .heading-size-3,
+  .page-metodologia
+    .timeline-item-2.timeline-item
+    .item-content
+    .heading-size-2,
+  .page-metodologia
+    .timeline-item-3.timeline-item
+    .item-content
+    .heading-size-2,
+  .page-metodologia
+    .timeline-item-4.timeline-item
+    .item-content
+    .heading-size-2,
+  .page-metodologia
+    .timeline-item-5.timeline-item
+    .item-content
+    .heading-size-2 {
+    font-weight: 300;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0em 0.3em;
+  }
+  .page-metodologia .timeline-item-0.timeline-item .item-content .item-desc,
+  .page-metodologia .timeline-item-0.timeline-item .item-content .item-desc p,
+  .page-metodologia .timeline-item-1.timeline-item .item-content .item-desc,
+  .page-metodologia .timeline-item-1.timeline-item .item-content .item-desc p,
+  .page-metodologia .timeline-item-2.timeline-item .item-content .item-desc,
+  .page-metodologia .timeline-item-2.timeline-item .item-content .item-desc p,
+  .page-metodologia .timeline-item-3.timeline-item .item-content .item-desc,
+  .page-metodologia .timeline-item-3.timeline-item .item-content .item-desc p,
+  .page-metodologia .timeline-item-4.timeline-item .item-content .item-desc,
+  .page-metodologia .timeline-item-4.timeline-item .item-content .item-desc p,
+  .page-metodologia .timeline-item-5.timeline-item .item-content .item-desc,
+  .page-metodologia .timeline-item-5.timeline-item .item-content .item-desc p {
+    font-size: 13px;
+  }
+  .page-metodologia .timeline-item-0.timeline-item .item-time,
+  .page-metodologia .timeline-item-1.timeline-item .item-time,
+  .page-metodologia .timeline-item-2.timeline-item .item-time,
+  .page-metodologia .timeline-item-3.timeline-item .item-time,
+  .page-metodologia .timeline-item-4.timeline-item .item-time,
+  .page-metodologia .timeline-item-5.timeline-item .item-time {
+    font-weight: 700;
+    font-size: 48px;
+    color: rgb(87, 0, 255);
+    text-align: center;
+  }
+  @media only screen and (max-width: 980px) {
+    .page-metodologia .timeline-0 .stem-center {
+      width: 32px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .timeline-0 .stem-center {
+      width: 32px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-metodologia .timeline-0 .stem-wrapper {
+      left: 16px;
+    }
+  }
+  .page-metodologia .timeline .timeline-item .item-content {
+    overflow: visible;
+  }
+}
+
+@layer overrides {
+  .page-metodologia .benefit-card:focus-within .benefit-front {
+    transform: rotateX(180deg);
+  }
+  .page-metodologia .benefit-card:focus-within .benefit-back {
+    transform: rotateX(0deg);
+  }
+}

@@ -1,0 +1,24 @@
+---
+interface Props {
+  class?: string;
+  style?: string;
+}
+const { class: className, style } = Astro.props;
+---
+
+<div
+  class:list={['carousel-slide', className]}
+  style={style}
+  data-carousel-slide
+>
+  <slot />
+</div>
+<style>
+  @layer components {
+    .carousel-slide {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+</style>

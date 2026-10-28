@@ -1,0 +1,117 @@
+---
+import AssetImage from './AssetImage.astro';
+interface Props {
+  author: string;
+  position: string;
+  company: string;
+  image?: string;
+  class?: string;
+  stacked?: boolean;
+}
+const {
+  author,
+  position,
+  company,
+  image,
+  class: className,
+  stacked = true,
+} = Astro.props;
+---
+
+<figure
+  class:list={['testimonial', className, { 'testimonial-flow': !stacked }]}
+>
+  <div class="testimonial-inner">
+    {image && (
+      <div class="testimonial-portrait">
+        <AssetImage src={image} alt="" sizes="90px" />
+      </div>
+    )}
+    <div class:list={['testimonial-description', { stack: stacked }]}>
+      <div class="testimonial-description-inner">
+        <blockquote class="testimonial-content">
+          <slot />
+        </blockquote>
+      </div>
+      <span class="testimonial-author">{author}</span>
+      <span class="testimonial-meta">
+        <span class="testimonial-position">{position}</span>
+        <span class="testimonial-separator">, </span>
+        <span class="testimonial-company">{company}</span>
+      </span>
+    </div>
+  </div>
+</figure>
+<style>
+  @layer components {
+    blockquote {
+      margin: 0;
+    }
+    .testimonial {
+      position: relative;
+      padding: 30px;
+      line-height: 1.5;
+    }
+    .testimonial-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    .testimonial-portrait {
+      position: relative;
+      width: 90px;
+      height: 90px;
+      flex: 0 0 90px;
+      border-radius: 90px;
+      overflow: hidden;
+    }
+    .testimonial-description {
+      flex: 1;
+      min-width: 0;
+    }
+    .testimonial-description.stack {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .testimonial-author {
+      display: block;
+      font-weight: 700;
+      margin-top: 0;
+    }
+    .testimonial-portrait :global(picture) {
+      display: contents;
+    }
+    .testimonial-portrait :global(img) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+    @media (max-width: 767px) {
+      .testimonial-inner {
+        display: block;
+      }
+      .testimonial-portrait {
+        margin: 0 auto 20px;
+      }
+    }
+  }
+</style>
+<style>
+  @layer overrides {
+    .testimonial-flow .testimonial-inner {
+      display: block;
+    }
+    .testimonial-flow .testimonial-portrait {
+      float: left;
+      margin-right: 30px;
+    }
+    @media (max-width: 767px) {
+      .testimonial-flow .testimonial-portrait {
+        float: none;
+        margin: 0 auto 20px;
+      }
+    }
+  }
+</style>

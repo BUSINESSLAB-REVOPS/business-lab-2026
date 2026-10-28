@@ -1,0 +1,767 @@
+/* Layout and typography for consultoriaagil. Component behavior lives in its component. */
+@layer pages {
+  @media (width <= 980px) {
+    .page-consultoriaagil .flex-row {
+      flex-wrap: wrap;
+    }
+  }
+  @media (width <= 980px) {
+    .page-consultoriaagil .flex-row > .content-column {
+      flex: 0 0 100%;
+      min-width: 0px;
+    }
+  }
+  .page-consultoriaagil .carousel-slide {
+    display: none;
+  }
+  .page-consultoriaagil .carousel-slide {
+    background-position: 50% center;
+    background-size: cover;
+    position: relative;
+  }
+  .page-consultoriaagil .slide-inner,
+  .page-consultoriaagil .slide-description {
+    z-index: 1;
+    position: relative;
+  }
+  .page-consultoriaagil .tone-dark .slide-title,
+  .page-consultoriaagil .tone-dark .slide-content,
+  .page-consultoriaagil .tone-dark .heading-title,
+  .page-consultoriaagil .tone-dark .header-content-wrapper {
+    color: rgb(255, 255, 255);
+  }
+  .page-consultoriaagil .carousel .carousel-slide > .slide-container {
+    height: 100%;
+  }
+  @media (width <= 767px) {
+    .page-consultoriaagil .carousel-slide .slide-title {
+      overflow-wrap: normal;
+      word-break: normal;
+      font-size: 32px;
+    }
+  }
+  @media (width >= 981px) {
+    .page-consultoriaagil .carousel .scene-image {
+      background-position: center top;
+      height: calc(100% + 30vh);
+      top: -18px;
+      bottom: auto;
+    }
+  }
+  .page-consultoriaagil ul {
+    list-style: none;
+  }
+  .page-consultoriaagil strong {
+    font-weight: 700;
+  }
+  .page-consultoriaagil .heading-size-1,
+  .page-consultoriaagil .heading-size-2,
+  .page-consultoriaagil .heading-size-4,
+  .page-consultoriaagil .heading-size-5 {
+    color: rgb(51, 51, 51);
+    padding-bottom: 10px;
+    line-height: 1em;
+    font-weight: 500;
+  }
+  .page-consultoriaagil .heading-size-1 {
+    font-size: 30px;
+  }
+  .page-consultoriaagil .heading-size-2 {
+    font-size: 26px;
+  }
+  .page-consultoriaagil .heading-size-4 {
+    font-size: 18px;
+  }
+  .page-consultoriaagil .heading-size-5 {
+    font-size: 16px;
+  }
+  .page-consultoriaagil img {
+    max-width: 100%;
+    height: auto;
+  }
+  @media (min-width: 981px) {
+    .page-consultoriaagil
+      .page-section
+      div.content-row
+      .content-column
+      .content-block.last-column {
+      margin-bottom: 0px;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-consultoriaagil .content-column .content-block {
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-consultoriaagil .flex-column > .content-block,
+    .page-consultoriaagil .flex-group > .content-block {
+      margin-bottom: unset;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-consultoriaagil
+      .content-row
+      .content-column
+      .content-block.last-column,
+    .page-consultoriaagil
+      .content-row
+      .content-column
+      .content-block:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .page-consultoriaagil .flex-column,
+  .page-consultoriaagil .flex-group,
+  .page-consultoriaagil .stack,
+  .page-consultoriaagil .flex-row,
+  .page-consultoriaagil .flex-section {
+    display: flex;
+    column-gap: var(--horizontal-gap);
+    row-gap: var(--vertical-gap);
+    flex-direction: var(--flex-direction);
+  }
+  .page-consultoriaagil .flex-row {
+    --horizontal-gap: var(--row-gutter-horizontal);
+    --vertical-gap: var(--row-gutter-vertical);
+    --flex-direction: row;
+  }
+  .page-consultoriaagil .flex-section {
+    --horizontal-gap: var(--section-gutter);
+    --vertical-gap: var(--section-gutter);
+    --flex-direction: column;
+    align-items: center;
+  }
+  .page-consultoriaagil .flex-column,
+  .page-consultoriaagil .flex-group,
+  .page-consultoriaagil .stack {
+    --flex-direction: column;
+    --horizontal-gap: var(--module-gutter);
+    --vertical-gap: var(--module-gutter);
+  }
+  .page-consultoriaagil .flex-column > .content-block,
+  .page-consultoriaagil .flex-group > .content-block,
+  .page-consultoriaagil
+    .page-section
+    .content-row
+    .flex-column
+    > .content-block,
+  .page-consultoriaagil
+    .page-section
+    .content-row
+    .flex-group
+    > .content-block {
+    margin-bottom: 0px;
+  }
+  .page-consultoriaagil .column-24-24 {
+    width: calc(100% - var(--horizontal-gap-parent, 5.5%) * 0 / 1);
+  }
+  .page-consultoriaagil .flex-section > .content-row {
+    margin: initial;
+  }
+  .page-consultoriaagil .content-column,
+  .page-consultoriaagil .content-row {
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+  .page-consultoriaagil .image-block {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0;
+  }
+  .page-consultoriaagil .flex-column > .image-block {
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .page-consultoriaagil .image-block .image-frame {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+  }
+  .page-consultoriaagil .image-block:where(.stack) > .image-frame {
+    width: fit-content;
+    display: flex;
+  }
+  .page-consultoriaagil .image-block img {
+    position: relative;
+  }
+  .page-consultoriaagil .copy {
+    overflow-wrap: break-word;
+    line-height: var(--body-line-height, 1.7em);
+  }
+  .page-consultoriaagil .copy ul {
+    padding-bottom: 1em;
+  }
+  .page-consultoriaagil .copy > :last-child {
+    padding-bottom: 0px;
+  }
+  .page-consultoriaagil .copy-inner {
+    position: relative;
+  }
+  .page-consultoriaagil .heading-container {
+    position: relative;
+    width: 100%;
+  }
+  .page-consultoriaagil .metric {
+    overflow-wrap: break-word;
+    margin: 0px auto 30px;
+    position: relative;
+    text-align: center;
+    --vertical-gap: 20px;
+  }
+  .page-consultoriaagil .flex-column > .metric {
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .page-consultoriaagil .metric .metric-value {
+    z-index: 2;
+  }
+  .page-consultoriaagil .metric {
+    opacity: 0;
+  }
+  .page-consultoriaagil .metric {
+    width: auto;
+  }
+  .page-consultoriaagil .metric .metric-value {
+    height: 72px;
+    position: relative;
+  }
+  .page-consultoriaagil .metric .metric-value p {
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 500;
+  }
+  .page-consultoriaagil .testimonial-description-inner {
+    overflow-wrap: break-word;
+  }
+  .page-consultoriaagil .testimonial {
+    position: relative;
+    padding: 30px;
+    line-height: 1.5;
+  }
+  .page-consultoriaagil .testimonial .testimonial-content {
+    line-height: 1.5em;
+  }
+  .page-consultoriaagil .testimonial .testimonial-meta {
+    padding-bottom: 0px;
+  }
+  .page-consultoriaagil .testimonial-portrait {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    margin-right: 30px;
+    box-sizing: content-box;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px inset;
+    border-radius: 90px;
+  }
+  .page-consultoriaagil .testimonial-portrait img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+  .page-consultoriaagil .testimonial-author {
+    font-weight: 700;
+    width: 100%;
+  }
+  .page-consultoriaagil .testimonial-company,
+  .page-consultoriaagil .testimonial-meta,
+  .page-consultoriaagil .testimonial-position {
+    display: inline-block;
+  }
+  @media (min-width: 768px) and (max-width: 980px) {
+    .page-consultoriaagil .content-column .testimonial-portrait {
+      display: block;
+      margin-right: 30px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 980px) {
+    .page-consultoriaagil .content-column .testimonial-description {
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-consultoriaagil .content-column .testimonial-description {
+      width: 100%;
+      display: block;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-consultoriaagil .content-column .testimonial-portrait {
+      display: block;
+      margin: 0px auto 20px;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-consultoriaagil .testimonial {
+      padding-top: 10%;
+    }
+  }
+  .page-consultoriaagil {
+    font-size: 18px;
+  }
+  .page-consultoriaagil .slide-content {
+    font-size: 20px;
+  }
+  .page-consultoriaagil {
+    font-weight: 400;
+  }
+  .page-consultoriaagil .slide-content {
+    font-weight: 400;
+  }
+  .page-consultoriaagil .heading-size-1,
+  .page-consultoriaagil .heading-size-2,
+  .page-consultoriaagil .heading-size-4,
+  .page-consultoriaagil .heading-size-5,
+  .page-consultoriaagil .slide-description .slide-title {
+    line-height: 1.2em;
+  }
+  .page-consultoriaagil .heading-size-1 {
+    font-size: 32px;
+  }
+  .page-consultoriaagil .heading-size-2 {
+    font-size: 27px;
+  }
+  .page-consultoriaagil .heading-size-4 {
+    font-size: 19px;
+  }
+  .page-consultoriaagil .slide-description .slide-title {
+    font-size: 48px;
+  }
+  .page-consultoriaagil .heading-size-1 {
+    font-weight: 600;
+  }
+  .page-consultoriaagil .heading-size-2 {
+    font-weight: 600;
+  }
+  .page-consultoriaagil .heading-size-4 {
+    font-weight: 600;
+  }
+  .page-consultoriaagil .heading-size-5 {
+    font-weight: 600;
+  }
+  .page-consultoriaagil .slide-description .slide-title {
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil .heading-size-1 {
+      font-size: 28px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil .heading-size-2 {
+      font-size: 24px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil .heading-size-4 {
+      font-size: 16px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil
+      .carousel.content-block
+      .carousel-track
+      .slide-description
+      .slide-title {
+      font-size: 42px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil .heading-size-5 {
+      font-size: 14px;
+    }
+  }
+  .page-consultoriaagil .heading-size-1,
+  .page-consultoriaagil .heading-size-2,
+  .page-consultoriaagil .heading-size-4,
+  .page-consultoriaagil .heading-size-5 {
+    font-family: var(--font-heading);
+  }
+  .page-consultoriaagil .fullwidth-slider-1 .carousel-slide .slide-description {
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-consultoriaagil .fullwidth-slider-1.carousel .slide-content {
+    font-size: 18px;
+  }
+  .page-consultoriaagil .fullwidth-slider-1 .slide-link.action-link {
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: solid;
+  }
+  .page-consultoriaagil .carousel .slide-1 {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  .page-consultoriaagil .slide-1 .slide-description .slide-title,
+  .page-consultoriaagil .slide-1 .slide-description .slide-content,
+  .page-consultoriaagil
+    .carousel-track
+    .slide-1.carousel-slide
+    .slide-description {
+    text-align: start;
+  }
+  .page-consultoriaagil
+    .carousel
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-title {
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-consultoriaagil
+    .carousel.content-block
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-content {
+    font-size: 28px;
+    line-height: 1.9em;
+    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+  }
+  .page-consultoriaagil .slide-1.carousel-slide .slide-link.action-link {
+    background-color: rgb(131, 0, 233);
+    letter-spacing: 2px;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil .fullwidth-slider-1 .slide-link.action-link {
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil
+      .carousel.content-block
+      .slide-1.carousel-slide
+      .slide-description
+      .slide-content {
+      font-size: 24px;
+    }
+  }
+  .page-consultoriaagil .benefit {
+    background-color: rgb(31, 101, 129);
+    padding: 40px 60px;
+    text-align: center;
+    --vertical-gap: 20px;
+  }
+  .page-consultoriaagil .benefit-description {
+    padding-bottom: 20px;
+    position: relative;
+  }
+  .page-consultoriaagil .stack .benefit-description,
+  .page-consultoriaagil .benefit-description p:last-of-type {
+    padding-bottom: 0px;
+  }
+  @media (max-width: 767px) {
+    .page-consultoriaagil .benefit {
+      padding: 40px;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-consultoriaagil .benefit {
+      padding: 40px;
+    }
+  }
+  .page-consultoriaagil .carousel {
+    --vertical-gap: 0px;
+    --horizontal-gap: 0px;
+  }
+  .page-consultoriaagil .carousel .slide-container {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    z-index: 2;
+  }
+  .page-consultoriaagil .carousel-track .slide-container {
+    display: table;
+    table-layout: fixed;
+  }
+  .page-consultoriaagil .carousel-track .slide-inner {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+  .page-consultoriaagil .slide-content {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+  }
+  .page-consultoriaagil .slide-content p:last-of-type {
+    padding-bottom: 0px;
+  }
+  .page-consultoriaagil .tone-dark .slide-content {
+    color: rgb(255, 255, 255);
+  }
+  .page-consultoriaagil .slide-description {
+    overflow-wrap: break-word;
+    --vertical-gap: 20px;
+  }
+  .page-consultoriaagil .tone-dark .slide-description {
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+  }
+  .page-consultoriaagil .slide-description {
+    padding: 16% 8%;
+    width: auto;
+    margin: auto;
+  }
+  .page-consultoriaagil .slide-description .slide-title {
+    font-weight: 300;
+    margin-top: 0px;
+  }
+  .page-consultoriaagil .slide-description .heading-size-2.slide-title {
+    font-size: 46px;
+  }
+  .page-consultoriaagil .carousel .action-link {
+    margin-top: 0px;
+  }
+  .page-consultoriaagil .carousel .slide-title {
+    padding-bottom: 0px;
+  }
+  @media (max-width: 980px) {
+    .page-consultoriaagil .slide-description .heading-size-2.slide-title {
+      font-size: 26px;
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-consultoriaagil .slide-description .slide-title {
+      font-weight: 500;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-consultoriaagil .slide-content {
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+  @media (max-width: 980px) {
+    .page-consultoriaagil .slide-description {
+      text-align: center;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-consultoriaagil .slide-content {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-consultoriaagil
+      .carousel.content-block
+      .carousel-track
+      .slide-content {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-consultoriaagil .slide-description .heading-size-2.slide-title {
+      font-size: 24px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-consultoriaagil
+      .carousel.content-block
+      .carousel-track
+      .slide-description
+      .heading-size-2.slide-title {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-consultoriaagil .slide-description {
+      text-align: center;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-consultoriaagil .slide-description .heading-size-2.slide-title {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 479px) {
+    .page-consultoriaagil .slide-content {
+      font-weight: 400;
+      font-size: 10px;
+      display: block;
+    }
+  }
+  .page-consultoriaagil .carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  .page-consultoriaagil .carousel-slide {
+    padding: 0px 6%;
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+  }
+  .page-consultoriaagil .carousel .carousel-slide {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-position: 50% center;
+    background-size: cover;
+  }
+  .page-consultoriaagil .testimonial-1 {
+    background-color: rgb(245, 245, 245);
+    border-radius: 16px;
+    text-align: center;
+  }
+  .page-consultoriaagil .testimonial-1 .testimonial-inner,
+  .page-consultoriaagil .cta-4,
+  .page-consultoriaagil .cta-5,
+  .page-consultoriaagil .cta-6,
+  .page-consultoriaagil .cta-7 {
+    overflow: hidden;
+  }
+  .page-consultoriaagil .testimonial-1.testimonial .testimonial-content {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: none;
+    font-variant: normal;
+    text-decoration-line: none;
+    font-size: 18px;
+  }
+  .page-consultoriaagil .text-10,
+  .page-consultoriaagil .text-11,
+  .page-consultoriaagil .text-12,
+  .page-consultoriaagil .text-13,
+  .page-consultoriaagil .text-14 {
+    text-align: start;
+  }
+  .page-consultoriaagil .image-2 .image-frame {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .page-consultoriaagil .image-2 .image-frame img {
+    border-radius: inherit;
+  }
+  .page-consultoriaagil .cta-4.benefit,
+  .page-consultoriaagil .cta-5.benefit,
+  .page-consultoriaagil .cta-6.benefit,
+  .page-consultoriaagil .cta-7.benefit {
+    background-color: var(--color-blue);
+    border-radius: 16px;
+  }
+  .page-consultoriaagil .cta-4 .benefit-description,
+  .page-consultoriaagil .cta-4 .heading-title,
+  .page-consultoriaagil .number-counter-5 .metric-label,
+  .page-consultoriaagil .number-counter-5 .metric-value,
+  .page-consultoriaagil .cta-5 .benefit-description,
+  .page-consultoriaagil .cta-5 .heading-title,
+  .page-consultoriaagil .cta-6 .benefit-description,
+  .page-consultoriaagil .cta-6 .heading-title,
+  .page-consultoriaagil .number-counter-6 .metric-label,
+  .page-consultoriaagil .number-counter-6 .metric-value,
+  .page-consultoriaagil .cta-7 .benefit-description,
+  .page-consultoriaagil .cta-7 .heading-title,
+  .page-consultoriaagil .number-counter-7 .metric-label,
+  .page-consultoriaagil .number-counter-7 .metric-value,
+  .page-consultoriaagil .number-counter-8 .metric-label,
+  .page-consultoriaagil .number-counter-8 .metric-value,
+  .page-consultoriaagil .heading-9 .heading-container .heading-size-1,
+  .page-consultoriaagil .number-counter-9 .metric-label,
+  .page-consultoriaagil .number-counter-9 .metric-value {
+    text-align: center;
+  }
+  .page-consultoriaagil .number-counter-5.metric .heading-size-5.metric-label,
+  .page-consultoriaagil .number-counter-6.metric .heading-size-5.metric-label,
+  .page-consultoriaagil .number-counter-7.metric .heading-size-5.metric-label,
+  .page-consultoriaagil .number-counter-8.metric .heading-size-5.metric-label,
+  .page-consultoriaagil .number-counter-9.metric .heading-size-5.metric-label {
+    font-family: var(--font-body);
+    font-weight: var(--heading-weight);
+  }
+  .page-consultoriaagil .number-counter-5.metric .metric-value p,
+  .page-consultoriaagil .number-counter-6.metric .metric-value p,
+  .page-consultoriaagil .number-counter-7.metric .metric-value p,
+  .page-consultoriaagil .number-counter-8.metric .metric-value p,
+  .page-consultoriaagil .number-counter-9.metric .metric-value p {
+    font-family: Poppins, Helvetica, Arial, Lucida, sans-serif;
+    font-weight: var(--heading-weight);
+    color: rgb(87, 0, 255);
+    font-size: 52px;
+  }
+  .page-consultoriaagil .heading-7 .heading-container .heading-size-4 {
+    font-weight: 300;
+    text-align: center;
+  }
+  .page-consultoriaagil .heading-8 .heading-container .heading-size-1 {
+    text-align: center;
+  }
+  .page-consultoriaagil .section-12.page-section {
+    padding-bottom: 100px;
+  }
+}
+@layer overrides {
+  @media (width <= 980px) {
+    .page-consultoriaagil .flex-row > .content-column {
+      width: 100%;
+    }
+  }
+  @media (width <= 767px) {
+    .page-consultoriaagil .carousel-slide .slide-title {
+      font-size: 32px;
+      line-height: 1.2;
+    }
+  }
+  .page-consultoriaagil .tone-dark,
+  .page-consultoriaagil .tone-dark .heading-size-1,
+  .page-consultoriaagil .tone-dark .heading-size-2 {
+    color: rgb(255, 255, 255);
+  }
+  .page-consultoriaagil
+    .fullwidth-slider-1.carousel
+    .slide-description
+    .slide-title {
+    font-size: 52px;
+  }
+  .page-consultoriaagil
+    .carousel
+    .slide-1.carousel-slide
+    .slide-description
+    .slide-title {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.3em;
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil
+      .carousel
+      .slide-1.carousel-slide
+      .slide-description
+      .slide-title {
+      font-size: 38px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil .hide-background-phone {
+      display: none;
+    }
+  }
+  .page-consultoriaagil .carousel .carousel-slide {
+    list-style: none;
+  }
+  .page-consultoriaagil .number-counter-5.metric .heading-size-5.metric-label,
+  .page-consultoriaagil .number-counter-6.metric .heading-size-5.metric-label,
+  .page-consultoriaagil .number-counter-7.metric .heading-size-5.metric-label,
+  .page-consultoriaagil .number-counter-8.metric .heading-size-5.metric-label,
+  .page-consultoriaagil .number-counter-9.metric .heading-size-5.metric-label {
+    color: rgb(255, 0, 117);
+  }
+  .page-consultoriaagil .heading-8 .heading-container .heading-size-1 {
+    color: var(--color-soft);
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil .image-2 {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .page-consultoriaagil .section-11 {
+      background-image: url('../../assets/images/Diapositiva91-background.webp');
+    }
+  }
+}

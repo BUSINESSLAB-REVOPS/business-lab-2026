@@ -1,0 +1,39 @@
+---
+interface Props {
+  value: string;
+  label: string;
+  class?: string;
+}
+const { value, label, class: className } = Astro.props;
+---
+
+<div class:list={['metric', className]}>
+  <div class="metric-value">
+    <p>
+      <span class="metric-number">{value}</span>
+    </p>
+  </div>
+  <p class="metric-label heading-size-5">{label}</p>
+</div>
+<style>
+  @layer components {
+    .metric {
+      text-align: center;
+    }
+    .metric-value {
+      font: 500 72px/1 var(--font-heading);
+    }
+    .metric-label {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+</style>
+<style>
+  @layer overrides {
+    .metric {
+      opacity: 1;
+    }
+  }
+</style>

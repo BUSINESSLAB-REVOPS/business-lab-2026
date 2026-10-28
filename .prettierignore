@@ -1,0 +1,11 @@
+node_modules
+dist
+.astro
+.agents
+AGENTS.md
+.artifacts
+.venv-fonts
+package-lock.json
+public
+test-results
+playwright-report

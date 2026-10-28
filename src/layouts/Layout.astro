@@ -1,10 +1,27 @@
 ---
 import '../styles/global.css';
+import '../styles/content.css';
+import '../styles/layout.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-interface Props { title?: string; description?: string; }
-const { title = 'Nosotros - Business Lab', description = 'Business Lab es la fusión de la estrategia y la ejecución para ayudar a escalar a las empresas tecnológicas.' } = Astro.props;
+import { pages, type PageId } from '../data/pages';
+interface Props {
+  page: PageId;
+  title?: string;
+  description?: string;
+}
+const {
+  page,
+  title = pages[page].title,
+  description = pages[page].description,
+} = Astro.props;
+const canonical = new URL(pages[page].path, Astro.site);
+const socialImage = new URL(
+  '/assets/BL-LOGO-BLACK-LABEL-short.png',
+  Astro.site,
+);
 ---
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -12,14 +29,31 @@ const { title = 'Nosotros - Business Lab', description = 'Business Lab es la fus
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Business Lab" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="Business Lab" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
     <title>{title}</title>
   </head>
   <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <a class="skip-link" href="#contenido">
+      Saltar al contenido
+    </a>
     <Header />
-    <main id="contenido"><slot /></main>
+    <main id="contenido">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
