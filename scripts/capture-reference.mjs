@@ -16,6 +16,16 @@ const routes = [
 ];
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const results = [];
+const baseURL = process.env.BASE_URL || 'http://127.0.0.1:4325';
+const readyBy = Date.now() + 60000;
+while (true) {
+  try {
+    const response = await fetch(baseURL);
+    if (response.ok) break;
+  } catch {}
+  if (Date.now() > readyBy) throw new Error(`Preview is not ready: ${baseURL}`);
+  await new Promise((resolve) => setTimeout(resolve, 500));
+}
 for (const route of routes) {
   const name = route.replaceAll('/', '-').replace(/^-|-$/g, '') || 'home';
   for (const width of [390, 768, 1280]) {
@@ -25,7 +35,7 @@ for (const route of routes) {
     });
     page.setDefaultTimeout(90000);
     await page.goto(
-      `${process.env.BASE_URL || 'http://localhost:4325'}${route}`,
+      `${process.env.BASE_URL || 'http://127.0.0.1:4325'}${route}`,
       { waitUntil: 'load', timeout: 90000 },
     );
     await page.evaluate(async () => {
@@ -48,13 +58,11 @@ for (const route of routes) {
     const data = await page.evaluate(() => ({
       overflow: document.documentElement.scrollWidth > innerWidth,
       height: document.documentElement.scrollHeight,
-      resources: performance
-        .getEntriesByType('resource')
-        .map((e) => ({
-          url: e.name,
-          bytes: e.transferSize,
-          decoded: e.decodedBodySize,
-        })),
+      resources: performance.getEntriesByType('resource').map((e) => ({
+        url: e.name,
+        bytes: e.transferSize,
+        decoded: e.decodedBodySize,
+      })),
       sections: [
         ...document.querySelectorAll('main .et_pb_section,main .page-section'),
       ].map((el) => {
