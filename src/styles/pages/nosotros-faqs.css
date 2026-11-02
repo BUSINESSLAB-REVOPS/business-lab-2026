@@ -16,9 +16,9 @@
   }
   .page-nosotros-faqs .heading-size-1,
   .page-nosotros-faqs .heading-size-5 {
-    color: rgb(51, 51, 51);
+    color: var(--color-ink);
     padding-bottom: 10px;
-    line-height: 1em;
+    line-height: 1.3;
     font-weight: 500;
   }
   .page-nosotros-faqs .heading-size-1 {
@@ -191,7 +191,7 @@
     }
   }
   .page-nosotros-faqs .tone-light.content-block.action-link {
-    color: rgb(46, 163, 242);
+    color: var(--color-primary);
   }
   .page-nosotros-faqs .action-link {
     display: inline-block;
@@ -204,7 +204,7 @@
   }
   .page-nosotros-faqs .heading-size-1,
   .page-nosotros-faqs .heading-size-5 {
-    line-height: 1.2em;
+    line-height: 1.3;
   }
   @media only screen and (min-width: 1350px) {
     .page-nosotros-faqs .block-row {
@@ -271,7 +271,7 @@
   .page-nosotros-faqs .page-section .button-1 {
     border-radius: 0px;
     border-width: 0px;
-    border-color: rgb(51, 51, 51);
+    border-color: var(--color-ink);
     border-style: solid;
   }
   .page-nosotros-faqs .heading-2 .heading-container .heading-size-1 {
@@ -329,7 +329,7 @@
   .page-nosotros-faqs .accordion-1.faq-list .faq-item {
     border-radius: 16px;
     border-width: 0px;
-    border-color: rgb(51, 51, 51);
+    border-color: var(--color-ink);
     border-style: solid;
     overflow: hidden;
   }
@@ -379,6 +379,7 @@
     color: var(--color-soft);
   }
   .page-nosotros-faqs .section-5 {
+    background-color: var(--color-midnight);
     background-repeat: no-repeat;
     background-image: url('../../assets/images/Slide43-1-background.webp');
   }

@@ -50,9 +50,9 @@
   }
   .page-servicios-entrenamiento .heading-size-1,
   .page-servicios-entrenamiento .heading-size-2 {
-    color: rgb(51, 51, 51);
+    color: var(--color-ink);
     padding-bottom: 10px;
-    line-height: 1em;
+    line-height: 1.3;
     font-weight: 500;
   }
   .page-servicios-entrenamiento .heading-size-1 {
@@ -190,7 +190,7 @@
   .page-servicios-entrenamiento .slide-content {
     font-size: 14px;
     font-weight: 400;
-    color: rgb(51, 51, 51);
+    color: var(--color-ink);
   }
   .page-servicios-entrenamiento .slide-content p:last-of-type {
     padding-bottom: 0px;
@@ -327,7 +327,7 @@
   .page-servicios-entrenamiento .heading-size-1,
   .page-servicios-entrenamiento .heading-size-2,
   .page-servicios-entrenamiento .slide-description .slide-title {
-    line-height: 1.2em;
+    line-height: 1.3;
   }
   .page-servicios-entrenamiento .heading-size-1 {
     font-size: 32px;
@@ -387,9 +387,7 @@
     border-color: rgba(255, 255, 255, 0);
     border-style: solid;
   }
-  .page-servicios-entrenamiento .carousel .slide-1 {
-    background-color: rgba(255, 255, 255, 0.12);
-  }
+
   .page-servicios-entrenamiento .slide-1 .slide-description .slide-title,
   .page-servicios-entrenamiento .slide-1 .slide-description .slide-content,
   .page-servicios-entrenamiento
@@ -417,7 +415,7 @@
   .page-servicios-entrenamiento
     .slide-1.carousel-slide
     .slide-link.action-link {
-    background-color: rgb(131, 0, 233);
+    background-color: var(--color-primary);
     letter-spacing: 2px;
   }
   @media only screen and (max-width: 767px) {
@@ -453,7 +451,8 @@
     margin-right: auto;
   }
   .page-servicios-entrenamiento .page-section .button-1 {
-    background-color: rgb(87, 0, 255);
+    background-color: var(--color-primary);
+    color: var(--color-white);
     border-radius: 16px;
   }
   .page-servicios-entrenamiento .text-8,
@@ -478,7 +477,7 @@
   @media (width <= 767px) {
     .page-servicios-entrenamiento .carousel-slide .slide-title {
       font-size: 32px;
-      line-height: 1.2;
+      line-height: 1.3;
     }
   }
   .page-servicios-entrenamiento .tone-dark,
