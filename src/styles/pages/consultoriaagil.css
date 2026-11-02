@@ -58,9 +58,9 @@
   .page-consultoriaagil .heading-size-2,
   .page-consultoriaagil .heading-size-4,
   .page-consultoriaagil .heading-size-5 {
-    color: rgb(51, 51, 51);
+    color: var(--color-ink);
     padding-bottom: 10px;
-    line-height: 1em;
+    line-height: 1.3;
     font-weight: 500;
   }
   .page-consultoriaagil .heading-size-1 {
@@ -70,7 +70,7 @@
     font-size: 26px;
   }
   .page-consultoriaagil .heading-size-4 {
-    font-size: 18px;
+    font-size: 22px;
   }
   .page-consultoriaagil .heading-size-5 {
     font-size: 16px;
@@ -303,7 +303,7 @@
     }
   }
   .page-consultoriaagil {
-    font-size: 18px;
+    font-size: 16px;
   }
   .page-consultoriaagil .slide-content {
     font-size: 20px;
@@ -319,7 +319,7 @@
   .page-consultoriaagil .heading-size-4,
   .page-consultoriaagil .heading-size-5,
   .page-consultoriaagil .slide-description .slide-title {
-    line-height: 1.2em;
+    line-height: 1.3;
   }
   .page-consultoriaagil .heading-size-1 {
     font-size: 32px;
@@ -328,7 +328,7 @@
     font-size: 27px;
   }
   .page-consultoriaagil .heading-size-4 {
-    font-size: 19px;
+    font-size: 22px;
   }
   .page-consultoriaagil .slide-description .slide-title {
     font-size: 48px;
@@ -360,7 +360,7 @@
   }
   @media only screen and (max-width: 767px) {
     .page-consultoriaagil .heading-size-4 {
-      font-size: 16px;
+      font-size: 20px;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -397,9 +397,7 @@
     border-color: rgba(255, 255, 255, 0);
     border-style: solid;
   }
-  .page-consultoriaagil .carousel .slide-1 {
-    background-color: rgba(255, 255, 255, 0.12);
-  }
+
   .page-consultoriaagil .slide-1 .slide-description .slide-title,
   .page-consultoriaagil .slide-1 .slide-description .slide-content,
   .page-consultoriaagil
@@ -425,7 +423,7 @@
     text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
   }
   .page-consultoriaagil .slide-1.carousel-slide .slide-link.action-link {
-    background-color: rgb(131, 0, 233);
+    background-color: var(--color-primary);
     letter-spacing: 2px;
   }
   @media only screen and (max-width: 767px) {
@@ -488,7 +486,7 @@
   .page-consultoriaagil .slide-content {
     font-size: 14px;
     font-weight: 400;
-    color: rgb(51, 51, 51);
+    color: var(--color-ink);
   }
   .page-consultoriaagil .slide-content p:last-of-type {
     padding-bottom: 0px;
@@ -679,9 +677,9 @@
   .page-consultoriaagil .number-counter-7.metric .metric-value p,
   .page-consultoriaagil .number-counter-8.metric .metric-value p,
   .page-consultoriaagil .number-counter-9.metric .metric-value p {
-    font-family: Poppins, Helvetica, Arial, Lucida, sans-serif;
+    font-family: var(--font-heading);
     font-weight: var(--heading-weight);
-    color: rgb(87, 0, 255);
+    color: var(--color-primary);
     font-size: 52px;
   }
   .page-consultoriaagil .heading-7 .heading-container .heading-size-4 {
@@ -704,7 +702,7 @@
   @media (width <= 767px) {
     .page-consultoriaagil .carousel-slide .slide-title {
       font-size: 32px;
-      line-height: 1.2;
+      line-height: 1.3;
     }
   }
   .page-consultoriaagil .tone-dark,
@@ -749,7 +747,7 @@
   .page-consultoriaagil .number-counter-7.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-8.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-9.metric .heading-size-5.metric-label {
-    color: rgb(255, 0, 117);
+    color: var(--color-text-muted);
   }
   .page-consultoriaagil .heading-8 .heading-container .heading-size-1 {
     color: var(--color-soft);

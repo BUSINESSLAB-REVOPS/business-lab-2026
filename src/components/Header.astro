@@ -82,8 +82,9 @@ const navigation = Object.values(pages)
       position: sticky;
       top: 0;
       z-index: 100;
-      background: #fff;
-      box-shadow: 0 1px 0 #0000001a;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
     }
     .header-inner {
       position: relative;
@@ -114,17 +115,22 @@ const navigation = Object.values(pages)
       display: block;
       padding-block: 25px;
       font-family: var(--font-heading);
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
-      line-height: 1.2;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      color: var(--color-ink);
       white-space: nowrap;
-      transition: opacity 0.15s;
+      transition:
+        color 0.15s ease,
+        opacity 0.15s ease;
     }
     .main-navigation a:hover {
-      opacity: 0.65;
+      color: var(--color-primary);
+      opacity: 1;
     }
     .main-navigation a[aria-current='page'] {
-      color: var(--color-blue);
+      color: var(--color-primary);
     }
     .menu-toggle {
       display: none;
@@ -139,14 +145,15 @@ const navigation = Object.values(pages)
       width: 24px;
       height: 3px;
       margin: 4px 0;
-      background: #333;
+      background: var(--color-ink);
+      border-radius: 2px;
     }
     @media (min-width: 1051px) and (max-width: 1250px) {
       .main-navigation ul {
         gap: 14px;
       }
       .main-navigation a {
-        font-size: 12px;
+        font-size: 13px;
       }
       .brand {
         width: 200px;
@@ -157,7 +164,7 @@ const navigation = Object.values(pages)
         width: 192px;
       }
       .main-navigation a {
-        font-size: 16px;
+        font-size: 15px;
       }
     }
     @media (max-width: 1050px) {
@@ -174,9 +181,9 @@ const navigation = Object.values(pages)
         left: 0;
         width: 100%;
         padding: 14px 24px;
-        background: #fff;
-        border-top: 3px solid var(--color-orange);
-        box-shadow: 0 8px 15px #0002;
+        background: var(--color-white);
+        border-top: 1px solid var(--color-border);
+        box-shadow: var(--shadow-panel);
       }
       .site-header[data-menu-ready] .main-navigation.is-open {
         display: block;
@@ -186,8 +193,8 @@ const navigation = Object.values(pages)
       }
       .main-navigation a {
         padding: 13px 0;
-        font-size: 14px;
-        border-bottom: 1px solid #eee;
+        font-size: 15px;
+        border-bottom: 1px solid var(--color-border);
       }
       .site-header:not([data-menu-ready]) .header-inner {
         flex-wrap: wrap;

@@ -27,9 +27,9 @@
   }
   .page-casos .heading-size-1,
   .page-casos .heading-size-2 {
-    color: rgb(51, 51, 51);
+    color: var(--color-ink);
     padding-bottom: 10px;
-    line-height: 1em;
+    line-height: 1.3;
     font-weight: 500;
   }
   .page-casos .heading-size-2 a {
@@ -176,7 +176,7 @@
     font-size: 18px;
   }
   .page-casos .post-card .post-image-link {
-    border: 0px solid rgb(51, 51, 51);
+    border: 0px solid var(--color-ink);
   }
   @media (max-width: 479px) {
     .page-casos .grid-module > .post-card .heading-size-2 {
@@ -245,14 +245,14 @@
   }
   @media (max-width: 479px) {
     .page-casos .post-card .post-meta {
-      color: rgb(102, 102, 102);
+      color: var(--color-text-muted);
       font-size: 14px;
     }
   }
   .page-casos .tone-light .post-card .post-meta,
   .page-casos .tone-light .post-card .post-meta a,
   .page-casos .tone-light .post-card p {
-    color: rgb(102, 102, 102);
+    color: var(--color-text-muted);
   }
   .page-casos {
     --content-width: 80%;
@@ -286,7 +286,7 @@
   }
   .page-casos .heading-size-1,
   .page-casos .heading-size-2 {
-    line-height: 1.2em;
+    line-height: 1.3;
   }
   @media only screen and (min-width: 1350px) {
     .page-casos .block-row {

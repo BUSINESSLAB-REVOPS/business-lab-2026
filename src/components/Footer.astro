@@ -46,9 +46,11 @@ import Newsletter from './Newsletter.astro';
 <style>
   @layer components {
     .site-footer {
-      background: var(--color-black);
-      color: #fff;
-      padding: 50px 0;
+      background: var(--color-midnight);
+      color: var(--color-footer-copy);
+      border-top: 1px solid var(--color-footer-border);
+      padding: 60px 0 32px;
+      font-family: var(--font-body);
     }
     .footer-grid {
       display: grid;
@@ -63,23 +65,39 @@ import Newsletter from './Newsletter.astro';
     }
     .footer-contact address {
       font-style: normal;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.8;
       overflow-wrap: anywhere;
+      color: var(--color-footer-copy);
+    }
+    .footer-contact address a {
+      color: var(--color-footer-copy);
+      transition: color 0.15s;
+    }
+    .footer-contact address a:hover {
+      color: var(--color-cyan);
     }
     .footer-contact address p + p {
       margin-top: 10px;
     }
     .site-footer a:hover {
+      color: var(--color-cyan);
       text-decoration: underline;
       text-underline-offset: 4px;
     }
     .footer-links {
       display: flex;
       flex-direction: column;
-      gap: 23px;
-      font-size: 14px;
+      gap: 20px;
+      font-size: 15px;
       line-height: 1.5;
+    }
+    .footer-links a {
+      color: var(--color-footer-copy);
+      transition: color 0.15s;
+    }
+    .footer-links a:hover {
+      color: var(--color-cyan);
     }
     @media (max-width: 1050px) {
       .footer-grid {
@@ -99,7 +117,7 @@ import Newsletter from './Newsletter.astro';
       }
       .footer-links {
         flex-direction: column;
-        gap: 18px;
+        gap: 16px;
       }
     }
   }

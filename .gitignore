@@ -28,3 +28,6 @@ pnpm-debug.log*
 test-results/
 playwright-report/
 .venv-fonts/
+
+# Local Impeccable artifacts; keep the installed skill tracked.
+**/.impeccable/

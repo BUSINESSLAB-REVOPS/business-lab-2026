@@ -22,34 +22,40 @@ const { href, class: className, arrow = false } = Astro.props;
   @layer components {
     .action-link {
       position: relative;
-      display: inline-block;
-      padding: 0.3em 1em;
-      border: 2px solid currentColor;
-      border-radius: 3px;
-      font-size: 20px;
-      line-height: 1.7;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 22px;
+      border: 1.5px solid currentColor;
+      border-radius: var(--radius-button);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
       transition:
-        padding 0.2s,
-        background 0.2s;
+        background-color 0.2s var(--ease-out),
+        border-color 0.2s var(--ease-out),
+        color 0.2s var(--ease-out);
     }
     .action-arrow {
       position: absolute;
       top: 50%;
-      right: 0.25em;
+      right: 0.5em;
       width: 1em;
       height: 1em;
       transform: translateY(-50%);
       opacity: 0;
-    }
-    .action-link:hover {
-      padding-right: 1.8em;
+      transition:
+        opacity 0.2s var(--ease-out),
+        transform 0.2s var(--ease-out);
     }
     .action-link:hover .action-arrow {
       opacity: 1;
+      transform: translate(2px, -50%);
     }
     .has-arrow .action-arrow {
       opacity: 1;
-      color: var(--color-blue);
+      color: var(--color-primary);
     }
   }
 </style>
