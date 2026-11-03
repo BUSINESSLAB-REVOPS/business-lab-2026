@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/content.css';
 import '../styles/layout.css';
+import Consultation from '../components/Consultation.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { pages, type PageId } from '../data/pages';
@@ -16,10 +17,7 @@ const {
   description = pages[page].description,
 } = Astro.props;
 const canonical = new URL(pages[page].path, Astro.site);
-const socialImage = new URL(
-  '/assets/BL-LOGO-BLACK-LABEL-short.png',
-  Astro.site,
-);
+const socialImage = new URL('/assets/business-lab-logo-light.png', Astro.site);
 ---
 
 <!doctype html>
@@ -42,8 +40,8 @@ const socialImage = new URL(
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
-    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -75,5 +73,6 @@ const socialImage = new URL(
       <slot />
     </main>
     <Footer />
+    <Consultation />
   </body>
 </html>

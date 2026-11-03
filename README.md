@@ -62,6 +62,8 @@ npm test
 
 `npm test` compila el sitio y la página de prueba aislada del CTA, y ejecuta Playwright. Usa Chrome instalado (`channel: chrome`) y sirve las compilaciones en los puertos locales 4325 y 4326. Las pruebas cubren las ocho rutas, semántica, metadatos, imágenes, presupuesto de 60 KB de CSS por página, menú móvil, FAQs, suscripción, pausa y movimiento reducido, y uso sin JavaScript.
 
+Con el servidor de desarrollo activo en `http://localhost:4321`, `npm run test:dev` verifica también el formulario en desarrollo, incluidos la inicialización de React y los fallos de descarga. Si no se puede cargar el formulario, muestra un aviso dentro del sitio para recargar; nunca abre automáticamente una aplicación de correo.
+
 Para comparar visualmente con una referencia local:
 
 ```sh
@@ -87,7 +89,15 @@ python -m venv .venv-fonts
 - Menú móvil accesible con soporte de Escape.
 - Carrusel con flechas, pausa, teclado y preferencia de movimiento reducido; no gira mientras conserva foco o puntero.
 - Preguntas frecuentes desplegables por ratón o teclado.
-- Consulta gratuita y suscripción mediante solicitud de correo; no hay backend ni envío automático.
+- Consulta gratuita mediante un formulario local de tres pasos: diagnóstico, datos de contacto y reserva en Zoho Bookings. Suscripción mediante solicitud de correo.
 - Los documentos legales no estaban enlazados en el original: sus enlaces permiten solicitarlos por correo.
 - Los artículos que no tienen ruta local conservan su destino público original.
-- El contenido se genera como HTML estático desde plantillas Astro, sin scripts de WordPress ni analítica.
+- El contenido se genera como HTML estático desde plantillas Astro; React hidrata únicamente el diagnóstico. Los eventos del diagnóstico se guardan en una cola local, sin proveedor de analítica.
+
+## Formulario de consultoría
+
+`src/components/diagnostic/` y los componentes utilizados en `src/components/ui/` son copias locales independientes del formulario de REVOPS-center. No importan archivos ni requieren que ese proyecto esté en ejecución. Conservan las preguntas, validaciones, teléfono internacional (Perú predeterminado) y la configuración de Zoho Bookings.
+
+Los enlaces de contacto y «Consultoría gratuita» abren una única ventana por página. `/?consultoria=gratuita#contacto` permite abrirla desde un enlace directo. El calendario predeterminado es `https://revops1.zohobookings.com/portal-embed#/5013442000000038009`; se puede sustituir mediante `PUBLIC_ZOHO_BOOKINGS_URL` (ver `.env.example`). Los datos de contacto se pasan a Zoho al llegar al paso de reserva; no hay almacenamiento local ni envío propio del formulario.
+
+El formulario y sus estilos se cargan al abrir la consulta. Los estilos se generan con Tailwind únicamente a partir de sus componentes, sin Preflight global. Los logos enviados se usan en cabecera, pie, metadatos e icono del sitio.
