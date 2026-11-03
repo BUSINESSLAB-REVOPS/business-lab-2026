@@ -1,0 +1,7 @@
+/* Shared utilities for Astro pages; diagnostic utilities stay lazy. */
+@layer theme, components, pages, overrides, utilities;
+@import './tokens.css';
+@import 'tailwindcss/utilities.css' layer(utilities) source(none);
+@source '../';
+@source not '../components/diagnostic';
+@source not '../components/ui';

@@ -6,7 +6,7 @@ interface Props {
 const { class: className, name = 'check' } = Astro.props;
 ---
 
-<span class:list={['symbol', className]} aria-hidden="true">
+<span class:list={['symbol align-top', className]} aria-hidden="true">
   <svg
     viewBox="0 0 32 32"
     width="1em"
@@ -29,10 +29,3 @@ const { class: className, name = 'check' } = Astro.props;
     )}
   </svg>
 </span>
-<style>
-  @layer components {
-    .symbol {
-      vertical-align: top;
-    }
-  }
-</style>

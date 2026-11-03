@@ -5,8 +5,8 @@ const navigation = Object.values(pages)
   .map((page) => [page.navigation, page.path]);
 ---
 
-<header class="site-header">
-  <div class="container header-inner">
+<header class="site-header sticky top-0 z-[100] bg-white border-b border-border shadow-[0_1px_0_rgba(0,0,0,0.04)]">
+  <div class="site-container header-inner">
     <a class="brand" href="/" aria-label="Business Lab, inicio">
       <img
         src="/assets/business-lab-logo-light.svg"
@@ -78,14 +78,6 @@ const navigation = Object.values(pages)
 
 <style>
   @layer components {
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--color-white);
-      border-bottom: 1px solid var(--color-border);
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
-    }
     .header-inner {
       position: relative;
       min-height: 80px;

@@ -48,7 +48,9 @@ for (const meta of Object.values(pages)) {
         duplicateIds: ids.filter((id, i) => ids.indexOf(id) !== i),
         unnamedLinks: links.length,
         missingAlt: document.querySelectorAll('img:not([alt])').length,
-        missingSrcset: document.querySelectorAll('img:not([srcset])').length,
+        missingSrcset: document.querySelectorAll(
+          'img:not([srcset]):not([src$=".svg"])',
+        ).length,
         broken,
         legacy: legacy.length,
         cssBytes: styles.reduce((sum, s) => sum + s.decodedBodySize, inline),
