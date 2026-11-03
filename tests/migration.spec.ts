@@ -193,7 +193,7 @@ test('CTA works inside Layout without a page stylesheet', async ({ page }) => {
     cta.getByRole('heading', { name: 'CTA independiente', level: 2 }),
   ).toBeVisible();
   await expect(
-    cta.getByRole('link', { name: 'Consultoria Gratuita' }),
+    cta.getByRole('link', { name: 'Consultoría gratuita' }),
   ).toHaveAttribute('href', 'mailto:eduardomz@business-lab.net');
   expect(
     await cta.evaluate((e) => e.getBoundingClientRect().height),

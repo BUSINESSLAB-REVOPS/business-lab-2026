@@ -1,0 +1,61 @@
+<div id="consultation-root"></div>
+<p id="consultation-error" role="alert" hidden>
+  No se pudo abrir el formulario. Recarga la página e inténtalo de nuevo.
+</p>
+
+<script>
+  const selector =
+    'a[href="/?consultoria=gratuita#contacto"], a[href="/#contacto"], [data-open-diagnostic]';
+  const triggers = [...document.querySelectorAll<HTMLElement>(selector)];
+  triggers.forEach((trigger) => {
+    trigger.setAttribute('aria-haspopup', 'dialog');
+    trigger.setAttribute('aria-controls', 'business-lab-diagnostic');
+  });
+
+  let loading = false;
+  async function open(trigger: HTMLElement) {
+    if (loading) return;
+    loading = true;
+    trigger.setAttribute('aria-busy', 'true');
+    const errorMessage = document.getElementById('consultation-error');
+    if (errorMessage) errorMessage.hidden = true;
+    try {
+      // No Astro island is rendered before this manual mount, so Astro's
+      // before-hydration React refresh script has not run in development.
+      if (import.meta.env.DEV) {
+        await import('@vitejs/plugin-react/preamble');
+      }
+      const { openDiagnostic } = await import('./diagnostic/mount');
+      openDiagnostic(trigger);
+    } catch (error) {
+      console.error('No se pudo cargar el formulario de consultoría.', error);
+      if (errorMessage) {
+        errorMessage.hidden = false;
+        errorMessage.scrollIntoView({ block: 'nearest' });
+      }
+    } finally {
+      loading = false;
+      trigger.removeAttribute('aria-busy');
+    }
+  }
+
+  document.addEventListener('click', (event) => {
+    const trigger =
+      event.target instanceof Element
+        ? event.target.closest<HTMLElement>(selector)
+        : null;
+    if (!trigger) return;
+    // Preserve browser shortcuts for opening a direct link in another tab.
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+      return;
+    event.preventDefault();
+    void open(trigger);
+  });
+  if (
+    new URLSearchParams(window.location.search).get('consultoria') ===
+    'gratuita'
+  ) {
+    const trigger = triggers[0];
+    if (trigger) void open(trigger);
+  }
+</script>

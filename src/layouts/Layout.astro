@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/content.css';
 import '../styles/layout.css';
+import Consultation from '../components/Consultation.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { pages, type PageId } from '../data/pages';
@@ -16,10 +17,7 @@ const {
   description = pages[page].description,
 } = Astro.props;
 const canonical = new URL(pages[page].path, Astro.site);
-const socialImage = new URL(
-  '/assets/business-lab-logo-light.png',
-  Astro.site,
-);
+const socialImage = new URL('/assets/business-lab-logo-light.png', Astro.site);
 ---
 
 <!doctype html>
@@ -75,5 +73,6 @@ const socialImage = new URL(
       <slot />
     </main>
     <Footer />
+    <Consultation />
   </body>
 </html>
