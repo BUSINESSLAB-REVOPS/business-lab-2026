@@ -7,6 +7,6 @@ interface Props {
 const { class: className, ...attributes } = Astro.props;
 ---
 
-<section class:list={['page-section', className]} {...attributes}>
+<section class:list={['page-section relative', className]} {...attributes}>
   <slot />
 </section>

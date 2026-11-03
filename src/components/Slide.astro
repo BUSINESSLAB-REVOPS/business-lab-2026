@@ -7,18 +7,9 @@ const { class: className, style } = Astro.props;
 ---
 
 <div
-  class:list={['carousel-slide', className]}
+  class:list={['carousel-slide relative bg-cover bg-center', className]}
   style={style}
   data-carousel-slide
 >
   <slot />
 </div>
-<style>
-  @layer components {
-    .carousel-slide {
-      position: relative;
-      background-size: cover;
-      background-position: center;
-    }
-  }
-</style>

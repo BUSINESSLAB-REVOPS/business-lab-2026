@@ -1,0 +1,596 @@
+/* Shared Tailwind recipes. Apply in each original selector to preserve cascade order. */
+@reference './tailwind.css';
+@utility page-flex-row-1 {
+  flex-wrap: wrap;
+}
+@utility page-flex-row-2 {
+  flex: 0 0 100%;
+  min-width: 0px;
+}
+@utility page-carousel-slide-3 {
+  display: none;
+}
+@utility page-carousel-slide-4 {
+  position: relative;
+}
+@utility page-slide-inner-5 {
+  z-index: 1;
+  position: relative;
+}
+@utility page-tone-dark-6 {
+  color: rgb(255, 255, 255);
+}
+@utility page-carousel-7 {
+  height: 100%;
+}
+@utility page-carousel-slide-8 {
+  overflow-wrap: normal;
+  word-break: normal;
+  font-size: 32px;
+}
+@utility page-carousel-9 {
+  background-position: center top;
+  height: calc(100% + 30vh);
+  top: -18px;
+  bottom: auto;
+}
+@utility page-heading-size-1-10 {
+  color: var(--color-ink);
+  padding-bottom: 10px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+@utility page-heading-size-2-11 {
+  color: inherit;
+}
+@utility page-heading-size-5-12 {
+  font-size: 16px;
+}
+@utility page-content-13 {
+  font-family: inherit;
+}
+@utility page-content-14 {
+  max-width: 100%;
+  height: auto;
+}
+@utility page-symbol-15 {
+  speak: none;
+  font-weight: 400;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 96px;
+  font-style: normal;
+  display: inline-block;
+  box-sizing: border-box;
+  direction: ltr;
+}
+@utility page-tone-light-16 {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+@utility page-page-section-17 {
+  margin-bottom: 0px;
+}
+@utility page-content-column-18 {
+  margin-bottom: 30px;
+}
+@utility page-flex-column-19 {
+  margin-bottom: unset;
+}
+@utility page-block-row-20 {
+  margin-right: 5.5%;
+}
+@utility page-block-row-21 {
+  width: 100%;
+}
+@utility page-block-row-22 {
+  width: 47.25%;
+}
+@utility page-span-4-4-23 {
+  margin-bottom: 2.75%;
+}
+@utility page-span-1-2-24 {
+  margin-bottom: 5.82%;
+}
+@utility page-flex-column-25 {
+  display: flex;
+  column-gap: var(--horizontal-gap);
+  row-gap: var(--vertical-gap);
+  flex-direction: var(--flex-direction);
+}
+@utility page-flex-row-26 {
+  --horizontal-gap: var(--row-gutter-horizontal);
+  --vertical-gap: var(--row-gutter-vertical);
+  --flex-direction: row;
+}
+@utility page-flex-section-27 {
+  --horizontal-gap: var(--section-gutter);
+  --vertical-gap: var(--section-gutter);
+  --flex-direction: column;
+  align-items: center;
+}
+@utility page-flex-column-28 {
+  --flex-direction: column;
+  --horizontal-gap: var(--module-gutter);
+  --vertical-gap: var(--module-gutter);
+}
+@utility page-column-24-24-29 {
+  width: calc(100% - var(--horizontal-gap-parent, 5.5%) * 0 / 1);
+}
+@utility page-flex-section-30 {
+  margin: initial;
+}
+@utility page-content-column-31 {
+  background-size: cover;
+  background-position: 50% center;
+  background-repeat: no-repeat;
+}
+@utility page-block-row-32 {
+  padding: 2% 0px;
+}
+@utility page-block-row-33 {
+  padding: 30px 0px;
+}
+@utility page-block-row-34 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+@utility page-four-column-grid-35 {
+  margin-right: 0px;
+}
+@utility page-image-block-36 {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 0;
+}
+@utility page-image-block-37 {
+  display: block;
+}
+@utility page-image-block-38 {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+}
+@utility page-copy-39 {
+  overflow-wrap: break-word;
+  line-height: var(--body-line-height, 1.7em);
+}
+@utility page-copy-40 {
+  padding-bottom: 0px;
+}
+@utility page-heading-container-41 {
+  position: relative;
+  width: 100%;
+}
+@utility page-metric-42 {
+  overflow-wrap: break-word;
+  margin: 0px auto 30px;
+  position: relative;
+  text-align: center;
+  --vertical-gap: 20px;
+}
+@utility page-flex-column-43 {
+  margin-left: unset;
+  margin-right: unset;
+}
+@utility page-metric-44 {
+  z-index: 2;
+}
+@utility page-metric-45 {
+  opacity: 0;
+}
+@utility page-metric-46 {
+  width: auto;
+}
+@utility page-metric-47 {
+  height: 72px;
+  position: relative;
+}
+@utility page-metric-48 {
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 500;
+}
+@utility page-testimonial-description-inner-49 {
+  overflow-wrap: break-word;
+}
+@utility page-testimonial-50 {
+  position: relative;
+  padding: 30px;
+  line-height: 1.5;
+}
+@utility page-testimonial-51 {
+  line-height: 1.5em;
+}
+@utility page-testimonial-portrait-52 {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  margin-right: 30px;
+  box-sizing: content-box;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px inset;
+  border-radius: 90px;
+}
+@utility page-testimonial-portrait-53 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  object-position: center center;
+  height: 100%;
+  width: 100%;
+}
+@utility page-testimonial-author-54 {
+  font-weight: 700;
+  width: 100%;
+}
+@utility page-testimonial-company-55 {
+  display: inline-block;
+}
+@utility page-content-column-56 {
+  display: block;
+  margin-right: 30px;
+}
+@utility page-content-column-57 {
+  width: 100%;
+  display: block;
+}
+@utility page-content-column-58 {
+  display: block;
+  margin: 0px auto 20px;
+}
+@utility page-testimonial-59 {
+  padding-top: 10%;
+}
+@utility page-content-60 {
+  font-size: 18px;
+}
+@utility page-content-61 {
+  font-weight: 400;
+}
+@utility page-heading-size-1-62 {
+  line-height: 1.3;
+}
+@utility page-block-row-63 {
+  padding: 27px 0px;
+}
+@utility page-heading-size-1-64 {
+  font-size: 32px;
+}
+@utility page-heading-size-2-65 {
+  font-size: 27px;
+}
+@utility page-slide-description-66 {
+  font-size: 48px;
+}
+@utility page-heading-size-1-67 {
+  font-weight: 600;
+}
+@utility page-heading-size-1-68 {
+  font-size: 28px;
+}
+@utility page-heading-size-2-69 {
+  font-size: 24px;
+}
+@utility page-carousel-70 {
+  font-size: 42px;
+}
+@utility page-heading-size-5-71 {
+  font-size: 14px;
+}
+@utility page-heading-size-1-72 {
+  font-family: var(--font-heading);
+}
+@utility page-fullwidth-slider-0-73 {
+  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0);
+  border-style: solid;
+}
+@utility page-slide-0-74 {
+  text-align: start;
+}
+@utility page-slide-0-75 {
+  background-color: var(--color-primary);
+  letter-spacing: 2px;
+}
+@utility page-heading-0-76 {
+  text-align: center;
+}
+@utility page-testimonial-0-77 {
+  background-color: rgb(245, 245, 245);
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 18px -6px;
+  text-align: start;
+}
+@utility page-testimonial-0-78 {
+  overflow: hidden;
+}
+@utility page-testimonial-0-79 {
+  font-size: 22px;
+  line-height: 22px;
+  border-radius: 22px;
+  top: -11px;
+  margin-left: -11px;
+}
+@utility page-testimonial-0-80 {
+  font-size: 13px;
+}
+@utility page-testimonial-0-81 {
+  font-weight: 600;
+  font-size: 13px;
+}
+@utility page-button-0-wrapper-82 {
+  margin-left: auto;
+  margin-right: auto;
+}
+@utility page-page-section-83 {
+  border-radius: 0px;
+  border-width: 0px;
+  border-color: var(--color-ink);
+  border-style: solid;
+}
+@utility page-image-0-84 {
+  border-radius: 16px;
+  overflow: hidden;
+}
+@utility page-image-0-85 {
+  border-radius: inherit;
+}
+@utility page-number-counter-0-86 {
+  font-family: var(--font-body);
+  font-weight: var(--heading-weight);
+}
+@utility page-number-counter-0-87 {
+  font-family: var(--font-heading);
+  font-weight: var(--heading-weight);
+  color: var(--color-primary);
+  font-size: 52px;
+}
+@utility page-cta-0-88 {
+  background-color: var(--color-blue);
+  border-radius: 16px;
+}
+@utility page-testimonial-2-89 {
+  background-color: rgb(245, 245, 245);
+  border-radius: 16px;
+  text-align: center;
+}
+@utility page-testimonial-2-90 {
+  font-weight: 700;
+  font-style: normal;
+  text-transform: none;
+  font-variant: normal;
+  text-decoration-line: none;
+  font-size: 18px;
+}
+@utility page-section-6-91 {
+  padding-bottom: 100px;
+}
+@utility page-tone-light-92 {
+  color: var(--color-primary);
+}
+@utility page-benefit-93 {
+  background-color: rgb(31, 101, 129);
+  padding: 40px 60px;
+  text-align: center;
+  --vertical-gap: 20px;
+}
+@utility page-benefit-description-94 {
+  padding-bottom: 20px;
+  position: relative;
+}
+@utility page-span-1-2-95 {
+  padding: 40px;
+}
+@utility page-carousel-96 {
+  --vertical-gap: 0px;
+  --horizontal-gap: 0px;
+}
+@utility page-carousel-97 {
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+  z-index: 2;
+}
+@utility page-carousel-track-98 {
+  display: table;
+  table-layout: fixed;
+}
+@utility page-carousel-track-99 {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+@utility page-slide-description-100 {
+  overflow-wrap: break-word;
+  --vertical-gap: 20px;
+}
+@utility page-tone-dark-101 {
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+}
+@utility page-slide-description-102 {
+  padding: 16% 8%;
+  width: auto;
+  margin: auto;
+}
+@utility page-slide-description-103 {
+  font-weight: 300;
+  margin-top: 0px;
+}
+@utility page-slide-description-104 {
+  font-size: 46px;
+}
+@utility page-carousel-105 {
+  margin-top: 0px;
+}
+@utility page-slide-description-106 {
+  font-size: 26px;
+  font-weight: 500;
+}
+@utility page-slide-description-107 {
+  font-weight: 500;
+}
+@utility page-carousel-108 {
+  font-size: 20px;
+}
+@utility page-carousel-109 {
+  position: relative;
+  overflow: hidden;
+}
+@utility page-carousel-slide-110 {
+  padding: 0px 6%;
+  background-size: cover;
+  background-position: 50% center;
+  background-repeat: no-repeat;
+}
+@utility page-carousel-111 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-position: 50% center;
+  background-size: cover;
+}
+@utility page-carousel-slide-112 {
+  font-size: 32px;
+  line-height: 1.3;
+}
+@utility page-fullwidth-slider-0-113 {
+  font-size: 52px;
+}
+@utility page-carousel-114 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.3em;
+}
+@utility page-page-section-115 {
+  color: #2a2a2a;
+  padding-right: 2em;
+  padding-left: 0.7em;
+}
+@utility page-number-counter-0-116 {
+  color: var(--color-text-muted);
+}
+@utility page-heading-1-117 {
+  color: var(--color-soft);
+}
+@utility page-carousel-118 {
+  list-style: none;
+}
+@utility page-article-card-119 {
+  height: 100%;
+  min-height: 500px;
+}
+@utility page-article-image-wrapper-120 {
+  flex-shrink: 0;
+  height: 200px;
+}
+@utility page-article-image-wrapper-121 {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+@utility page-article-card-122 {
+  min-height: 0px;
+}
+@utility page-content-123 {
+  zoom: 1;
+}
+@utility page-slide-content-124 {
+  color: var(--color-ink);
+}
+@utility page-slide-content-125 {
+  font-size: 13px;
+  font-weight: 400;
+}
+@utility page-blog-slider-0-126 {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+@utility page-article-module-127 {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@utility page-article-module-128 {
+  margin-bottom: 15px;
+}
+@utility page-article-read-more-129 {
+  text-decoration: none;
+}
+@utility page-article-module-130 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+@utility page-article-body-131 {
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+@utility page-article-image-132 {
+  border: 0px solid transparent;
+}
+@utility page-blog-slider-0-133 {
+  background-color: rgba(244, 244, 244, 0.7);
+}
+@utility page-heading-size-1-134 {
+  color: var(--color-ink);
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+@utility page-article-module-135 {
+  background: rgb(255, 255, 255);
+}
+@utility page-content-136 {
+  font-weight: 700;
+}
+@utility page-image-block-137 {
+  width: fit-content;
+  display: flex;
+}
+@utility page-fullwidth-slider-1-138 {
+  text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+}
+@utility page-carousel-139 {
+  font-size: 28px;
+  line-height: 1.9em;
+  text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+}
+@utility page-fullwidth-slider-1-140 {
+  font-size: 15px;
+}
+@utility page-slide-content-141 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-ink);
+}
+@utility page-slide-content-142 {
+  font-size: 12px;
+}
+@utility page-slide-content-143 {
+  font-weight: 400;
+  font-size: 10px;
+  display: block;
+}
+@utility page-carousel-144 {
+  font-size: 38px;
+}
+@utility page-heading-5-145 {
+  color: #072130;
+}
+@utility page-column-empty-146 {
+  min-height: 1px;
+}

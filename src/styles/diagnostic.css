@@ -1,33 +1,11 @@
-/* Utilities are generated only for the local diagnostic and its UI primitives.
-   Preflight is omitted to preserve the existing site's styles. */
 @layer theme, components, pages, overrides, utilities;
-@import 'tailwindcss/theme.css' layer(theme);
+@import './tokens.css';
 @import 'tailwindcss/utilities.css' layer(utilities) source(none);
 @import 'tw-animate-css';
 @source '../components/diagnostic';
 @source '../components/ui';
 
-@theme inline {
-  --font-sans: var(--font-body);
-  --font-display: var(--font-heading);
-  --color-background: #fff;
-  --color-foreground: var(--color-ink);
-  --color-primary: var(--color-blue);
-  --color-primary-foreground: #fff;
-  --color-secondary: var(--color-brand-tint);
-  --color-secondary-foreground: var(--color-ink);
-  --color-muted: var(--color-mist);
-  --color-muted-foreground: var(--color-text-muted);
-  --color-accent: var(--color-lilac-surface);
-  --color-accent-foreground: var(--color-ink);
-  --color-destructive: #b91c1c;
-  --color-input: var(--color-brand-border);
-  --color-ring: var(--color-blue);
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.75rem;
-}
-
+/* Local compatibility rules for the diagnostic and phone widget. */
 @layer components {
   [data-slot='dialog-content'] {
     font-family: var(--font-body);

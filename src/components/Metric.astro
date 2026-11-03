@@ -7,7 +7,7 @@ interface Props {
 const { value, label, class: className } = Astro.props;
 ---
 
-<div class:list={['metric', className]}>
+<div class:list={['metric text-center opacity-100', className]}>
   <div class="metric-value">
     <p>
       <span class="metric-number">{value}</span>
@@ -17,9 +17,6 @@ const { value, label, class: className } = Astro.props;
 </div>
 <style>
   @layer components {
-    .metric {
-      text-align: center;
-    }
     .metric-value {
       font: 700 72px/1 var(--font-heading);
       letter-spacing: -0.04em;
@@ -31,13 +28,6 @@ const { value, label, class: className } = Astro.props;
       font-weight: 500;
       letter-spacing: -0.01em;
       color: var(--color-text-muted);
-    }
-  }
-</style>
-<style>
-  @layer overrides {
-    .metric {
-      opacity: 1;
     }
   }
 </style>

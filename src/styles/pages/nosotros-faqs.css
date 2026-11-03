@@ -1,8 +1,9 @@
+@reference '../shared.css';
 /* Layout and typography for nosotros-faqs. Component behavior lives in its component. */
 @layer overrides {
   @media (min-width: 981px) {
     .page-nosotros-faqs .faq-list > .faq-item:not(:last-child) {
-      margin-bottom: 2.75%;
+      @apply page-span-4-4-23;
     }
   }
 }
@@ -10,279 +11,230 @@
   .page-nosotros-faqs .faq-question {
     cursor: pointer;
   }
-  .page-nosotros-faqs .tone-dark .heading-title,
-  .page-nosotros-faqs .tone-dark .header-content-wrapper {
-    color: rgb(255, 255, 255);
+  .page-nosotros-faqs .tone-dark .heading-title {
+    @apply page-tone-dark-6;
   }
   .page-nosotros-faqs .heading-size-1,
   .page-nosotros-faqs .heading-size-5 {
-    color: var(--color-ink);
-    padding-bottom: 10px;
-    line-height: 1.3;
-    font-weight: 500;
-  }
-  .page-nosotros-faqs .heading-size-1 {
-    font-size: 30px;
+    @apply page-heading-size-1-134;
   }
   .page-nosotros-faqs .heading-size-5 {
-    font-size: 16px;
+    @apply page-heading-size-5-12;
   }
   .page-nosotros-faqs img {
-    max-width: 100%;
-    height: auto;
+    @apply page-content-14;
   }
   .page-nosotros-faqs .tone-light.action-link:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    @apply page-tone-light-16;
   }
   @media (max-width: 980px) {
     .page-nosotros-faqs .content-column .content-block {
-      margin-bottom: 30px;
+      @apply page-content-column-18;
     }
   }
   @media (max-width: 980px) {
     .page-nosotros-faqs .content-row .content-column .content-block:last-child {
-      margin-bottom: 0px;
+      @apply page-page-section-17;
     }
   }
   @media (min-width: 981px) {
     .page-nosotros-faqs .block-row .content-column {
-      margin-right: 5.5%;
+      @apply page-block-row-20;
     }
   }
   @media (min-width: 981px) {
     .page-nosotros-faqs .block-row .span-4-4 {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   @media (min-width: 981px) {
     .page-nosotros-faqs .block-row .span-1-2 {
-      width: 47.25%;
+      @apply page-block-row-22;
     }
   }
   @media (min-width: 981px) {
     .page-nosotros-faqs .span-4-4.block-column .content-block {
-      margin-bottom: 2.75%;
+      @apply page-span-4-4-23;
     }
   }
   @media (min-width: 981px) {
     .page-nosotros-faqs .span-1-2.block-column .content-block {
-      margin-bottom: 5.82%;
+      @apply page-span-1-2-24;
     }
   }
   .page-nosotros-faqs .stack {
-    display: flex;
-    column-gap: var(--horizontal-gap);
-    row-gap: var(--vertical-gap);
-    flex-direction: var(--flex-direction);
+    @apply page-flex-column-25;
   }
   .page-nosotros-faqs .stack {
-    --flex-direction: column;
-    --horizontal-gap: var(--module-gutter);
-    --vertical-gap: var(--module-gutter);
+    @apply page-flex-column-28;
   }
   .page-nosotros-faqs .content-column,
   .page-nosotros-faqs .content-row {
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-content-column-31;
   }
   @media (min-width: 981px) {
     .page-nosotros-faqs .block-row {
-      padding: 2% 0px;
+      @apply page-block-row-32;
     }
   }
   @media (max-width: 980px) {
     .page-nosotros-faqs .block-row {
-      padding: 30px 0px;
+      @apply page-block-row-33;
     }
   }
   @media (max-width: 980px) {
     .page-nosotros-faqs .block-row .content-column {
-      width: 100%;
-      margin-bottom: 30px;
+      @apply page-block-row-34;
     }
   }
   .page-nosotros-faqs .copy {
-    overflow-wrap: break-word;
-    line-height: var(--body-line-height, 1.7em);
+    @apply page-copy-39;
   }
   .page-nosotros-faqs .copy > :last-child {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-nosotros-faqs .copy-inner {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-nosotros-faqs .heading-container {
-    position: relative;
-    width: 100%;
+    @apply page-heading-container-41;
   }
   .page-nosotros-faqs .testimonial-description-inner {
-    overflow-wrap: break-word;
+    @apply page-testimonial-description-inner-49;
   }
   .page-nosotros-faqs .testimonial {
-    position: relative;
-    padding: 30px;
-    line-height: 1.5;
+    @apply page-testimonial-50;
   }
   .page-nosotros-faqs .testimonial .testimonial-content {
-    line-height: 1.5em;
+    @apply page-testimonial-51;
   }
   .page-nosotros-faqs .testimonial .testimonial-meta {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-nosotros-faqs .testimonial-portrait {
-    width: 90px;
-    height: 90px;
-    position: relative;
-    margin-right: 30px;
-    box-sizing: content-box;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px inset;
-    border-radius: 90px;
+    @apply page-testimonial-portrait-52;
   }
   .page-nosotros-faqs .testimonial-portrait img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    object-fit: cover;
-    object-position: center center;
-    height: 100%;
-    width: 100%;
+    @apply page-testimonial-portrait-53;
   }
   .page-nosotros-faqs .testimonial.block-module .testimonial-author {
     margin-top: 32px;
     display: block;
   }
   .page-nosotros-faqs .testimonial-author {
-    font-weight: 700;
-    width: 100%;
+    @apply page-testimonial-author-54;
   }
   .page-nosotros-faqs .testimonial-company,
   .page-nosotros-faqs .testimonial-meta,
   .page-nosotros-faqs .testimonial-position {
-    display: inline-block;
+    @apply page-testimonial-company-55;
   }
   @media (min-width: 768px) and (max-width: 980px) {
     .page-nosotros-faqs .content-column .testimonial-portrait {
-      display: block;
-      margin-right: 30px;
+      @apply page-content-column-56;
     }
   }
   @media (min-width: 768px) and (max-width: 980px) {
     .page-nosotros-faqs .content-column .testimonial-description {
-      display: block;
+      @apply page-image-block-37;
     }
   }
   @media (max-width: 767px) {
     .page-nosotros-faqs .content-column .testimonial-description {
-      width: 100%;
-      display: block;
+      @apply page-content-column-57;
     }
   }
   @media (max-width: 767px) {
     .page-nosotros-faqs .content-column .testimonial-portrait {
-      display: block;
-      margin: 0px auto 20px;
+      @apply page-content-column-58;
     }
   }
   @media (max-width: 479px) {
     .page-nosotros-faqs .testimonial {
-      padding-top: 10%;
+      @apply page-testimonial-59;
     }
   }
   .page-nosotros-faqs .tone-light.content-block.action-link {
-    color: var(--color-primary);
+    @apply page-tone-light-92;
   }
   .page-nosotros-faqs .action-link {
-    display: inline-block;
+    @apply page-testimonial-company-55;
   }
   .page-nosotros-faqs {
-    font-size: 18px;
+    @apply page-content-60;
   }
   .page-nosotros-faqs {
-    font-weight: 400;
+    @apply page-content-61;
   }
   .page-nosotros-faqs .heading-size-1,
   .page-nosotros-faqs .heading-size-5 {
-    line-height: 1.3;
+    @apply page-heading-size-1-62;
   }
   @media only screen and (min-width: 1350px) {
     .page-nosotros-faqs .block-row {
-      padding: 27px 0px;
+      @apply page-block-row-63;
     }
   }
   .page-nosotros-faqs .heading-size-1 {
-    font-size: 32px;
+    @apply page-heading-size-1-64;
   }
   .page-nosotros-faqs .heading-size-1 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-nosotros-faqs .heading-size-5 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   @media only screen and (max-width: 767px) {
     .page-nosotros-faqs .heading-size-1 {
-      font-size: 28px;
+      @apply page-heading-size-1-68;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-nosotros-faqs .heading-size-5 {
-      font-size: 14px;
+      @apply page-heading-size-5-71;
     }
   }
   .page-nosotros-faqs .heading-size-1,
   .page-nosotros-faqs .heading-size-5 {
-    font-family: var(--font-heading);
+    @apply page-heading-size-1-72;
   }
   .page-nosotros-faqs .testimonial-1 {
-    background-color: rgb(245, 245, 245);
-    border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 18px -6px;
-    text-align: start;
+    @apply page-testimonial-0-77;
   }
   .page-nosotros-faqs .testimonial-1 .testimonial-inner {
-    overflow: hidden;
+    @apply page-testimonial-0-78;
   }
   .page-nosotros-faqs .testimonial-1::before {
-    font-size: 22px;
-    line-height: 22px;
-    border-radius: 22px;
-    top: -11px;
-    margin-left: -11px;
+    @apply page-testimonial-0-79;
   }
   .page-nosotros-faqs .testimonial-1.testimonial .testimonial-author,
   .page-nosotros-faqs .testimonial-1.testimonial .testimonial-position,
   .page-nosotros-faqs .testimonial-1.testimonial .testimonial-separator,
   .page-nosotros-faqs .testimonial-1.testimonial .testimonial-content {
-    font-size: 13px;
+    @apply page-testimonial-0-80;
   }
   .page-nosotros-faqs .testimonial-1.testimonial .testimonial-company {
-    font-weight: 600;
-    font-size: 13px;
+    @apply page-testimonial-0-81;
   }
   .page-nosotros-faqs .button-1-wrapper,
   .page-nosotros-faqs .text-8 {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-nosotros-faqs .button-1-wrapper .button-1 {
-    margin-left: auto;
-    margin-right: auto;
+    @apply page-button-0-wrapper-82;
   }
   .page-nosotros-faqs .page-section .button-1 {
-    border-radius: 0px;
-    border-width: 0px;
-    border-color: var(--color-ink);
-    border-style: solid;
+    @apply page-page-section-83;
   }
   .page-nosotros-faqs .heading-2 .heading-container .heading-size-1 {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-nosotros-faqs .text-8 .copy-inner {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-nosotros-faqs .text-9,
   .page-nosotros-faqs .text-10 {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-nosotros-faqs .faq-list {
     --vertical-gap: 10px;
@@ -296,11 +248,11 @@
     position: relative;
   }
   .page-nosotros-faqs .faq-list .faq-item:last-child {
-    margin-bottom: 0px;
+    @apply page-page-section-17;
   }
   .page-nosotros-faqs .faq-answer,
   .page-nosotros-faqs .faq-question {
-    overflow-wrap: break-word;
+    @apply page-testimonial-description-inner-49;
   }
   .page-nosotros-faqs .faq-item {
     border: 1px solid rgb(217, 217, 217);
@@ -324,7 +276,7 @@
     --vertical-gap: 0;
   }
   .page-nosotros-faqs .faq-answer p:last-of-type {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-nosotros-faqs .accordion-1.faq-list .faq-item {
     border-radius: 16px;
@@ -348,10 +300,10 @@
   .page-nosotros-faqs .accordion-item-21.faq-item .faq-answer,
   .page-nosotros-faqs .accordion-item-22.faq-item .faq-answer,
   .page-nosotros-faqs .accordion-item-23.faq-item .faq-answer {
-    font-size: 14px;
+    @apply page-heading-size-5-71;
   }
   .page-nosotros-faqs .heading-3 .heading-container .heading-size-1 {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-nosotros-faqs .section-5 {
     border-radius: 0px;
@@ -360,23 +312,21 @@
 @layer overrides {
   .page-nosotros-faqs .tone-dark,
   .page-nosotros-faqs .tone-dark .heading-size-1 {
-    color: rgb(255, 255, 255);
+    @apply page-tone-dark-6;
   }
   @media (max-width: 479px) {
     .page-nosotros-faqs .block-row .content-column {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   .page-nosotros-faqs .page-section .button-1 {
-    color: #2a2a2a;
-    padding-right: 2em;
-    padding-left: 0.7em;
+    @apply page-page-section-115;
   }
   .page-nosotros-faqs .heading-2 .heading-container .heading-size-1 {
-    color: #072130;
+    @apply page-heading-5-145;
   }
   .page-nosotros-faqs .heading-3 .heading-container .heading-size-1 {
-    color: var(--color-soft);
+    @apply page-heading-1-117;
   }
   .page-nosotros-faqs .section-5 {
     background-color: var(--color-midnight);

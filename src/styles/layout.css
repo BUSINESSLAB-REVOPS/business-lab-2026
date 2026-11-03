@@ -39,18 +39,9 @@
   .page-content .content-column .content-block:last-child {
     margin-bottom: 0;
   }
-  .page-content .testimonial-inner {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-  }
   .page-content .testimonial-portrait {
     flex: 0 0 90px;
     margin-right: 0;
-  }
-  .page-content .testimonial-description {
-    flex: 1;
-    min-width: 0;
   }
   .page-content .page-section.fullwidth-section {
     padding: 0;
@@ -92,9 +83,6 @@
   .page-content .testimonial-content {
     margin: 0;
   }
-  .page-content .testimonial-author {
-    display: block;
-  }
   .page-content .symbol {
     display: inline-flex;
   }
@@ -131,14 +119,13 @@
     }
   }
   @media (max-width: 767px) {
-    .page-content .testimonial-inner {
-      display: block;
-    }
-    .page-content .testimonial-portrait {
-      margin: 0 auto 20px;
-    }
     .page-content .content-row.four-column-grid {
       grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 767px) {
+    .page-content .testimonial-portrait {
+      margin: 0 auto 20px;
     }
   }
 }

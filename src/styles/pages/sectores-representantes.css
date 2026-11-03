@@ -1,194 +1,149 @@
+@reference '../shared.css';
 /* Layout and typography for sectores-representantes. Component behavior lives in its component. */
 @layer pages {
   @media (width <= 980px) {
     .page-sectores-representantes .flex-row {
-      flex-wrap: wrap;
+      @apply page-flex-row-1;
     }
   }
   @media (width <= 980px) {
     .page-sectores-representantes .flex-row > .content-column {
-      flex: 0 0 100%;
-      min-width: 0px;
+      @apply page-flex-row-2;
     }
   }
   .page-sectores-representantes .carousel-slide {
-    display: none;
+    @apply page-carousel-slide-3;
   }
   .page-sectores-representantes .carousel-slide {
-    background-position: 50% center;
-    background-size: cover;
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-sectores-representantes .slide-inner,
   .page-sectores-representantes .slide-description {
-    z-index: 1;
-    position: relative;
+    @apply page-slide-inner-5;
   }
   .page-sectores-representantes .tone-dark .slide-title,
   .page-sectores-representantes .tone-dark .slide-content,
-  .page-sectores-representantes .tone-dark .heading-title,
-  .page-sectores-representantes .tone-dark .header-content-wrapper {
-    color: rgb(255, 255, 255);
+  .page-sectores-representantes .tone-dark .heading-title {
+    @apply page-tone-dark-6;
   }
   .page-sectores-representantes .carousel .carousel-slide > .slide-container {
-    height: 100%;
+    @apply page-carousel-7;
   }
   @media (width <= 767px) {
     .page-sectores-representantes .carousel-slide .slide-title {
-      overflow-wrap: normal;
-      word-break: normal;
-      font-size: 32px;
+      @apply page-carousel-slide-8;
     }
   }
   @media (width >= 981px) {
     .page-sectores-representantes .carousel .scene-image {
-      background-position: center top;
-      height: calc(100% + 30vh);
-      top: -18px;
-      bottom: auto;
+      @apply page-carousel-9;
     }
   }
   .page-sectores-representantes .heading-size-1,
   .page-sectores-representantes .heading-size-2 {
-    color: var(--color-ink);
-    padding-bottom: 10px;
-    line-height: 1.3;
-    font-weight: 500;
-  }
-  .page-sectores-representantes .heading-size-1 {
-    font-size: 30px;
-  }
-  .page-sectores-representantes .heading-size-2 {
-    font-size: 26px;
+    @apply page-heading-size-1-10;
   }
   .page-sectores-representantes .flex-column,
   .page-sectores-representantes .stack,
   .page-sectores-representantes .flex-row,
   .page-sectores-representantes .flex-section {
-    display: flex;
-    column-gap: var(--horizontal-gap);
-    row-gap: var(--vertical-gap);
-    flex-direction: var(--flex-direction);
+    @apply page-flex-column-25;
   }
   .page-sectores-representantes .flex-row {
-    --horizontal-gap: var(--row-gutter-horizontal);
-    --vertical-gap: var(--row-gutter-vertical);
-    --flex-direction: row;
+    @apply page-flex-row-26;
   }
   .page-sectores-representantes .flex-section {
-    --horizontal-gap: var(--section-gutter);
-    --vertical-gap: var(--section-gutter);
-    --flex-direction: column;
-    align-items: center;
+    @apply page-flex-section-27;
   }
   .page-sectores-representantes .flex-column,
   .page-sectores-representantes .stack {
-    --flex-direction: column;
-    --horizontal-gap: var(--module-gutter);
-    --vertical-gap: var(--module-gutter);
+    @apply page-flex-column-28;
   }
   .page-sectores-representantes .column-24-24 {
-    width: calc(100% - var(--horizontal-gap-parent, 5.5%) * 0 / 1);
+    @apply page-column-24-24-29;
   }
   .page-sectores-representantes .flex-section > .content-row {
-    margin: initial;
+    @apply page-flex-section-30;
   }
   .page-sectores-representantes .column-empty {
-    min-height: 1px;
+    @apply page-column-empty-146;
   }
   .page-sectores-representantes .content-column,
   .page-sectores-representantes .content-row {
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-content-column-31;
   }
   @media (max-width: 980px) {
     .page-sectores-representantes .content-column.column-empty {
-      display: none;
+      @apply page-carousel-slide-3;
     }
   }
   .page-sectores-representantes .carousel {
-    --vertical-gap: 0px;
-    --horizontal-gap: 0px;
+    @apply page-carousel-96;
   }
   .page-sectores-representantes .carousel .slide-container {
-    width: 100%;
-    margin: 0px auto;
-    position: relative;
-    z-index: 2;
+    @apply page-carousel-97;
   }
   .page-sectores-representantes .carousel-track .slide-container {
-    display: table;
-    table-layout: fixed;
+    @apply page-carousel-track-98;
   }
   .page-sectores-representantes .carousel-track .slide-inner {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
+    @apply page-carousel-track-99;
   }
   .page-sectores-representantes .slide-content {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--color-ink);
+    @apply page-slide-content-124;
   }
   .page-sectores-representantes .slide-content p:last-of-type {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-sectores-representantes .tone-dark .slide-content {
-    color: rgb(255, 255, 255);
+    @apply page-tone-dark-6;
   }
   .page-sectores-representantes .slide-description {
-    overflow-wrap: break-word;
-    --vertical-gap: 20px;
+    @apply page-slide-description-100;
   }
   .page-sectores-representantes .tone-dark .slide-description {
-    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+    @apply page-tone-dark-101;
   }
   .page-sectores-representantes .slide-description {
-    padding: 16% 8%;
-    width: auto;
-    margin: auto;
+    @apply page-slide-description-102;
   }
   .page-sectores-representantes .slide-description .slide-title {
-    font-weight: 300;
-    margin-top: 0px;
+    @apply page-carousel-105;
   }
   .page-sectores-representantes .slide-description .heading-size-2.slide-title {
-    font-size: 46px;
+    @apply page-slide-description-104;
   }
   .page-sectores-representantes .carousel .action-link {
-    margin-top: 0px;
+    @apply page-carousel-105;
   }
   .page-sectores-representantes .carousel .slide-title {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   @media (max-width: 980px) {
     .page-sectores-representantes
       .slide-description
       .heading-size-2.slide-title {
-      font-size: 26px;
-      font-weight: 500;
+      @apply page-slide-description-106;
     }
   }
   @media (max-width: 980px) {
     .page-sectores-representantes .slide-description .slide-title {
-      font-weight: 500;
+      @apply page-slide-description-107;
     }
   }
   @media (max-width: 980px) {
     .page-sectores-representantes .slide-content {
-      font-size: 13px;
-      font-weight: 400;
+      @apply page-slide-content-125;
     }
   }
   @media (max-width: 980px) {
     .page-sectores-representantes .slide-description {
-      text-align: center;
+      @apply page-heading-0-76;
     }
   }
   @media (max-width: 767px) {
     .page-sectores-representantes .slide-content {
-      font-size: 12px;
+      @apply page-slide-content-142;
     }
   }
   @media (max-width: 767px) {
@@ -196,14 +151,14 @@
       .carousel.content-block
       .carousel-track
       .slide-content {
-      font-size: 14px;
+      @apply page-heading-size-5-71;
     }
   }
   @media (max-width: 767px) {
     .page-sectores-representantes
       .slide-description
       .heading-size-2.slide-title {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   @media (max-width: 767px) {
@@ -212,88 +167,78 @@
       .carousel-track
       .slide-description
       .heading-size-2.slide-title {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   @media (max-width: 767px) {
     .page-sectores-representantes .slide-description {
-      text-align: center;
+      @apply page-heading-0-76;
     }
   }
   @media (max-width: 479px) {
     .page-sectores-representantes
       .slide-description
       .heading-size-2.slide-title {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   @media (max-width: 479px) {
     .page-sectores-representantes .slide-content {
-      font-weight: 400;
-      font-size: 10px;
-      display: block;
+      @apply page-slide-content-143;
     }
   }
   .page-sectores-representantes .carousel {
-    position: relative;
-    overflow: hidden;
+    @apply page-carousel-109;
   }
   .page-sectores-representantes .carousel-slide {
-    padding: 0px 6%;
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-carousel-slide-110;
   }
   .page-sectores-representantes .carousel .carousel-slide {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    background-position: 50% center;
-    background-size: cover;
+    @apply page-carousel-111;
   }
   .page-sectores-representantes {
-    font-size: 18px;
+    @apply page-content-60;
   }
   .page-sectores-representantes .slide-content {
-    font-size: 20px;
+    @apply page-carousel-108;
   }
   .page-sectores-representantes {
-    font-weight: 400;
+    @apply page-content-61;
   }
   .page-sectores-representantes .slide-content {
-    font-weight: 400;
+    @apply page-content-61;
   }
   .page-sectores-representantes .heading-size-1,
   .page-sectores-representantes .heading-size-2,
   .page-sectores-representantes .slide-description .slide-title {
-    line-height: 1.3;
+    @apply page-heading-size-1-62;
   }
   .page-sectores-representantes .heading-size-1 {
-    font-size: 32px;
+    @apply page-heading-size-1-64;
   }
   .page-sectores-representantes .heading-size-2 {
-    font-size: 27px;
+    @apply page-heading-size-2-65;
   }
   .page-sectores-representantes .slide-description .slide-title {
-    font-size: 48px;
+    @apply page-slide-description-66;
   }
   .page-sectores-representantes .heading-size-1 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-sectores-representantes .heading-size-2 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-sectores-representantes .slide-description .slide-title {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   @media only screen and (max-width: 767px) {
     .page-sectores-representantes .heading-size-1 {
-      font-size: 28px;
+      @apply page-heading-size-1-68;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-sectores-representantes .heading-size-2 {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -302,29 +247,24 @@
       .carousel-track
       .slide-description
       .slide-title {
-      font-size: 42px;
+      @apply page-carousel-70;
     }
   }
   .page-sectores-representantes .heading-size-1,
   .page-sectores-representantes .heading-size-2 {
-    font-family: var(--font-heading);
+    @apply page-heading-size-1-72;
   }
   .page-sectores-representantes
     .fullwidth-slider-1
     .carousel-slide
     .slide-description {
-    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+    @apply page-fullwidth-slider-1-138;
   }
   .page-sectores-representantes .fullwidth-slider-1.carousel .slide-content {
-    font-size: 18px;
+    @apply page-content-60;
   }
   .page-sectores-representantes .fullwidth-slider-1 .slide-link.action-link {
-    color: rgb(255, 255, 255);
-    letter-spacing: 5px;
-    border-radius: 10px;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0);
-    border-style: solid;
+    @apply page-fullwidth-slider-0-73;
   }
 
   .page-sectores-representantes .slide-1 .slide-description .slide-title,
@@ -333,33 +273,30 @@
     .carousel-track
     .slide-1.carousel-slide
     .slide-description {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-sectores-representantes
     .carousel
     .slide-1.carousel-slide
     .slide-description
     .slide-title {
-    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+    @apply page-fullwidth-slider-1-138;
   }
   .page-sectores-representantes
     .carousel.content-block
     .slide-1.carousel-slide
     .slide-description
     .slide-content {
-    font-size: 28px;
-    line-height: 1.9em;
-    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+    @apply page-carousel-139;
   }
   .page-sectores-representantes
     .slide-1.carousel-slide
     .slide-link.action-link {
-    background-color: var(--color-primary);
-    letter-spacing: 2px;
+    @apply page-slide-0-75;
   }
   @media only screen and (max-width: 767px) {
     .page-sectores-representantes .fullwidth-slider-1 .slide-link.action-link {
-      font-size: 15px;
+      @apply page-fullwidth-slider-1-140;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -368,44 +305,41 @@
       .slide-1.carousel-slide
       .slide-description
       .slide-content {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
 }
 @layer overrides {
   @media (width <= 980px) {
     .page-sectores-representantes .flex-row > .content-column {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   @media (width <= 767px) {
     .page-sectores-representantes .carousel-slide .slide-title {
-      font-size: 32px;
-      line-height: 1.3;
+      @apply page-carousel-slide-112;
     }
   }
   .page-sectores-representantes .tone-dark,
   .page-sectores-representantes .tone-dark .heading-size-1,
   .page-sectores-representantes .tone-dark .heading-size-2 {
-    color: rgb(255, 255, 255);
+    @apply page-tone-dark-6;
   }
   .page-sectores-representantes .carousel .carousel-slide {
-    list-style: none;
+    @apply page-carousel-118;
   }
   .page-sectores-representantes
     .fullwidth-slider-1.carousel
     .slide-description
     .slide-title {
-    font-size: 52px;
+    @apply page-fullwidth-slider-0-113;
   }
   .page-sectores-representantes
     .carousel
     .slide-1.carousel-slide
     .slide-description
     .slide-title {
-    font-weight: 700;
-    font-size: 54px;
-    line-height: 1.3em;
+    @apply page-carousel-114;
   }
   @media only screen and (max-width: 767px) {
     .page-sectores-representantes
@@ -413,7 +347,7 @@
       .slide-1.carousel-slide
       .slide-description
       .slide-title {
-      font-size: 38px;
+      @apply page-carousel-144;
     }
   }
 }
