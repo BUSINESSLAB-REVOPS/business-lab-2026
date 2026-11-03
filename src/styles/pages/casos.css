@@ -1,25 +1,21 @@
+@reference '../shared.css';
 /* Layout and typography for casos. Component behavior lives in its component. */
 @layer pages {
-  .page-casos .tone-dark .heading-title,
-  .page-casos .tone-dark .header-content-wrapper {
-    color: rgb(255, 255, 255);
+  .page-casos .tone-dark .heading-title {
+    @apply page-tone-dark-6;
   }
   .page-casos .article-card {
-    height: 100%;
-    min-height: 500px;
+    @apply page-article-card-119;
   }
   .page-casos .article-image-wrapper {
-    flex-shrink: 0;
-    height: 200px;
+    @apply page-article-image-wrapper-120;
   }
   .page-casos .article-image-wrapper img {
-    object-fit: cover;
-    width: 100%;
-    height: 200px;
+    @apply page-article-image-wrapper-121;
   }
   @media (width <= 767px) {
     .page-casos .article-card {
-      min-height: 0px;
+      @apply page-article-card-122;
     }
   }
   .page-casos em {
@@ -27,89 +23,63 @@
   }
   .page-casos .heading-size-1,
   .page-casos .heading-size-2 {
-    color: var(--color-ink);
-    padding-bottom: 10px;
-    line-height: 1.3;
-    font-weight: 500;
+    @apply page-heading-size-1-134;
   }
   .page-casos .heading-size-2 a {
-    color: inherit;
-  }
-  .page-casos .heading-size-1 {
-    font-size: 30px;
-  }
-  .page-casos .heading-size-2 {
-    font-size: 26px;
+    @apply page-heading-size-2-11;
   }
   .page-casos button {
-    font-family: inherit;
+    @apply page-content-13;
   }
   .page-casos img {
-    max-width: 100%;
-    height: auto;
+    @apply page-content-14;
   }
   .page-casos .pagination {
     clear: both;
   }
   .page-casos * .clearfix,
   .page-casos :first-child + .clearfix {
-    zoom: 1;
+    @apply page-content-123;
   }
   .page-casos .symbol {
-    speak: none;
-    font-weight: 400;
-    font-feature-settings: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    font-size: 96px;
-    font-style: normal;
-    display: inline-block;
-    box-sizing: border-box;
-    direction: ltr;
+    @apply page-symbol-15;
   }
   .page-casos .post-image {
     margin: -20px -20px 29px;
   }
   .page-casos .module-inner {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   @media (max-width: 980px) {
     .page-casos .content-column .content-block {
-      margin-bottom: 30px;
+      @apply page-content-column-18;
     }
   }
   @media (max-width: 980px) {
     .page-casos .content-row .content-column .content-block:last-child {
-      margin-bottom: 0px;
+      @apply page-page-section-17;
     }
   }
   @media (min-width: 981px) {
     .page-casos .block-row .content-column {
-      margin-right: 5.5%;
+      @apply page-block-row-20;
     }
   }
   @media (min-width: 981px) {
     .page-casos .block-row .span-4-4 {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   @media (min-width: 981px) {
     .page-casos .span-4-4.block-column .content-block {
-      margin-bottom: 2.75%;
+      @apply page-span-4-4-23;
     }
   }
   .page-casos .stack {
-    display: flex;
-    column-gap: var(--horizontal-gap);
-    row-gap: var(--vertical-gap);
-    flex-direction: var(--flex-direction);
+    @apply page-flex-column-25;
   }
   .page-casos .stack {
-    --flex-direction: column;
-    --horizontal-gap: var(--module-gutter);
-    --vertical-gap: var(--module-gutter);
+    @apply page-flex-column-28;
   }
   .page-casos .overlay {
     z-index: -1;
@@ -129,29 +99,25 @@
   }
   .page-casos .content-column,
   .page-casos .content-row {
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-content-column-31;
   }
   @media (min-width: 981px) {
     .page-casos .block-row {
-      padding: 2% 0px;
+      @apply page-block-row-32;
     }
   }
   @media (max-width: 980px) {
     .page-casos .block-row {
-      padding: 30px 0px;
+      @apply page-block-row-33;
     }
   }
   @media (max-width: 980px) {
     .page-casos .block-row .content-column {
-      width: 100%;
-      margin-bottom: 30px;
+      @apply page-block-row-34;
     }
   }
   .page-casos .heading-container {
-    position: relative;
-    width: 100%;
+    @apply page-heading-container-41;
   }
   .page-casos .post-list .pagination {
     margin-top: var(--vertical-gap, 30px);
@@ -165,7 +131,7 @@
     min-width: 0px;
   }
   .page-casos .grid-module > .post-card .post-image {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-casos .grid-module > .post-card .post-image img {
     min-width: 100%;
@@ -173,10 +139,7 @@
     height: auto;
   }
   .page-casos .grid-module > .post-card .heading-size-2 {
-    font-size: 18px;
-  }
-  .page-casos .post-card .post-image-link {
-    border: 0px solid var(--color-ink);
+    @apply page-content-60;
   }
   @media (max-width: 479px) {
     .page-casos .grid-module > .post-card .heading-size-2 {
@@ -188,24 +151,19 @@
     margin-bottom: 60px;
     overflow-wrap: break-word;
   }
-  .page-casos .post-card .post-image-link {
-    display: block;
-    position: relative;
-    margin-bottom: 30px;
-  }
   .page-casos .post-card .post-title a,
   .page-casos .post-card .heading-size-2 a {
-    text-decoration: none;
+    @apply page-article-read-more-129;
   }
   .page-casos .post-card .post-meta {
     font-size: 14px;
     margin-bottom: 6px;
   }
   .page-casos .post-card .post-meta a {
-    text-decoration: none;
+    @apply page-article-read-more-129;
   }
   .page-casos .posts .post-card {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-casos .post-image img,
   .page-casos .post-card a img {
@@ -229,7 +187,7 @@
   }
   @media (max-width: 767px) {
     .page-casos .post-card > .heading-size-2 {
-      font-size: 18px;
+      @apply page-content-60;
     }
   }
   @media (max-width: 479px) {
@@ -252,14 +210,10 @@
   .page-casos .tone-light .post-card .post-meta,
   .page-casos .tone-light .post-card .post-meta a,
   .page-casos .tone-light .post-card p {
-    color: var(--color-text-muted);
+    @apply page-number-counter-0-116;
   }
   .page-casos {
-    --content-width: 80%;
-    --content-max-width: 1080px;
-    --section-padding: 56px;
     --section-gutter: 60px;
-    --row-gutter-grid: 60px;
     --module-gutter-grid: 30px;
   }
   .page-casos .grid-module {
@@ -278,49 +232,49 @@
   }
   .page-casos,
   .page-casos .tone-light .post-card .post-content {
-    font-size: 18px;
+    @apply page-content-60;
   }
   .page-casos,
   .page-casos .tone-light .post-card .post-content {
-    font-weight: 400;
+    @apply page-content-61;
   }
   .page-casos .heading-size-1,
   .page-casos .heading-size-2 {
-    line-height: 1.3;
+    @apply page-heading-size-1-62;
   }
   @media only screen and (min-width: 1350px) {
     .page-casos .block-row {
-      padding: 27px 0px;
+      @apply page-block-row-63;
     }
   }
   .page-casos .heading-size-1 {
-    font-size: 32px;
+    @apply page-heading-size-1-64;
   }
   .page-casos .heading-size-2 {
-    font-size: 27px;
+    @apply page-heading-size-2-65;
   }
   .page-casos .heading-size-1 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-casos .heading-size-2 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   @media only screen and (max-width: 767px) {
     .page-casos .heading-size-1 {
-      font-size: 28px;
+      @apply page-heading-size-1-68;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-casos .heading-size-2 {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   .page-casos .heading-size-1,
   .page-casos .heading-size-2 {
-    font-family: var(--font-heading);
+    @apply page-heading-size-1-72;
   }
   .page-casos .blog-2 {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-casos .blog-2 .post-grid {
     --column-count: 3;
@@ -348,36 +302,23 @@
     }
   }
   .page-casos .blog-3 {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-casos .blog-slider-0 .article-card {
-    height: 100%;
+    @apply page-carousel-7;
   }
   .page-casos .blog-slider-0 .article-read-more {
-    display: flex;
-    align-items: flex-end;
-    flex-grow: 1;
-  }
-  .page-casos .article-module .symbol {
-    font-size: 14px;
+    @apply page-blog-slider-0-126;
   }
   .page-casos .article-module .article-title,
   .page-casos .article-module p {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-casos .article-module .article-card {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @apply page-article-module-127;
   }
   .page-casos .article-module .action-link {
-    display: inline-block;
+    @apply page-testimonial-company-55;
   }
   .page-casos .article-module .article-categories a {
     display: inline-block;
@@ -388,24 +329,21 @@
     margin-right: 5px;
   }
   .page-casos .article-module .article-categories {
-    overflow-wrap: break-word;
+    @apply page-testimonial-description-inner-49;
   }
   .page-casos .article-module .article-title,
   .page-casos .article-module .layout2 .article-excerpt,
   .page-casos .article-module .layout2 .article-meta {
-    margin-bottom: 15px;
+    @apply page-article-module-128;
   }
   .page-casos .article-module .author a,
   .page-casos .article-read-more .action-link,
   .page-casos .article-module .article-title a,
   .page-casos .article-module .article-categories a {
-    text-decoration: none;
+    @apply page-article-read-more-129;
   }
   .page-casos .article-module .layout2 .article-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    @apply page-article-module-130;
   }
   .page-casos .article-module .layout2 .article-image-wrapper {
     position: absolute;
@@ -433,30 +371,29 @@
     margin-right: 10px;
   }
   .page-casos .article-module .layout2 .article-categories a {
-    background: rgb(255, 255, 255);
+    @apply page-article-module-135;
   }
   .page-casos .article-module .layout2 .article-categories a:last-child {
-    margin-right: 0px;
+    @apply page-four-column-grid-35;
   }
   .page-casos .article-module .layout2 .symbol {
     vertical-align: middle;
   }
   .page-casos .article-body .article-excerpt {
-    overflow: hidden;
-    overflow-wrap: break-word;
+    @apply page-article-body-131;
   }
   .page-casos .article-image {
-    border: 0px solid transparent;
+    @apply page-article-image-132;
   }
 }
 @layer overrides {
   .page-casos .tone-dark,
   .page-casos .tone-dark .heading-size-1 {
-    color: rgb(255, 255, 255);
+    @apply page-tone-dark-6;
   }
   @media (max-width: 479px) {
     .page-casos .block-row .content-column {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   .page-casos .blog-slider-0 .article-meta .symbol {
@@ -464,6 +401,6 @@
     color: rgb(0, 122, 255);
   }
   .page-casos .blog-slider-0 .article-card {
-    background-color: rgba(244, 244, 244, 0.7);
+    @apply page-blog-slider-0-133;
   }
 }
