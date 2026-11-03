@@ -1,5 +1,4 @@
 ---
-import AssetImage from './AssetImage.astro';
 import Newsletter from './Newsletter.astro';
 ---
 
@@ -7,10 +6,12 @@ import Newsletter from './Newsletter.astro';
   <div class="container footer-grid">
     <div class="footer-contact">
       <a href="/" aria-label="Business Lab, inicio">
-        <AssetImage
-          src="/assets/business-lab-logo-dark.png"
+        <img
+          src="/assets/business-lab-logo-dark.svg"
           alt="Business Lab"
-          sizes="230px"
+          width="1549"
+          height="389"
+          loading="lazy"
         />
       </a>
       <address>
@@ -60,6 +61,7 @@ import Newsletter from './Newsletter.astro';
     }
     .footer-contact :global(img) {
       width: 75%;
+      height: auto;
       max-width: 225px;
       margin: 0 0 27px;
     }

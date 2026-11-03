@@ -1,5 +1,4 @@
 ---
-import AssetImage from './AssetImage.astro';
 import { pages } from '../data/pages';
 const navigation = Object.values(pages)
   .filter((page) => page.navigation)
@@ -9,10 +8,11 @@ const navigation = Object.values(pages)
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="Business Lab, inicio">
-      <AssetImage
-        src="/assets/business-lab-logo-light.png"
+      <img
+        src="/assets/business-lab-logo-light.svg"
         alt="Business Lab"
-        sizes="230px"
+        width="1549"
+        height="389"
         loading="eager"
       />
     </a>
