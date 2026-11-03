@@ -1,83 +1,61 @@
+@reference '../shared.css';
 /* Layout and typography for consultoriaagil. Component behavior lives in its component. */
 @layer pages {
   @media (width <= 980px) {
     .page-consultoriaagil .flex-row {
-      flex-wrap: wrap;
+      @apply page-flex-row-1;
     }
   }
   @media (width <= 980px) {
     .page-consultoriaagil .flex-row > .content-column {
-      flex: 0 0 100%;
-      min-width: 0px;
+      @apply page-flex-row-2;
     }
   }
   .page-consultoriaagil .carousel-slide {
-    display: none;
+    @apply page-carousel-slide-3;
   }
   .page-consultoriaagil .carousel-slide {
-    background-position: 50% center;
-    background-size: cover;
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-consultoriaagil .slide-inner,
   .page-consultoriaagil .slide-description {
-    z-index: 1;
-    position: relative;
+    @apply page-slide-inner-5;
   }
   .page-consultoriaagil .tone-dark .slide-title,
   .page-consultoriaagil .tone-dark .slide-content,
-  .page-consultoriaagil .tone-dark .heading-title,
-  .page-consultoriaagil .tone-dark .header-content-wrapper {
-    color: rgb(255, 255, 255);
+  .page-consultoriaagil .tone-dark .heading-title {
+    @apply page-tone-dark-6;
   }
   .page-consultoriaagil .carousel .carousel-slide > .slide-container {
-    height: 100%;
+    @apply page-carousel-7;
   }
   @media (width <= 767px) {
     .page-consultoriaagil .carousel-slide .slide-title {
-      overflow-wrap: normal;
-      word-break: normal;
-      font-size: 32px;
+      @apply page-carousel-slide-8;
     }
   }
   @media (width >= 981px) {
     .page-consultoriaagil .carousel .scene-image {
-      background-position: center top;
-      height: calc(100% + 30vh);
-      top: -18px;
-      bottom: auto;
+      @apply page-carousel-9;
     }
   }
   .page-consultoriaagil ul {
-    list-style: none;
+    @apply page-carousel-118;
   }
   .page-consultoriaagil strong {
-    font-weight: 700;
+    @apply page-content-136;
   }
   .page-consultoriaagil .heading-size-1,
   .page-consultoriaagil .heading-size-2,
   .page-consultoriaagil .heading-size-4,
   .page-consultoriaagil .heading-size-5 {
-    color: var(--color-ink);
-    padding-bottom: 10px;
-    line-height: 1.3;
-    font-weight: 500;
-  }
-  .page-consultoriaagil .heading-size-1 {
-    font-size: 30px;
-  }
-  .page-consultoriaagil .heading-size-2 {
-    font-size: 26px;
-  }
-  .page-consultoriaagil .heading-size-4 {
-    font-size: 22px;
+    @apply page-heading-size-1-10;
   }
   .page-consultoriaagil .heading-size-5 {
-    font-size: 16px;
+    @apply page-heading-size-5-12;
   }
   .page-consultoriaagil img {
-    max-width: 100%;
-    height: auto;
+    @apply page-content-14;
   }
   @media (min-width: 981px) {
     .page-consultoriaagil
@@ -85,18 +63,18 @@
       div.content-row
       .content-column
       .content-block.last-column {
-      margin-bottom: 0px;
+      @apply page-page-section-17;
     }
   }
   @media (max-width: 980px) {
     .page-consultoriaagil .content-column .content-block {
-      margin-bottom: 30px;
+      @apply page-content-column-18;
     }
   }
   @media (max-width: 980px) {
     .page-consultoriaagil .flex-column > .content-block,
     .page-consultoriaagil .flex-group > .content-block {
-      margin-bottom: unset;
+      @apply page-flex-column-19;
     }
   }
   @media (max-width: 980px) {
@@ -108,7 +86,7 @@
       .content-row
       .content-column
       .content-block:last-child {
-      margin-bottom: 0px;
+      @apply page-page-section-17;
     }
   }
   .page-consultoriaagil .flex-column,
@@ -116,28 +94,18 @@
   .page-consultoriaagil .stack,
   .page-consultoriaagil .flex-row,
   .page-consultoriaagil .flex-section {
-    display: flex;
-    column-gap: var(--horizontal-gap);
-    row-gap: var(--vertical-gap);
-    flex-direction: var(--flex-direction);
+    @apply page-flex-column-25;
   }
   .page-consultoriaagil .flex-row {
-    --horizontal-gap: var(--row-gutter-horizontal);
-    --vertical-gap: var(--row-gutter-vertical);
-    --flex-direction: row;
+    @apply page-flex-row-26;
   }
   .page-consultoriaagil .flex-section {
-    --horizontal-gap: var(--section-gutter);
-    --vertical-gap: var(--section-gutter);
-    --flex-direction: column;
-    align-items: center;
+    @apply page-flex-section-27;
   }
   .page-consultoriaagil .flex-column,
   .page-consultoriaagil .flex-group,
   .page-consultoriaagil .stack {
-    --flex-direction: column;
-    --horizontal-gap: var(--module-gutter);
-    --vertical-gap: var(--module-gutter);
+    @apply page-flex-column-28;
   }
   .page-consultoriaagil .flex-column > .content-block,
   .page-consultoriaagil .flex-group > .content-block,
@@ -151,216 +119,170 @@
     .content-row
     .flex-group
     > .content-block {
-    margin-bottom: 0px;
+    @apply page-page-section-17;
   }
   .page-consultoriaagil .column-24-24 {
-    width: calc(100% - var(--horizontal-gap-parent, 5.5%) * 0 / 1);
+    @apply page-column-24-24-29;
   }
   .page-consultoriaagil .flex-section > .content-row {
-    margin: initial;
+    @apply page-flex-section-30;
   }
   .page-consultoriaagil .content-column,
   .page-consultoriaagil .content-row {
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-content-column-31;
   }
   .page-consultoriaagil .image-block {
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 0;
+    @apply page-image-block-36;
   }
   .page-consultoriaagil .flex-column > .image-block {
-    margin-left: unset;
-    margin-right: unset;
+    @apply page-flex-column-43;
   }
   .page-consultoriaagil .image-block .image-frame {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
+    @apply page-image-block-38;
   }
   .page-consultoriaagil .image-block:where(.stack) > .image-frame {
-    width: fit-content;
-    display: flex;
+    @apply page-image-block-137;
   }
   .page-consultoriaagil .image-block img {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-consultoriaagil .copy {
-    overflow-wrap: break-word;
-    line-height: var(--body-line-height, 1.7em);
+    @apply page-copy-39;
   }
   .page-consultoriaagil .copy ul {
     padding-bottom: 1em;
   }
   .page-consultoriaagil .copy > :last-child {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-consultoriaagil .copy-inner {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-consultoriaagil .heading-container {
-    position: relative;
-    width: 100%;
+    @apply page-heading-container-41;
   }
   .page-consultoriaagil .metric {
-    overflow-wrap: break-word;
-    margin: 0px auto 30px;
-    position: relative;
-    text-align: center;
-    --vertical-gap: 20px;
+    @apply page-metric-42;
   }
   .page-consultoriaagil .flex-column > .metric {
-    margin-left: unset;
-    margin-right: unset;
+    @apply page-flex-column-43;
   }
   .page-consultoriaagil .metric .metric-value {
-    z-index: 2;
+    @apply page-metric-44;
   }
   .page-consultoriaagil .metric {
-    opacity: 0;
+    @apply page-metric-45;
   }
   .page-consultoriaagil .metric {
-    width: auto;
+    @apply page-metric-46;
   }
   .page-consultoriaagil .metric .metric-value {
-    height: 72px;
-    position: relative;
+    @apply page-metric-47;
   }
   .page-consultoriaagil .metric .metric-value p {
-    font-size: 72px;
-    line-height: 72px;
-    font-weight: 500;
+    @apply page-metric-48;
   }
   .page-consultoriaagil .testimonial-description-inner {
-    overflow-wrap: break-word;
+    @apply page-testimonial-description-inner-49;
   }
   .page-consultoriaagil .testimonial {
-    position: relative;
-    padding: 30px;
-    line-height: 1.5;
+    @apply page-testimonial-50;
   }
   .page-consultoriaagil .testimonial .testimonial-content {
-    line-height: 1.5em;
+    @apply page-testimonial-51;
   }
   .page-consultoriaagil .testimonial .testimonial-meta {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-consultoriaagil .testimonial-portrait {
-    width: 90px;
-    height: 90px;
-    position: relative;
-    margin-right: 30px;
-    box-sizing: content-box;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px inset;
-    border-radius: 90px;
+    @apply page-testimonial-portrait-52;
   }
   .page-consultoriaagil .testimonial-portrait img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    object-fit: cover;
-    object-position: center center;
-    height: 100%;
-    width: 100%;
+    @apply page-testimonial-portrait-53;
   }
   .page-consultoriaagil .testimonial-author {
-    font-weight: 700;
-    width: 100%;
+    @apply page-testimonial-author-54;
   }
   .page-consultoriaagil .testimonial-company,
   .page-consultoriaagil .testimonial-meta,
   .page-consultoriaagil .testimonial-position {
-    display: inline-block;
+    @apply page-testimonial-company-55;
   }
   @media (min-width: 768px) and (max-width: 980px) {
     .page-consultoriaagil .content-column .testimonial-portrait {
-      display: block;
-      margin-right: 30px;
+      @apply page-content-column-56;
     }
   }
   @media (min-width: 768px) and (max-width: 980px) {
     .page-consultoriaagil .content-column .testimonial-description {
-      display: block;
+      @apply page-image-block-37;
     }
   }
   @media (max-width: 767px) {
     .page-consultoriaagil .content-column .testimonial-description {
-      width: 100%;
-      display: block;
+      @apply page-content-column-57;
     }
   }
   @media (max-width: 767px) {
     .page-consultoriaagil .content-column .testimonial-portrait {
-      display: block;
-      margin: 0px auto 20px;
+      @apply page-content-column-58;
     }
   }
   @media (max-width: 479px) {
     .page-consultoriaagil .testimonial {
-      padding-top: 10%;
+      @apply page-testimonial-59;
     }
   }
   .page-consultoriaagil {
-    font-size: 16px;
-  }
-  .page-consultoriaagil .slide-content {
-    font-size: 20px;
+    @apply page-heading-size-5-12;
   }
   .page-consultoriaagil {
-    font-weight: 400;
-  }
-  .page-consultoriaagil .slide-content {
-    font-weight: 400;
+    @apply page-content-61;
   }
   .page-consultoriaagil .heading-size-1,
   .page-consultoriaagil .heading-size-2,
   .page-consultoriaagil .heading-size-4,
   .page-consultoriaagil .heading-size-5,
   .page-consultoriaagil .slide-description .slide-title {
-    line-height: 1.3;
+    @apply page-heading-size-1-62;
   }
   .page-consultoriaagil .heading-size-1 {
-    font-size: 32px;
+    @apply page-heading-size-1-64;
   }
   .page-consultoriaagil .heading-size-2 {
-    font-size: 27px;
+    @apply page-heading-size-2-65;
   }
   .page-consultoriaagil .heading-size-4 {
     font-size: 22px;
   }
   .page-consultoriaagil .slide-description .slide-title {
-    font-size: 48px;
+    @apply page-slide-description-66;
   }
   .page-consultoriaagil .heading-size-1 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-consultoriaagil .heading-size-2 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-consultoriaagil .heading-size-4 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-consultoriaagil .heading-size-5 {
-    font-weight: 600;
-  }
-  .page-consultoriaagil .slide-description .slide-title {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   @media only screen and (max-width: 767px) {
     .page-consultoriaagil .heading-size-1 {
-      font-size: 28px;
+      @apply page-heading-size-1-68;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-consultoriaagil .heading-size-2 {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-consultoriaagil .heading-size-4 {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -369,33 +291,28 @@
       .carousel-track
       .slide-description
       .slide-title {
-      font-size: 42px;
+      @apply page-carousel-70;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-consultoriaagil .heading-size-5 {
-      font-size: 14px;
+      @apply page-heading-size-5-71;
     }
   }
   .page-consultoriaagil .heading-size-1,
   .page-consultoriaagil .heading-size-2,
   .page-consultoriaagil .heading-size-4,
   .page-consultoriaagil .heading-size-5 {
-    font-family: var(--font-heading);
+    @apply page-heading-size-1-72;
   }
   .page-consultoriaagil .fullwidth-slider-1 .carousel-slide .slide-description {
-    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+    @apply page-fullwidth-slider-1-138;
   }
   .page-consultoriaagil .fullwidth-slider-1.carousel .slide-content {
-    font-size: 18px;
+    @apply page-content-60;
   }
   .page-consultoriaagil .fullwidth-slider-1 .slide-link.action-link {
-    color: rgb(255, 255, 255);
-    letter-spacing: 5px;
-    border-radius: 10px;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0);
-    border-style: solid;
+    @apply page-fullwidth-slider-0-73;
   }
 
   .page-consultoriaagil .slide-1 .slide-description .slide-title,
@@ -404,31 +321,28 @@
     .carousel-track
     .slide-1.carousel-slide
     .slide-description {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-consultoriaagil
     .carousel
     .slide-1.carousel-slide
     .slide-description
     .slide-title {
-    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+    @apply page-fullwidth-slider-1-138;
   }
   .page-consultoriaagil
     .carousel.content-block
     .slide-1.carousel-slide
     .slide-description
     .slide-content {
-    font-size: 28px;
-    line-height: 1.9em;
-    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+    @apply page-carousel-139;
   }
   .page-consultoriaagil .slide-1.carousel-slide .slide-link.action-link {
-    background-color: var(--color-primary);
-    letter-spacing: 2px;
+    @apply page-slide-0-75;
   }
   @media only screen and (max-width: 767px) {
     .page-consultoriaagil .fullwidth-slider-1 .slide-link.action-link {
-      font-size: 15px;
+      @apply page-fullwidth-slider-1-140;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -437,113 +351,94 @@
       .slide-1.carousel-slide
       .slide-description
       .slide-content {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   .page-consultoriaagil .benefit {
-    background-color: rgb(31, 101, 129);
-    padding: 40px 60px;
-    text-align: center;
-    --vertical-gap: 20px;
+    @apply page-benefit-93;
   }
   .page-consultoriaagil .benefit-description {
-    padding-bottom: 20px;
-    position: relative;
+    @apply page-benefit-description-94;
   }
   .page-consultoriaagil .stack .benefit-description,
   .page-consultoriaagil .benefit-description p:last-of-type {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   @media (max-width: 767px) {
     .page-consultoriaagil .benefit {
-      padding: 40px;
+      @apply page-span-1-2-95;
     }
   }
   @media (max-width: 479px) {
     .page-consultoriaagil .benefit {
-      padding: 40px;
+      @apply page-span-1-2-95;
     }
   }
   .page-consultoriaagil .carousel {
-    --vertical-gap: 0px;
-    --horizontal-gap: 0px;
+    @apply page-carousel-96;
   }
   .page-consultoriaagil .carousel .slide-container {
-    width: 100%;
-    margin: 0px auto;
-    position: relative;
-    z-index: 2;
+    @apply page-carousel-97;
   }
   .page-consultoriaagil .carousel-track .slide-container {
-    display: table;
-    table-layout: fixed;
+    @apply page-carousel-track-98;
   }
   .page-consultoriaagil .carousel-track .slide-inner {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
+    @apply page-carousel-track-99;
   }
   .page-consultoriaagil .slide-content {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--color-ink);
+    @apply page-slide-content-141;
   }
   .page-consultoriaagil .slide-content p:last-of-type {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-consultoriaagil .tone-dark .slide-content {
-    color: rgb(255, 255, 255);
+    @apply page-tone-dark-6;
   }
   .page-consultoriaagil .slide-description {
-    overflow-wrap: break-word;
-    --vertical-gap: 20px;
+    @apply page-slide-description-100;
   }
   .page-consultoriaagil .tone-dark .slide-description {
-    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+    @apply page-tone-dark-101;
   }
   .page-consultoriaagil .slide-description {
-    padding: 16% 8%;
-    width: auto;
-    margin: auto;
+    @apply page-slide-description-102;
   }
   .page-consultoriaagil .slide-description .slide-title {
-    font-weight: 300;
-    margin-top: 0px;
+    @apply page-slide-description-103;
   }
   .page-consultoriaagil .slide-description .heading-size-2.slide-title {
-    font-size: 46px;
+    @apply page-slide-description-104;
   }
   .page-consultoriaagil .carousel .action-link {
-    margin-top: 0px;
+    @apply page-carousel-105;
   }
   .page-consultoriaagil .carousel .slide-title {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   @media (max-width: 980px) {
     .page-consultoriaagil .slide-description .heading-size-2.slide-title {
-      font-size: 26px;
-      font-weight: 500;
+      @apply page-slide-description-106;
     }
   }
   @media (max-width: 980px) {
     .page-consultoriaagil .slide-description .slide-title {
-      font-weight: 500;
+      @apply page-slide-description-107;
     }
   }
   @media (max-width: 980px) {
     .page-consultoriaagil .slide-content {
-      font-size: 13px;
-      font-weight: 400;
+      @apply page-slide-content-125;
     }
   }
   @media (max-width: 980px) {
     .page-consultoriaagil .slide-description {
-      text-align: center;
+      @apply page-heading-0-76;
     }
   }
   @media (max-width: 767px) {
     .page-consultoriaagil .slide-content {
-      font-size: 12px;
+      @apply page-slide-content-142;
     }
   }
   @media (max-width: 767px) {
@@ -551,12 +446,12 @@
       .carousel.content-block
       .carousel-track
       .slide-content {
-      font-size: 14px;
+      @apply page-heading-size-5-71;
     }
   }
   @media (max-width: 767px) {
     .page-consultoriaagil .slide-description .heading-size-2.slide-title {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   @media (max-width: 767px) {
@@ -565,83 +460,64 @@
       .carousel-track
       .slide-description
       .heading-size-2.slide-title {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   @media (max-width: 767px) {
     .page-consultoriaagil .slide-description {
-      text-align: center;
+      @apply page-heading-0-76;
     }
   }
   @media (max-width: 479px) {
     .page-consultoriaagil .slide-description .heading-size-2.slide-title {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   @media (max-width: 479px) {
     .page-consultoriaagil .slide-content {
-      font-weight: 400;
-      font-size: 10px;
-      display: block;
+      @apply page-slide-content-143;
     }
   }
   .page-consultoriaagil .carousel {
-    position: relative;
-    overflow: hidden;
+    @apply page-carousel-109;
   }
   .page-consultoriaagil .carousel-slide {
-    padding: 0px 6%;
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-carousel-slide-110;
   }
   .page-consultoriaagil .carousel .carousel-slide {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    background-position: 50% center;
-    background-size: cover;
+    @apply page-carousel-111;
   }
   .page-consultoriaagil .testimonial-1 {
-    background-color: rgb(245, 245, 245);
-    border-radius: 16px;
-    text-align: center;
+    @apply page-testimonial-2-89;
   }
   .page-consultoriaagil .testimonial-1 .testimonial-inner,
   .page-consultoriaagil .cta-4,
   .page-consultoriaagil .cta-5,
   .page-consultoriaagil .cta-6,
   .page-consultoriaagil .cta-7 {
-    overflow: hidden;
+    @apply page-testimonial-0-78;
   }
   .page-consultoriaagil .testimonial-1.testimonial .testimonial-content {
-    font-weight: 700;
-    font-style: normal;
-    text-transform: none;
-    font-variant: normal;
-    text-decoration-line: none;
-    font-size: 18px;
+    @apply page-testimonial-2-90;
   }
   .page-consultoriaagil .text-10,
   .page-consultoriaagil .text-11,
   .page-consultoriaagil .text-12,
   .page-consultoriaagil .text-13,
   .page-consultoriaagil .text-14 {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-consultoriaagil .image-2 .image-frame {
-    border-radius: 16px;
-    overflow: hidden;
+    @apply page-image-0-84;
   }
   .page-consultoriaagil .image-2 .image-frame img {
-    border-radius: inherit;
+    @apply page-image-0-85;
   }
   .page-consultoriaagil .cta-4.benefit,
   .page-consultoriaagil .cta-5.benefit,
   .page-consultoriaagil .cta-6.benefit,
   .page-consultoriaagil .cta-7.benefit {
-    background-color: var(--color-blue);
-    border-radius: 16px;
+    @apply page-cta-0-88;
   }
   .page-consultoriaagil .cta-4 .benefit-description,
   .page-consultoriaagil .cta-4 .heading-title,
@@ -662,68 +538,61 @@
   .page-consultoriaagil .heading-9 .heading-container .heading-size-1,
   .page-consultoriaagil .number-counter-9 .metric-label,
   .page-consultoriaagil .number-counter-9 .metric-value {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-consultoriaagil .number-counter-5.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-6.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-7.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-8.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-9.metric .heading-size-5.metric-label {
-    font-family: var(--font-body);
-    font-weight: var(--heading-weight);
+    @apply page-number-counter-0-86;
   }
   .page-consultoriaagil .number-counter-5.metric .metric-value p,
   .page-consultoriaagil .number-counter-6.metric .metric-value p,
   .page-consultoriaagil .number-counter-7.metric .metric-value p,
   .page-consultoriaagil .number-counter-8.metric .metric-value p,
   .page-consultoriaagil .number-counter-9.metric .metric-value p {
-    font-family: var(--font-heading);
-    font-weight: var(--heading-weight);
-    color: var(--color-primary);
-    font-size: 52px;
+    @apply page-number-counter-0-87;
   }
   .page-consultoriaagil .heading-7 .heading-container .heading-size-4 {
     font-weight: 300;
     text-align: center;
   }
   .page-consultoriaagil .heading-8 .heading-container .heading-size-1 {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-consultoriaagil .section-12.page-section {
-    padding-bottom: 100px;
+    @apply page-section-6-91;
   }
 }
 @layer overrides {
   @media (width <= 980px) {
     .page-consultoriaagil .flex-row > .content-column {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   @media (width <= 767px) {
     .page-consultoriaagil .carousel-slide .slide-title {
-      font-size: 32px;
-      line-height: 1.3;
+      @apply page-carousel-slide-112;
     }
   }
   .page-consultoriaagil .tone-dark,
   .page-consultoriaagil .tone-dark .heading-size-1,
   .page-consultoriaagil .tone-dark .heading-size-2 {
-    color: rgb(255, 255, 255);
+    @apply page-tone-dark-6;
   }
   .page-consultoriaagil
     .fullwidth-slider-1.carousel
     .slide-description
     .slide-title {
-    font-size: 52px;
+    @apply page-fullwidth-slider-0-113;
   }
   .page-consultoriaagil
     .carousel
     .slide-1.carousel-slide
     .slide-description
     .slide-title {
-    font-weight: 700;
-    font-size: 54px;
-    line-height: 1.3em;
+    @apply page-carousel-114;
   }
   @media only screen and (max-width: 767px) {
     .page-consultoriaagil
@@ -731,30 +600,30 @@
       .slide-1.carousel-slide
       .slide-description
       .slide-title {
-      font-size: 38px;
+      @apply page-carousel-144;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-consultoriaagil .hide-background-phone {
-      display: none;
+      @apply page-carousel-slide-3;
     }
   }
   .page-consultoriaagil .carousel .carousel-slide {
-    list-style: none;
+    @apply page-carousel-118;
   }
   .page-consultoriaagil .number-counter-5.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-6.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-7.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-8.metric .heading-size-5.metric-label,
   .page-consultoriaagil .number-counter-9.metric .heading-size-5.metric-label {
-    color: var(--color-text-muted);
+    @apply page-number-counter-0-116;
   }
   .page-consultoriaagil .heading-8 .heading-container .heading-size-1 {
-    color: var(--color-soft);
+    @apply page-heading-1-117;
   }
   @media only screen and (max-width: 767px) {
     .page-consultoriaagil .image-2 {
-      display: none;
+      @apply page-carousel-slide-3;
     }
   }
   @media only screen and (max-width: 767px) {

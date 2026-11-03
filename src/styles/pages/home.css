@@ -1,95 +1,65 @@
+@reference '../shared.css';
 /* Layout and typography for home. Component behavior lives in its component. */
 @layer pages {
   @media (width <= 980px) {
     .page-home .flex-row {
-      flex-wrap: wrap;
+      @apply page-flex-row-1;
     }
   }
   @media (width <= 980px) {
     .page-home .flex-row > .content-column {
-      flex: 0 0 100%;
-      min-width: 0px;
+      @apply page-flex-row-2;
     }
   }
   .page-home .carousel-slide {
-    display: none;
+    @apply page-carousel-slide-3;
   }
   .page-home .carousel-slide {
-    background-position: 50% center;
-    background-size: cover;
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-home .slide-inner,
   .page-home .slide-description {
-    z-index: 1;
-    position: relative;
+    @apply page-slide-inner-5;
   }
   .page-home .tone-dark .slide-title,
-  .page-home .tone-dark .heading-title,
-  .page-home .tone-dark .header-content-wrapper {
-    color: rgb(255, 255, 255);
+  .page-home .tone-dark .heading-title {
+    @apply page-tone-dark-6;
   }
   .page-home .carousel .carousel-slide > .slide-container {
-    height: 100%;
+    @apply page-carousel-7;
   }
   @media (width <= 767px) {
     .page-home .carousel-slide .slide-title {
-      overflow-wrap: normal;
-      word-break: normal;
-      font-size: 32px;
+      @apply page-carousel-slide-8;
     }
   }
   @media (width >= 981px) {
     .page-home .carousel .scene-image {
-      background-position: center top;
-      height: calc(100% + 30vh);
-      top: -18px;
-      bottom: auto;
+      @apply page-carousel-9;
     }
   }
   .page-home .heading-size-1,
   .page-home .heading-size-2,
   .page-home .heading-size-5 {
-    color: var(--color-ink);
-    padding-bottom: 10px;
-    line-height: 1.3;
-    font-weight: 500;
+    @apply page-heading-size-1-10;
   }
   .page-home .heading-size-2 a {
-    color: inherit;
-  }
-  .page-home .heading-size-1 {
-    font-size: 30px;
-  }
-  .page-home .heading-size-2 {
-    font-size: 26px;
+    @apply page-heading-size-2-11;
   }
   .page-home .heading-size-5 {
-    font-size: 16px;
+    @apply page-heading-size-5-12;
   }
   .page-home button {
-    font-family: inherit;
+    @apply page-content-13;
   }
   .page-home img {
-    max-width: 100%;
-    height: auto;
+    @apply page-content-14;
   }
   .page-home .symbol {
-    speak: none;
-    font-weight: 400;
-    font-feature-settings: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    font-size: 96px;
-    font-style: normal;
-    display: inline-block;
-    box-sizing: border-box;
-    direction: ltr;
+    @apply page-symbol-15;
   }
   .page-home .tone-light.action-link:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    @apply page-tone-light-16;
   }
   @media (min-width: 981px) {
     .page-home
@@ -97,38 +67,38 @@
       div.content-row
       .content-column
       .content-block.last-column {
-      margin-bottom: 0px;
+      @apply page-page-section-17;
     }
   }
   @media (max-width: 980px) {
     .page-home .content-column .content-block {
-      margin-bottom: 30px;
+      @apply page-content-column-18;
     }
   }
   @media (max-width: 980px) {
     .page-home .flex-column > .content-block {
-      margin-bottom: unset;
+      @apply page-flex-column-19;
     }
   }
   @media (max-width: 980px) {
     .page-home .content-row .content-column .content-block.last-column,
     .page-home .content-row .content-column .content-block:last-child {
-      margin-bottom: 0px;
+      @apply page-page-section-17;
     }
   }
   @media (min-width: 981px) {
     .page-home .block-row .content-column {
-      margin-right: 5.5%;
+      @apply page-block-row-20;
     }
   }
   @media (min-width: 981px) {
     .page-home .block-row .span-4-4 {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   @media (min-width: 981px) {
     .page-home .block-row .span-1-2 {
-      width: 47.25%;
+      @apply page-block-row-22;
     }
   }
   @media (min-width: 981px) {
@@ -138,12 +108,12 @@
   }
   @media (min-width: 981px) {
     .page-home .span-4-4.block-column .content-block {
-      margin-bottom: 2.75%;
+      @apply page-span-4-4-23;
     }
   }
   @media (min-width: 981px) {
     .page-home .span-1-2.block-column .content-block {
-      margin-bottom: 5.82%;
+      @apply page-span-1-2-24;
     }
   }
   @media (min-width: 981px) {
@@ -155,61 +125,48 @@
   .page-home .stack,
   .page-home .flex-row,
   .page-home .flex-section {
-    display: flex;
-    column-gap: var(--horizontal-gap);
-    row-gap: var(--vertical-gap);
-    flex-direction: var(--flex-direction);
+    @apply page-flex-column-25;
   }
   .page-home .flex-row {
-    --horizontal-gap: var(--row-gutter-horizontal);
-    --vertical-gap: var(--row-gutter-vertical);
-    --flex-direction: row;
+    @apply page-flex-row-26;
   }
   .page-home .flex-section {
-    --horizontal-gap: var(--section-gutter);
-    --vertical-gap: var(--section-gutter);
-    --flex-direction: column;
-    align-items: center;
+    @apply page-flex-section-27;
   }
   .page-home .flex-column,
   .page-home .stack {
-    --flex-direction: column;
-    --horizontal-gap: var(--module-gutter);
-    --vertical-gap: var(--module-gutter);
+    @apply page-flex-column-28;
   }
   .page-home .flex-column > .content-block,
   .page-home .page-section .content-row .flex-column > .content-block {
-    margin-bottom: 0px;
+    @apply page-page-section-17;
   }
   .page-home .column-24-24 {
-    width: calc(100% - var(--horizontal-gap-parent, 5.5%) * 0 / 1);
+    @apply page-column-24-24-29;
   }
   .page-home .flex-section > .content-row {
-    margin: initial;
+    @apply page-flex-section-30;
   }
   .page-home .content-column,
   .page-home .content-row {
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-content-column-31;
   }
   @media (min-width: 981px) {
     .page-home .block-row {
-      padding: 2% 0px;
+      @apply page-block-row-32;
     }
   }
   @media (max-width: 980px) {
     .page-home .block-row {
-      padding: 30px 0px;
+      @apply page-block-row-33;
     }
   }
   .page-home .four-column-row .last-column {
-    margin-bottom: 0px;
+    @apply page-page-section-17;
   }
   @media (max-width: 980px) {
     .page-home .block-row .content-column {
-      width: 100%;
-      margin-bottom: 30px;
+      @apply page-block-row-34;
     }
   }
   @media (max-width: 980px) {
@@ -226,12 +183,12 @@
   }
   @media (max-width: 980px) {
     .page-home .four-column-grid > .content-column.span-1-4:nth-child(2n) {
-      margin-right: 0px;
+      @apply page-four-column-grid-35;
     }
   }
   @media (max-width: 980px) {
     .page-home .four-column-grid .content-column:nth-last-child(-n + 2) {
-      margin-bottom: 0px;
+      @apply page-page-section-17;
     }
   }
   @media (max-width: 479px) {
@@ -243,184 +200,148 @@
   @media (max-width: 479px) {
     .page-home .content-row .content-column.span-1-4.last-column,
     .page-home .content-row .content-column.span-1-4:last-child {
-      margin-bottom: 0px;
+      @apply page-page-section-17;
     }
   }
   .page-home .image-block {
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 0;
+    @apply page-image-block-36;
   }
   .page-home .image-block.block-module {
-    display: block;
+    @apply page-image-block-37;
   }
   .page-home .image-block .image-frame {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
+    @apply page-image-block-38;
   }
   .page-home .image-block img {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-home .copy {
-    overflow-wrap: break-word;
-    line-height: var(--body-line-height, 1.7em);
+    @apply page-copy-39;
   }
   .page-home .copy > :last-child {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-home .copy-inner {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-home .heading-container {
-    position: relative;
-    width: 100%;
+    @apply page-heading-container-41;
   }
   .page-home .metric {
-    overflow-wrap: break-word;
-    margin: 0px auto 30px;
-    position: relative;
-    text-align: center;
-    --vertical-gap: 20px;
+    @apply page-metric-42;
   }
   .page-home .flex-column > .metric {
-    margin-left: unset;
-    margin-right: unset;
+    @apply page-flex-column-43;
   }
   .page-home .metric .metric-value {
-    z-index: 2;
+    @apply page-metric-44;
   }
   .page-home .metric {
-    opacity: 0;
+    @apply page-metric-45;
   }
   .page-home .metric {
-    width: auto;
+    @apply page-metric-46;
   }
   .page-home .metric .metric-value {
-    height: 72px;
-    position: relative;
+    @apply page-metric-47;
   }
   .page-home .metric .metric-value p {
-    font-size: 72px;
-    line-height: 72px;
-    font-weight: 500;
+    @apply page-metric-48;
   }
   .page-home .testimonial-description-inner {
-    overflow-wrap: break-word;
+    @apply page-testimonial-description-inner-49;
   }
   .page-home .testimonial {
-    position: relative;
-    padding: 30px;
-    line-height: 1.5;
+    @apply page-testimonial-50;
   }
   .page-home .testimonial .testimonial-content {
-    line-height: 1.5em;
+    @apply page-testimonial-51;
   }
   .page-home .testimonial .testimonial-meta {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-home .testimonial-portrait {
-    width: 90px;
-    height: 90px;
-    position: relative;
-    margin-right: 30px;
-    box-sizing: content-box;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px inset;
-    border-radius: 90px;
+    @apply page-testimonial-portrait-52;
   }
   .page-home .testimonial-portrait img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    object-fit: cover;
-    object-position: center center;
-    height: 100%;
-    width: 100%;
+    @apply page-testimonial-portrait-53;
   }
   .page-home .testimonial-author {
-    font-weight: 700;
-    width: 100%;
+    @apply page-testimonial-author-54;
   }
   .page-home .testimonial-company,
   .page-home .testimonial-meta,
   .page-home .testimonial-position {
-    display: inline-block;
+    @apply page-testimonial-company-55;
   }
   @media (min-width: 768px) and (max-width: 980px) {
     .page-home .content-column .testimonial-portrait {
-      display: block;
-      margin-right: 30px;
+      @apply page-content-column-56;
     }
   }
   @media (min-width: 768px) and (max-width: 980px) {
     .page-home .content-column .testimonial-description {
-      display: block;
+      @apply page-image-block-37;
     }
   }
   @media (max-width: 767px) {
     .page-home .content-column .testimonial-description {
-      width: 100%;
-      display: block;
+      @apply page-content-column-57;
     }
   }
   @media (max-width: 767px) {
     .page-home .content-column .testimonial-portrait {
-      display: block;
-      margin: 0px auto 20px;
+      @apply page-content-column-58;
     }
   }
   @media (max-width: 479px) {
     .page-home .testimonial {
-      padding-top: 10%;
+      @apply page-testimonial-59;
     }
   }
   .page-home {
-    font-size: 18px;
+    @apply page-content-60;
   }
   .page-home {
-    font-weight: 400;
+    @apply page-content-61;
   }
   .page-home .heading-size-1,
   .page-home .heading-size-2,
   .page-home .heading-size-5,
   .page-home .slide-description .slide-title {
-    line-height: 1.3;
+    @apply page-heading-size-1-62;
   }
   @media only screen and (min-width: 1350px) {
     .page-home .block-row {
-      padding: 27px 0px;
+      @apply page-block-row-63;
     }
   }
   .page-home .heading-size-1 {
-    font-size: 32px;
+    @apply page-heading-size-1-64;
   }
   .page-home .heading-size-2 {
-    font-size: 27px;
+    @apply page-heading-size-2-65;
   }
   .page-home .slide-description .slide-title {
-    font-size: 48px;
+    @apply page-slide-description-66;
   }
   .page-home .heading-size-1 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-home .heading-size-2 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-home .heading-size-5 {
-    font-weight: 600;
-  }
-  .page-home .slide-description .slide-title {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   @media only screen and (max-width: 767px) {
     .page-home .heading-size-1 {
-      font-size: 28px;
+      @apply page-heading-size-1-68;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-home .heading-size-2 {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -429,26 +350,21 @@
       .carousel-track
       .slide-description
       .slide-title {
-      font-size: 42px;
+      @apply page-carousel-70;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-home .heading-size-5 {
-      font-size: 14px;
+      @apply page-heading-size-5-71;
     }
   }
   .page-home .heading-size-1,
   .page-home .heading-size-2,
   .page-home .heading-size-5 {
-    font-family: var(--font-heading);
+    @apply page-heading-size-1-72;
   }
   .page-home .fullwidth-slider-0 .slide-link.action-link {
-    color: rgb(255, 255, 255);
-    letter-spacing: 5px;
-    border-radius: 10px;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0);
-    border-style: solid;
+    @apply page-fullwidth-slider-0-73;
   }
   .page-home .slide-0 .slide-description .slide-title,
   .page-home .carousel-track .slide-0.carousel-slide .slide-description,
@@ -458,14 +374,13 @@
   .page-home .carousel-track .slide-2.carousel-slide .slide-description,
   .page-home .slide-3 .slide-description .slide-title,
   .page-home .carousel-track .slide-3.carousel-slide .slide-description {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-home .slide-0.carousel-slide .slide-link.action-link,
   .page-home .slide-1.carousel-slide .slide-link.action-link,
   .page-home .slide-2.carousel-slide .slide-link.action-link,
   .page-home .slide-3.carousel-slide .slide-link.action-link {
-    background-color: var(--color-primary);
-    letter-spacing: 2px;
+    @apply page-slide-0-75;
   }
   .page-home .heading-0 .heading-container .heading-size-1,
   .page-home .text-0,
@@ -500,17 +415,14 @@
   .page-home .button-5-wrapper,
   .page-home .heading-7 .heading-container .heading-size-1,
   .page-home .heading-8 .heading-container .heading-size-1 {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-home .text-0 .copy-inner {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-home .testimonial-0,
   .page-home .testimonial-1 {
-    background-color: rgb(245, 245, 245);
-    border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 18px -6px;
-    text-align: start;
+    @apply page-testimonial-0-77;
   }
   .page-home .testimonial-0 .testimonial-inner,
   .page-home .cta-0,
@@ -519,15 +431,11 @@
   .page-home .cta-2,
   .page-home .testimonial-2 .testimonial-inner,
   .page-home .cta-3 {
-    overflow: hidden;
+    @apply page-testimonial-0-78;
   }
   .page-home .testimonial-0::before,
   .page-home .testimonial-1::before {
-    font-size: 22px;
-    line-height: 22px;
-    border-radius: 22px;
-    top: -11px;
-    margin-left: -11px;
+    @apply page-testimonial-0-79;
   }
   .page-home .testimonial-0.testimonial .testimonial-author,
   .page-home .testimonial-0.testimonial .testimonial-position,
@@ -537,12 +445,11 @@
   .page-home .testimonial-1.testimonial .testimonial-position,
   .page-home .testimonial-1.testimonial .testimonial-separator,
   .page-home .testimonial-1.testimonial .testimonial-content {
-    font-size: 13px;
+    @apply page-testimonial-0-80;
   }
   .page-home .testimonial-0.testimonial .testimonial-company,
   .page-home .testimonial-1.testimonial .testimonial-company {
-    font-weight: 600;
-    font-size: 13px;
+    @apply page-testimonial-0-81;
   }
   .page-home .button-0-wrapper .button-0,
   .page-home .button-1-wrapper .button-1,
@@ -550,28 +457,23 @@
   .page-home .button-3-wrapper .button-3,
   .page-home .button-4-wrapper .button-4,
   .page-home .button-5-wrapper .button-5 {
-    margin-left: auto;
-    margin-right: auto;
+    @apply page-button-0-wrapper-82;
   }
   .page-home .page-section .button-0,
   .page-home .page-section .button-5 {
-    border-radius: 0px;
-    border-width: 0px;
-    border-color: var(--color-ink);
-    border-style: solid;
+    @apply page-page-section-83;
   }
   .page-home .image-0 .image-frame,
   .page-home .image-1 .image-frame,
   .page-home .image-2 .image-frame,
   .page-home .image-3 .image-frame {
-    border-radius: 16px;
-    overflow: hidden;
+    @apply page-image-0-84;
   }
   .page-home .image-0 .image-frame img,
   .page-home .image-1 .image-frame img,
   .page-home .image-2 .image-frame img,
   .page-home .image-3 .image-frame img {
-    border-radius: inherit;
+    @apply page-image-0-85;
   }
   .page-home .icon-0 .icon-frame .symbol,
   .page-home .icon-1 .icon-frame .symbol {
@@ -583,35 +485,30 @@
   .page-home .number-counter-2.metric .heading-size-5.metric-label,
   .page-home .number-counter-3.metric .heading-size-5.metric-label,
   .page-home .number-counter-4.metric .heading-size-5.metric-label {
-    font-family: var(--font-body);
-    font-weight: var(--heading-weight);
+    @apply page-number-counter-0-86;
   }
   .page-home .number-counter-0.metric .metric-value p,
   .page-home .number-counter-1.metric .metric-value p,
   .page-home .number-counter-2.metric .metric-value p,
   .page-home .number-counter-3.metric .metric-value p,
   .page-home .number-counter-4.metric .metric-value p {
-    font-family: var(--font-heading);
-    font-weight: var(--heading-weight);
-    color: var(--color-primary);
-    font-size: 52px;
+    @apply page-number-counter-0-87;
   }
   .page-home .text-1,
   .page-home .text-2,
   .page-home .text-3,
   .page-home .text-4 {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-home .cta-0.benefit,
   .page-home .cta-1.benefit,
   .page-home .cta-2.benefit,
   .page-home .cta-3.benefit {
-    background-color: var(--color-blue);
-    border-radius: 16px;
+    @apply page-cta-0-88;
   }
   .page-home .heading-1 .heading-container .heading-size-1,
   .page-home .heading-5 .heading-container .heading-size-1 {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-home .page-section .button-1,
   .page-home .page-section .button-2 {
@@ -622,17 +519,10 @@
     border-style: solid;
   }
   .page-home .testimonial-2 {
-    background-color: rgb(245, 245, 245);
-    border-radius: 16px;
-    text-align: center;
+    @apply page-testimonial-2-89;
   }
   .page-home .testimonial-2.testimonial .testimonial-content {
-    font-weight: 700;
-    font-style: normal;
-    text-transform: none;
-    font-variant: normal;
-    text-decoration-line: none;
-    font-size: 18px;
+    @apply page-testimonial-2-90;
   }
   .page-home .page-section .button-3,
   .page-home .page-section .button-4 {
@@ -643,106 +533,90 @@
     border-style: solid;
   }
   .page-home .section-6.page-section {
-    padding-bottom: 100px;
+    @apply page-section-6-91;
   }
   .page-home .heading-6 .heading-container .heading-size-1 {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-home .tone-light.content-block.action-link {
-    color: var(--color-primary);
+    @apply page-tone-light-92;
   }
   .page-home .action-link {
-    display: inline-block;
+    @apply page-testimonial-company-55;
   }
   .page-home .benefit {
-    background-color: rgb(31, 101, 129);
-    padding: 40px 60px;
-    text-align: center;
-    --vertical-gap: 20px;
+    @apply page-benefit-93;
   }
   .page-home .benefit-description {
-    padding-bottom: 20px;
-    position: relative;
+    @apply page-benefit-description-94;
   }
   .page-home .benefit-description p:last-of-type {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-home .span-1-2 .benefit {
-    padding: 40px;
+    @apply page-span-1-2-95;
   }
   @media (max-width: 767px) {
     .page-home .benefit {
-      padding: 40px;
+      @apply page-span-1-2-95;
     }
   }
   @media (max-width: 479px) {
     .page-home .benefit {
-      padding: 40px;
+      @apply page-span-1-2-95;
     }
   }
   .page-home .carousel {
-    --vertical-gap: 0px;
-    --horizontal-gap: 0px;
+    @apply page-carousel-96;
   }
   .page-home .carousel .slide-container {
-    width: 100%;
-    margin: 0px auto;
-    position: relative;
-    z-index: 2;
+    @apply page-carousel-97;
   }
   .page-home .carousel-track .slide-container {
-    display: table;
-    table-layout: fixed;
+    @apply page-carousel-track-98;
   }
   .page-home .carousel-track .slide-inner {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
+    @apply page-carousel-track-99;
   }
   .page-home .slide-description {
-    overflow-wrap: break-word;
-    --vertical-gap: 20px;
+    @apply page-slide-description-100;
   }
   .page-home .tone-dark .slide-description {
-    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+    @apply page-tone-dark-101;
   }
   .page-home .slide-description {
-    padding: 16% 8%;
-    width: auto;
-    margin: auto;
+    @apply page-slide-description-102;
   }
   .page-home .slide-description .slide-title {
-    font-weight: 300;
-    margin-top: 0px;
+    @apply page-slide-description-103;
   }
   .page-home .slide-description .heading-size-2.slide-title {
-    font-size: 46px;
+    @apply page-slide-description-104;
   }
   .page-home .carousel .action-link {
-    margin-top: 0px;
+    @apply page-carousel-105;
   }
   .page-home .carousel .slide-title {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   @media (max-width: 980px) {
     .page-home .slide-description .heading-size-2.slide-title {
-      font-size: 26px;
-      font-weight: 500;
+      @apply page-slide-description-106;
     }
   }
   @media (max-width: 980px) {
     .page-home .slide-description .slide-title {
-      font-weight: 500;
+      @apply page-slide-description-107;
     }
   }
   @media (max-width: 980px) {
     .page-home .slide-description {
-      text-align: center;
+      @apply page-heading-0-76;
     }
   }
   @media (max-width: 767px) {
     .page-home .slide-description .heading-size-2.slide-title {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   @media (max-width: 767px) {
@@ -751,42 +625,34 @@
       .carousel-track
       .slide-description
       .heading-size-2.slide-title {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   @media (max-width: 767px) {
     .page-home .slide-description {
-      text-align: center;
+      @apply page-heading-0-76;
     }
   }
   @media (max-width: 479px) {
     .page-home .slide-description .heading-size-2.slide-title {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   .page-home .carousel {
-    position: relative;
-    overflow: hidden;
+    @apply page-carousel-109;
   }
   .page-home .carousel-slide {
-    padding: 0px 6%;
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-carousel-slide-110;
   }
   .page-home .carousel .carousel-slide {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    background-position: 50% center;
-    background-size: cover;
+    @apply page-carousel-111;
   }
   .page-home .icon-block {
     text-align: center;
     height: auto;
   }
   .page-home .icon-block .symbol {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-home .icon-block .icon-frame {
     display: inline-block;
@@ -800,33 +666,30 @@
 @layer overrides {
   @media (width <= 980px) {
     .page-home .flex-row > .content-column {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   @media (width <= 767px) {
     .page-home .carousel-slide .slide-title {
-      font-size: 32px;
-      line-height: 1.3;
+      @apply page-carousel-slide-112;
     }
   }
   .page-home .tone-dark,
   .page-home .tone-dark .heading-size-1,
   .page-home .tone-dark .heading-size-2 {
-    color: rgb(255, 255, 255);
+    @apply page-tone-dark-6;
   }
   @media (max-width: 479px) {
     .page-home .block-row .content-column {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   .page-home .fullwidth-slider-0.carousel .slide-description .slide-title {
-    font-size: 52px;
+    @apply page-fullwidth-slider-0-113;
   }
   .page-home .carousel .slide-0.carousel-slide .slide-description .slide-title,
   .page-home .carousel .slide-3.carousel-slide .slide-description .slide-title {
-    font-weight: 700;
-    font-size: 54px;
-    line-height: 1.3em;
+    @apply page-carousel-114;
   }
   .page-home .carousel .slide-1.carousel-slide .slide-description .slide-title {
     font-weight: 700;
@@ -854,34 +717,32 @@
       .slide-3.carousel-slide
       .slide-description
       .slide-title {
-      font-size: 42px;
+      @apply page-carousel-70;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-home .hide-background-phone {
-      display: none;
+      @apply page-carousel-slide-3;
     }
   }
   .page-home .page-section .button-0,
   .page-home .page-section .button-5 {
-    color: #2a2a2a;
-    padding-right: 2em;
-    padding-left: 0.7em;
+    @apply page-page-section-115;
   }
   .page-home .icon-0 .icon-frame .symbol,
   .page-home .icon-1 .icon-frame .symbol {
-    font-weight: 400;
+    @apply page-content-61;
   }
   .page-home .number-counter-0.metric .heading-size-5.metric-label,
   .page-home .number-counter-1.metric .heading-size-5.metric-label,
   .page-home .number-counter-2.metric .heading-size-5.metric-label,
   .page-home .number-counter-3.metric .heading-size-5.metric-label,
   .page-home .number-counter-4.metric .heading-size-5.metric-label {
-    color: var(--color-text-muted);
+    @apply page-number-counter-0-116;
   }
   .page-home .heading-1 .heading-container .heading-size-1,
   .page-home .heading-5 .heading-container .heading-size-1 {
-    color: var(--color-soft);
+    @apply page-heading-1-117;
   }
   .page-home .heading-6 .heading-container .heading-size-1 {
     color: rgb(0, 0, 0);
@@ -891,7 +752,7 @@
     .page-home .image-1,
     .page-home .image-2,
     .page-home .image-3 {
-      display: none;
+      @apply page-carousel-slide-3;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -900,6 +761,6 @@
     }
   }
   .page-home .carousel .carousel-slide {
-    list-style: none;
+    @apply page-carousel-118;
   }
 }
