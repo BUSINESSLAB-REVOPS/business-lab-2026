@@ -1,0 +1,78 @@
+/* Utilities are generated only for the local diagnostic and its UI primitives.
+   Preflight is omitted to preserve the existing site's styles. */
+@layer theme, components, pages, overrides, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities) source(none);
+@import 'tw-animate-css';
+@source '../components/diagnostic';
+@source '../components/ui';
+
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --color-background: #fff;
+  --color-foreground: var(--color-ink);
+  --color-primary: var(--color-blue);
+  --color-primary-foreground: #fff;
+  --color-secondary: var(--color-brand-tint);
+  --color-secondary-foreground: var(--color-ink);
+  --color-muted: var(--color-mist);
+  --color-muted-foreground: var(--color-text-muted);
+  --color-accent: var(--color-lilac-surface);
+  --color-accent-foreground: var(--color-ink);
+  --color-destructive: #b91c1c;
+  --color-input: var(--color-brand-border);
+  --color-ring: var(--color-blue);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.75rem;
+}
+
+@layer components {
+  [data-slot='dialog-content'] {
+    font-family: var(--font-body);
+    line-height: 1.5;
+  }
+  /* The copied primitives normally receive these defaults from Preflight. */
+  [data-slot='dialog-content'],
+  [data-slot='dialog-content'] *,
+  [data-slot='dialog-content'] *::before,
+  [data-slot='dialog-content'] *::after {
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--color-card-border);
+  }
+  [data-slot='dialog-content'] button,
+  [data-slot='dialog-content'] input {
+    background-color: transparent;
+  }
+  [data-slot='dialog-content'] [data-slot='button'],
+  [data-slot='dialog-content'] [data-slot='input'] {
+    min-height: 44px;
+  }
+  [data-slot='dialog-content'] .iti {
+    width: 100%;
+    --iti-spacer-horizontal: 12px;
+    --iti-border-color: var(--color-brand-border);
+  }
+  [data-slot='dialog-content'] .iti__selected-dial-code {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  [data-slot='dialog-content'] .iti__dropdown-content {
+    color: var(--color-ink);
+    background: white;
+  }
+  [data-slot='dialog-content'] .iti__country-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  [data-slot='dialog-overlay'],
+  [data-slot='dialog-content'] {
+    z-index: 200;
+  }
+  [data-slot='dialog-content'] {
+    z-index: 201;
+  }
+}
