@@ -100,4 +100,4 @@ python -m venv .venv-fonts
 
 Los enlaces de contacto y «Consultoría gratuita» abren una única ventana por página. `/?consultoria=gratuita#contacto` permite abrirla desde un enlace directo. El calendario predeterminado es `https://revops1.zohobookings.com/portal-embed#/5013442000000038009`; se puede sustituir mediante `PUBLIC_ZOHO_BOOKINGS_URL` (ver `.env.example`). Los datos de contacto se pasan a Zoho al llegar al paso de reserva; no hay almacenamiento local ni envío propio del formulario.
 
-El formulario y sus estilos se cargan al abrir la consulta. Los estilos se generan con Tailwind únicamente a partir de sus componentes, sin Preflight global. Los logos enviados se usan en cabecera, pie, metadatos e icono del sitio.
+El formulario y sus estilos se cargan al abrir la consulta. Los estilos se generan con Tailwind únicamente a partir de sus componentes, sin Preflight global. La cabecera y el pie usan logos SVG transparentes en `public/assets`; el icono del sitio es `public/favicon.svg`. Se generan versiones PNG independientes para metadatos sociales (`business-lab-social.png`) y el icono de Apple (`apple-touch-icon.png`) por compatibilidad.
