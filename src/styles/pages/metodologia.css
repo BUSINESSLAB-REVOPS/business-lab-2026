@@ -1,101 +1,65 @@
+@reference '../shared.css';
 /* Layout and typography for metodologia. Component behavior lives in its component. */
 @layer pages {
   @media (width <= 980px) {
     .page-metodologia .flex-row {
-      flex-wrap: wrap;
+      @apply page-flex-row-1;
     }
   }
   @media (width <= 980px) {
     .page-metodologia .flex-row > .content-column {
-      flex: 0 0 100%;
-      min-width: 0px;
+      @apply page-flex-row-2;
     }
   }
   .page-metodologia .carousel-slide {
-    display: none;
+    @apply page-carousel-slide-3;
   }
   .page-metodologia .carousel-slide {
-    background-position: 50% center;
-    background-size: cover;
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-metodologia .slide-inner,
   .page-metodologia .slide-description {
-    z-index: 1;
-    position: relative;
+    @apply page-slide-inner-5;
   }
   .page-metodologia .tone-dark .slide-title,
   .page-metodologia .tone-dark .slide-content,
-  .page-metodologia .tone-dark .heading-title,
-  .page-metodologia .tone-dark .header-content-wrapper {
-    color: rgb(255, 255, 255);
+  .page-metodologia .tone-dark .heading-title {
+    @apply page-tone-dark-6;
   }
   .page-metodologia .carousel .carousel-slide > .slide-container {
-    height: 100%;
+    @apply page-carousel-7;
   }
   @media (width <= 767px) {
     .page-metodologia .carousel-slide .slide-title {
-      overflow-wrap: normal;
-      word-break: normal;
-      font-size: 32px;
+      @apply page-carousel-slide-8;
     }
   }
   @media (width >= 981px) {
     .page-metodologia .carousel .scene-image {
-      background-position: center top;
-      height: calc(100% + 30vh);
-      top: -18px;
-      bottom: auto;
+      @apply page-carousel-9;
     }
   }
   .page-metodologia strong {
-    font-weight: 700;
+    @apply page-content-136;
   }
   .page-metodologia .heading-size-1,
   .page-metodologia .heading-size-2,
   .page-metodologia .heading-size-3,
   .page-metodologia .heading-size-4,
   .page-metodologia .heading-size-5 {
-    color: var(--color-ink);
-    padding-bottom: 10px;
-    line-height: 1.3;
-    font-weight: 500;
-  }
-  .page-metodologia .heading-size-1 {
-    font-size: 30px;
-  }
-  .page-metodologia .heading-size-2 {
-    font-size: 26px;
-  }
-  .page-metodologia .heading-size-3 {
-    font-size: 22px;
-  }
-  .page-metodologia .heading-size-4 {
-    font-size: 18px;
+    @apply page-heading-size-1-10;
   }
   .page-metodologia .heading-size-5 {
-    font-size: 16px;
+    @apply page-heading-size-5-12;
   }
   .page-metodologia img {
-    max-width: 100%;
-    height: auto;
+    @apply page-content-14;
   }
   .page-metodologia .symbol {
-    speak: none;
-    font-weight: 400;
-    font-feature-settings: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    font-size: 96px;
-    font-style: normal;
-    display: inline-block;
-    box-sizing: border-box;
-    direction: ltr;
+    @apply page-symbol-15;
   }
   .page-metodologia .module-inner {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-metodologia .with-border {
     position: relative;
@@ -103,32 +67,27 @@
   }
   @media (max-width: 980px) {
     .page-metodologia .content-column .content-block {
-      margin-bottom: 30px;
+      @apply page-content-column-18;
     }
   }
   @media (max-width: 980px) {
     .page-metodologia .flex-column > .content-block {
-      margin-bottom: unset;
+      @apply page-flex-column-19;
     }
   }
   @media (max-width: 980px) {
     .page-metodologia .content-row .content-column .content-block:last-child {
-      margin-bottom: 0px;
+      @apply page-page-section-17;
     }
   }
   .page-metodologia .flex-column,
   .page-metodologia .stack,
   .page-metodologia .flex-row,
   .page-metodologia .flex-section {
-    display: flex;
-    column-gap: var(--horizontal-gap);
-    row-gap: var(--vertical-gap);
-    flex-direction: var(--flex-direction);
+    @apply page-flex-column-25;
   }
   .page-metodologia .flex-row {
-    --horizontal-gap: var(--row-gutter-horizontal);
-    --vertical-gap: var(--row-gutter-vertical);
-    --flex-direction: row;
+    @apply page-flex-row-26;
   }
   .page-metodologia .flex-row .nested-row.flex-row {
     width: 100%;
@@ -137,109 +96,80 @@
     margin: 0px;
   }
   .page-metodologia .flex-section {
-    --horizontal-gap: var(--section-gutter);
-    --vertical-gap: var(--section-gutter);
-    --flex-direction: column;
-    align-items: center;
+    @apply page-flex-section-27;
   }
   .page-metodologia .flex-column,
   .page-metodologia .stack {
-    --flex-direction: column;
-    --horizontal-gap: var(--module-gutter);
-    --vertical-gap: var(--module-gutter);
+    @apply page-flex-column-28;
   }
   .page-metodologia .flex-column > .content-block,
   .page-metodologia .page-section .content-row .flex-column > .content-block {
-    margin-bottom: 0px;
+    @apply page-page-section-17;
   }
   .page-metodologia .column-24-24 {
-    width: calc(100% - var(--horizontal-gap-parent, 5.5%) * 0 / 1);
+    @apply page-column-24-24-29;
   }
   .page-metodologia .flex-column > .content-row,
   .page-metodologia .flex-section > .content-row {
-    margin: initial;
+    @apply page-flex-section-30;
   }
   .page-metodologia .content-column,
   .page-metodologia .content-row {
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-content-column-31;
   }
   .page-metodologia .image-block {
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 0;
+    @apply page-image-block-36;
   }
   .page-metodologia .flex-column > .image-block {
-    margin-left: unset;
-    margin-right: unset;
+    @apply page-flex-column-43;
   }
   .page-metodologia .image-block .image-frame {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
+    @apply page-image-block-38;
   }
   .page-metodologia .image-block:where(.stack) > .image-frame {
-    width: fit-content;
-    display: flex;
+    @apply page-image-block-137;
   }
   .page-metodologia .image-block img {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-metodologia .copy {
-    overflow-wrap: break-word;
-    line-height: var(--body-line-height, 1.7em);
+    @apply page-copy-39;
   }
   .page-metodologia .copy > :last-child {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-metodologia .copy-inner {
-    position: relative;
+    @apply page-carousel-slide-4;
   }
   .page-metodologia .heading-container {
-    position: relative;
-    width: 100%;
+    @apply page-heading-container-41;
   }
   .page-metodologia .metric {
-    overflow-wrap: break-word;
-    margin: 0px auto 30px;
-    position: relative;
-    text-align: center;
-    --vertical-gap: 20px;
+    @apply page-metric-42;
   }
   .page-metodologia .flex-column > .metric {
-    margin-left: unset;
-    margin-right: unset;
+    @apply page-flex-column-43;
   }
   .page-metodologia .metric .metric-value {
-    z-index: 2;
+    @apply page-metric-44;
   }
   .page-metodologia .metric {
-    opacity: 0;
+    @apply page-metric-45;
   }
   .page-metodologia .metric {
-    width: auto;
+    @apply page-metric-46;
   }
   .page-metodologia .metric .metric-value {
-    height: 72px;
-    position: relative;
+    @apply page-metric-47;
   }
   .page-metodologia .metric .metric-value p {
-    font-size: 72px;
-    line-height: 72px;
-    font-weight: 500;
+    @apply page-metric-48;
   }
   .page-metodologia {
-    font-size: 18px;
-  }
-  .page-metodologia .slide-content {
-    font-size: 20px;
+    @apply page-content-60;
   }
   .page-metodologia {
-    font-weight: 400;
-  }
-  .page-metodologia .slide-content {
-    font-weight: 400;
+    @apply page-content-61;
   }
   .page-metodologia .heading-size-1,
   .page-metodologia .heading-size-2,
@@ -247,13 +177,13 @@
   .page-metodologia .heading-size-4,
   .page-metodologia .heading-size-5,
   .page-metodologia .slide-description .slide-title {
-    line-height: 1.3;
+    @apply page-heading-size-1-62;
   }
   .page-metodologia .heading-size-1 {
-    font-size: 32px;
+    @apply page-heading-size-1-64;
   }
   .page-metodologia .heading-size-2 {
-    font-size: 27px;
+    @apply page-heading-size-2-65;
   }
   .page-metodologia .heading-size-3 {
     font-size: 23px;
@@ -262,44 +192,41 @@
     font-size: 19px;
   }
   .page-metodologia .slide-description .slide-title {
-    font-size: 48px;
+    @apply page-slide-description-66;
   }
   .page-metodologia .heading-size-1 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-metodologia .heading-size-2 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-metodologia .heading-size-3 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-metodologia .heading-size-4 {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   .page-metodologia .heading-size-5 {
-    font-weight: 600;
-  }
-  .page-metodologia .slide-description .slide-title {
-    font-weight: 600;
+    @apply page-heading-size-1-67;
   }
   @media only screen and (max-width: 767px) {
     .page-metodologia .heading-size-1 {
-      font-size: 28px;
+      @apply page-heading-size-1-68;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-metodologia .heading-size-2 {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-metodologia .heading-size-3 {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-metodologia .heading-size-4 {
-      font-size: 16px;
+      @apply page-heading-size-5-12;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -308,12 +235,12 @@
       .carousel-track
       .slide-description
       .slide-title {
-      font-size: 42px;
+      @apply page-carousel-70;
     }
   }
   @media only screen and (max-width: 767px) {
     .page-metodologia .heading-size-5 {
-      font-size: 14px;
+      @apply page-heading-size-5-71;
     }
   }
   .page-metodologia .heading-size-1,
@@ -321,51 +248,43 @@
   .page-metodologia .heading-size-3,
   .page-metodologia .heading-size-4,
   .page-metodologia .heading-size-5 {
-    font-family: var(--font-heading);
+    @apply page-heading-size-1-72;
   }
   .page-metodologia .fullwidth-slider-1 .carousel-slide .slide-description {
-    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+    @apply page-fullwidth-slider-1-138;
   }
   .page-metodologia .fullwidth-slider-1.carousel .slide-content {
-    font-size: 18px;
+    @apply page-content-60;
   }
   .page-metodologia .fullwidth-slider-1 .slide-link.action-link {
-    color: rgb(255, 255, 255);
-    letter-spacing: 5px;
-    border-radius: 10px;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0);
-    border-style: solid;
+    @apply page-fullwidth-slider-0-73;
   }
 
   .page-metodologia .slide-1 .slide-description .slide-title,
   .page-metodologia .slide-1 .slide-description .slide-content,
   .page-metodologia .carousel-track .slide-1.carousel-slide .slide-description {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-metodologia
     .carousel
     .slide-1.carousel-slide
     .slide-description
     .slide-title {
-    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+    @apply page-fullwidth-slider-1-138;
   }
   .page-metodologia
     .carousel.content-block
     .slide-1.carousel-slide
     .slide-description
     .slide-content {
-    font-size: 28px;
-    line-height: 1.9em;
-    text-shadow: rgba(0, 0, 0, 0.4) 0em 0.1em 0.1em;
+    @apply page-carousel-139;
   }
   .page-metodologia .slide-1.carousel-slide .slide-link.action-link {
-    background-color: var(--color-primary);
-    letter-spacing: 2px;
+    @apply page-slide-0-75;
   }
   @media only screen and (max-width: 767px) {
     .page-metodologia .fullwidth-slider-1 .slide-link.action-link {
-      font-size: 15px;
+      @apply page-fullwidth-slider-1-140;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -374,99 +293,84 @@
       .slide-1.carousel-slide
       .slide-description
       .slide-content {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   .page-metodologia .carousel {
-    --vertical-gap: 0px;
-    --horizontal-gap: 0px;
+    @apply page-carousel-96;
   }
   .page-metodologia .carousel .slide-container {
-    width: 100%;
-    margin: 0px auto;
-    position: relative;
-    z-index: 2;
+    @apply page-carousel-97;
   }
   .page-metodologia .carousel-track .slide-container {
-    display: table;
-    table-layout: fixed;
+    @apply page-carousel-track-98;
   }
   .page-metodologia .carousel-track .slide-inner {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
+    @apply page-carousel-track-99;
   }
   .page-metodologia .slide-content {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--color-ink);
+    @apply page-slide-content-141;
   }
   .page-metodologia .slide-content p:last-of-type {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-metodologia .tone-dark .slide-content {
-    color: rgb(255, 255, 255);
+    @apply page-tone-dark-6;
   }
   .page-metodologia .slide-description {
-    overflow-wrap: break-word;
-    --vertical-gap: 20px;
+    @apply page-slide-description-100;
   }
   .page-metodologia .tone-dark .slide-description {
-    text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+    @apply page-tone-dark-101;
   }
   .page-metodologia .slide-description {
-    padding: 16% 8%;
-    width: auto;
-    margin: auto;
+    @apply page-slide-description-102;
   }
   .page-metodologia .slide-description .slide-title {
-    font-weight: 300;
-    margin-top: 0px;
+    @apply page-slide-description-103;
   }
   .page-metodologia .slide-description .heading-size-2.slide-title {
-    font-size: 46px;
+    @apply page-slide-description-104;
   }
   .page-metodologia .carousel .action-link {
-    margin-top: 0px;
+    @apply page-carousel-105;
   }
   .page-metodologia .carousel .slide-title {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   @media (max-width: 980px) {
     .page-metodologia .slide-description .heading-size-2.slide-title {
-      font-size: 26px;
-      font-weight: 500;
+      @apply page-slide-description-106;
     }
   }
   @media (max-width: 980px) {
     .page-metodologia .slide-description .slide-title {
-      font-weight: 500;
+      @apply page-slide-description-107;
     }
   }
   @media (max-width: 980px) {
     .page-metodologia .slide-content {
-      font-size: 13px;
-      font-weight: 400;
+      @apply page-slide-content-125;
     }
   }
   @media (max-width: 980px) {
     .page-metodologia .slide-description {
-      text-align: center;
+      @apply page-heading-0-76;
     }
   }
   @media (max-width: 767px) {
     .page-metodologia .slide-content {
-      font-size: 12px;
+      @apply page-slide-content-142;
     }
   }
   @media (max-width: 767px) {
     .page-metodologia .carousel.content-block .carousel-track .slide-content {
-      font-size: 14px;
+      @apply page-heading-size-5-71;
     }
   }
   @media (max-width: 767px) {
     .page-metodologia .slide-description .heading-size-2.slide-title {
-      font-size: 24px;
+      @apply page-heading-size-2-69;
     }
   }
   @media (max-width: 767px) {
@@ -475,111 +379,82 @@
       .carousel-track
       .slide-description
       .heading-size-2.slide-title {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   @media (max-width: 767px) {
     .page-metodologia .slide-description {
-      text-align: center;
+      @apply page-heading-0-76;
     }
   }
   @media (max-width: 479px) {
     .page-metodologia .slide-description .heading-size-2.slide-title {
-      font-size: 20px;
+      @apply page-carousel-108;
     }
   }
   @media (max-width: 479px) {
     .page-metodologia .slide-content {
-      font-weight: 400;
-      font-size: 10px;
-      display: block;
+      @apply page-slide-content-143;
     }
   }
   .page-metodologia .carousel {
-    position: relative;
-    overflow: hidden;
+    @apply page-carousel-109;
   }
   .page-metodologia .carousel-slide {
-    padding: 0px 6%;
-    background-size: cover;
-    background-position: 50% center;
-    background-repeat: no-repeat;
+    @apply page-carousel-slide-110;
   }
   .page-metodologia .carousel .carousel-slide {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    background-position: 50% center;
-    background-size: cover;
+    @apply page-carousel-111;
   }
   .page-metodologia .testimonial-description-inner {
-    overflow-wrap: break-word;
+    @apply page-testimonial-description-inner-49;
   }
   .page-metodologia .testimonial {
-    position: relative;
-    padding: 30px;
-    line-height: 1.5;
+    @apply page-testimonial-50;
   }
   .page-metodologia .testimonial .testimonial-content {
-    line-height: 1.5em;
+    @apply page-testimonial-51;
   }
   .page-metodologia .testimonial .testimonial-meta {
-    padding-bottom: 0px;
+    @apply page-copy-40;
   }
   .page-metodologia .testimonial-portrait {
-    width: 90px;
-    height: 90px;
-    position: relative;
-    margin-right: 30px;
-    box-sizing: content-box;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px inset;
-    border-radius: 90px;
+    @apply page-testimonial-portrait-52;
   }
   .page-metodologia .testimonial-portrait img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    object-fit: cover;
-    object-position: center center;
-    height: 100%;
-    width: 100%;
+    @apply page-testimonial-portrait-53;
   }
   .page-metodologia .testimonial-author {
-    font-weight: 700;
-    width: 100%;
+    @apply page-testimonial-author-54;
   }
   .page-metodologia .testimonial-company,
   .page-metodologia .testimonial-meta,
   .page-metodologia .testimonial-position {
-    display: inline-block;
+    @apply page-testimonial-company-55;
   }
   @media (min-width: 768px) and (max-width: 980px) {
     .page-metodologia .content-column .testimonial-portrait {
-      display: block;
-      margin-right: 30px;
+      @apply page-content-column-56;
     }
   }
   @media (min-width: 768px) and (max-width: 980px) {
     .page-metodologia .content-column .testimonial-description {
-      display: block;
+      @apply page-image-block-37;
     }
   }
   @media (max-width: 767px) {
     .page-metodologia .content-column .testimonial-description {
-      width: 100%;
-      display: block;
+      @apply page-content-column-57;
     }
   }
   @media (max-width: 767px) {
     .page-metodologia .content-column .testimonial-portrait {
-      display: block;
-      margin: 0px auto 20px;
+      @apply page-content-column-58;
     }
   }
   @media (max-width: 479px) {
     .page-metodologia .testimonial {
-      padding-top: 10%;
+      @apply page-testimonial-59;
     }
   }
   .page-metodologia .testimonial-1 {
@@ -588,19 +463,19 @@
     text-align: start;
   }
   .page-metodologia .testimonial-1 .testimonial-inner {
-    overflow: hidden;
+    @apply page-testimonial-0-78;
   }
   .page-metodologia .text-10,
   .page-metodologia .text-11,
   .page-metodologia .text-12,
   .page-metodologia .text-13,
   .page-metodologia .text-14 {
-    text-align: start;
+    @apply page-slide-0-74;
   }
   .page-metodologia .heading-5 .heading-container .heading-size-1,
   .page-metodologia .heading-7 .heading-container .heading-size-1,
   .page-metodologia .heading-8 .heading-container .heading-size-1 {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-metodologia .number-counter-5 .metric-label,
   .page-metodologia .number-counter-5 .metric-value,
@@ -612,34 +487,30 @@
   .page-metodologia .number-counter-8 .metric-value,
   .page-metodologia .number-counter-9 .metric-label,
   .page-metodologia .number-counter-9 .metric-value {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-metodologia .number-counter-5.metric .heading-size-5.metric-label,
   .page-metodologia .number-counter-6.metric .heading-size-5.metric-label,
   .page-metodologia .number-counter-7.metric .heading-size-5.metric-label,
   .page-metodologia .number-counter-8.metric .heading-size-5.metric-label,
   .page-metodologia .number-counter-9.metric .heading-size-5.metric-label {
-    font-family: var(--font-body);
-    font-weight: var(--heading-weight);
+    @apply page-number-counter-0-86;
   }
   .page-metodologia .number-counter-5.metric .metric-value p,
   .page-metodologia .number-counter-6.metric .metric-value p,
   .page-metodologia .number-counter-7.metric .metric-value p,
   .page-metodologia .number-counter-8.metric .metric-value p,
   .page-metodologia .number-counter-9.metric .metric-value p {
-    font-family: var(--font-heading);
-    font-weight: var(--heading-weight);
-    color: var(--color-primary);
-    font-size: 52px;
+    @apply page-number-counter-0-87;
   }
   .page-metodologia .heading-6 .heading-container .heading-size-5 {
     text-align: left;
   }
   .page-metodologia .heading-9 .heading-container .heading-size-1 {
-    text-align: center;
+    @apply page-heading-0-76;
   }
   .page-metodologia .section-10.page-section {
-    padding-bottom: 100px;
+    @apply page-section-6-91;
   }
   .page-metodologia .flipbox-0 .benefit-front,
   .page-metodologia .flipbox-0 .benefit-back,
@@ -701,7 +572,7 @@
     border-width: 1px;
   }
   .page-metodologia .benefit-card {
-    width: auto;
+    @apply page-metric-46;
   }
   .page-metodologia .benefit-card .module-inner {
     position: relative;
@@ -732,7 +603,7 @@
     overflow: visible;
   }
   .page-metodologia .benefit-card .benefit-inner {
-    width: 100%;
+    @apply page-block-row-21;
   }
   .page-metodologia .benefit-card .flipbox_position_top .benefit-inner {
     display: flex;
@@ -745,7 +616,7 @@
     align-items: center;
   }
   .page-metodologia .benefit-front .heading-size-4.heading-title {
-    font-size: 18px;
+    @apply page-content-60;
   }
   .page-metodologia .benefit-card .layout1 {
     perspective: 1000px;
@@ -786,10 +657,10 @@
     margin-bottom: 12px;
   }
   .page-metodologia .timeline .item-icon.symbol {
-    font-size: 32px;
+    @apply page-heading-size-1-64;
   }
   .page-metodologia .timeline .icon-tree .symbol {
-    background: rgb(255, 255, 255);
+    @apply page-article-module-135;
   }
   .page-metodologia .timeline .item-content-inner {
     background-color: rgb(238, 238, 238);
@@ -918,7 +789,7 @@
   }
   @media only screen and (max-width: 767px) {
     .page-metodologia .timeline .timeline-alternate .date-container {
-      display: none;
+      @apply page-carousel-slide-3;
     }
   }
   .page-metodologia .timeline-item .timeline-item-wrapper {
@@ -963,34 +834,31 @@
 @layer overrides {
   @media (width <= 980px) {
     .page-metodologia .flex-row > .content-column {
-      width: 100%;
+      @apply page-block-row-21;
     }
   }
   @media (width <= 767px) {
     .page-metodologia .carousel-slide .slide-title {
-      font-size: 32px;
-      line-height: 1.3;
+      @apply page-carousel-slide-112;
     }
   }
   .page-metodologia .tone-dark,
   .page-metodologia .tone-dark .heading-size-1,
   .page-metodologia .tone-dark .heading-size-2 {
-    color: rgb(255, 255, 255);
+    @apply page-tone-dark-6;
   }
   .page-metodologia
     .fullwidth-slider-1.carousel
     .slide-description
     .slide-title {
-    font-size: 52px;
+    @apply page-fullwidth-slider-0-113;
   }
   .page-metodologia
     .carousel
     .slide-1.carousel-slide
     .slide-description
     .slide-title {
-    font-weight: 700;
-    font-size: 54px;
-    line-height: 1.3em;
+    @apply page-carousel-114;
   }
   @media only screen and (max-width: 767px) {
     .page-metodologia
@@ -998,26 +866,26 @@
       .slide-1.carousel-slide
       .slide-description
       .slide-title {
-      font-size: 38px;
+      @apply page-carousel-144;
     }
   }
   .page-metodologia .carousel .carousel-slide {
-    list-style: none;
+    @apply page-carousel-118;
   }
   .page-metodologia .heading-5 .heading-container .heading-size-1,
   .page-metodologia .heading-7 .heading-container .heading-size-1,
   .page-metodologia .heading-8 .heading-container .heading-size-1 {
-    color: #072130;
+    @apply page-heading-5-145;
   }
   .page-metodologia .number-counter-5.metric .heading-size-5.metric-label,
   .page-metodologia .number-counter-6.metric .heading-size-5.metric-label,
   .page-metodologia .number-counter-7.metric .heading-size-5.metric-label,
   .page-metodologia .number-counter-8.metric .heading-size-5.metric-label,
   .page-metodologia .number-counter-9.metric .heading-size-5.metric-label {
-    color: var(--color-text-muted);
+    @apply page-number-counter-0-116;
   }
   .page-metodologia .heading-9 .heading-container .heading-size-1 {
-    color: var(--color-ink);
+    @apply page-slide-content-124;
   }
   .page-metodologia .flipbox-0 .benefit-wrapper,
   .page-metodologia .flipbox-1 .benefit-wrapper,
@@ -1050,7 +918,7 @@
   .page-metodologia .timeline-item-3 .item-icon,
   .page-metodologia .timeline-item-4 .item-icon,
   .page-metodologia .timeline-item-5 .item-icon {
-    font-weight: 400;
+    @apply page-content-61;
   }
   .page-metodologia .timeline .timeline-item-0 .item-icon,
   .page-metodologia .timeline .timeline-item-1 .item-icon,
@@ -1058,7 +926,7 @@
   .page-metodologia .timeline .timeline-item-3 .item-icon,
   .page-metodologia .timeline .timeline-item-4 .item-icon,
   .page-metodologia .timeline .timeline-item-5 .item-icon {
-    color: var(--color-primary);
+    @apply page-tone-light-92;
   }
   .page-metodologia .timeline-0 .item-icon.symbol {
     font-size: 6px;
@@ -1118,7 +986,7 @@
   .page-metodologia .timeline-item-4.timeline-item .item-content .item-desc p,
   .page-metodologia .timeline-item-5.timeline-item .item-content .item-desc,
   .page-metodologia .timeline-item-5.timeline-item .item-content .item-desc p {
-    font-size: 13px;
+    @apply page-testimonial-0-80;
   }
   .page-metodologia .timeline-item-0.timeline-item .item-time,
   .page-metodologia .timeline-item-1.timeline-item .item-time,
